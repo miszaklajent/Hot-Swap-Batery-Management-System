@@ -3631,7 +3631,7 @@
 		(uuid "3188be6d-e068-4e74-ada8-e648454e6790")
 	)
 	(junction
-		(at 229.87 86.36)
+		(at 229.87 85.09)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "3452c1de-6b9a-4bc9-ae3c-a1d57e079977")
@@ -3685,7 +3685,7 @@
 		(uuid "79ecde59-dc9b-4229-8245-aeabb884d8e3")
 	)
 	(junction
-		(at 251.46 86.36)
+		(at 251.46 85.09)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b77dee82-c0e5-4b79-a0a7-fc36161d5665")
@@ -3697,7 +3697,7 @@
 		(uuid "c126b65f-7b94-46a7-8ebc-cf44ab11dc7c")
 	)
 	(junction
-		(at 236.22 86.36)
+		(at 236.22 85.09)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e8f7b244-4ea8-45c9-b09f-636ebea7f96b")
@@ -3724,7 +3724,7 @@
 	)
 	(wire
 		(pts
-			(xy 229.87 106.68) (xy 229.87 99.06)
+			(xy 229.87 105.41) (xy 229.87 97.79)
 		)
 		(stroke
 			(width 0)
@@ -3754,7 +3754,7 @@
 	)
 	(wire
 		(pts
-			(xy 229.87 91.44) (xy 229.87 86.36)
+			(xy 229.87 90.17) (xy 229.87 85.09)
 		)
 		(stroke
 			(width 0)
@@ -3791,16 +3791,6 @@
 			(type default)
 		)
 		(uuid "25056560-d14d-4c94-9979-f980ddc7e352")
-	)
-	(wire
-		(pts
-			(xy 213.36 85.09) (xy 213.36 86.36)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "28b1fe54-e76a-451c-b93c-04af7d364fce")
 	)
 	(wire
 		(pts
@@ -3934,7 +3924,7 @@
 	)
 	(wire
 		(pts
-			(xy 229.87 106.68) (xy 231.14 106.68)
+			(xy 229.87 105.41) (xy 231.14 105.41)
 		)
 		(stroke
 			(width 0)
@@ -3994,7 +3984,7 @@
 	)
 	(wire
 		(pts
-			(xy 200.66 85.09) (xy 213.36 85.09)
+			(xy 200.66 85.09) (xy 229.87 85.09)
 		)
 		(stroke
 			(width 0)
@@ -4004,7 +3994,7 @@
 	)
 	(wire
 		(pts
-			(xy 251.46 86.36) (xy 259.08 86.36)
+			(xy 251.46 85.09) (xy 259.08 85.09)
 		)
 		(stroke
 			(width 0)
@@ -4134,7 +4124,7 @@
 	)
 	(wire
 		(pts
-			(xy 248.92 86.36) (xy 251.46 86.36)
+			(xy 248.92 85.09) (xy 251.46 85.09)
 		)
 		(stroke
 			(width 0)
@@ -4204,7 +4194,7 @@
 	)
 	(wire
 		(pts
-			(xy 236.22 86.36) (xy 236.22 93.98)
+			(xy 236.22 85.09) (xy 236.22 92.71)
 		)
 		(stroke
 			(width 0)
@@ -4214,7 +4204,7 @@
 	)
 	(wire
 		(pts
-			(xy 251.46 86.36) (xy 251.46 93.98)
+			(xy 251.46 85.09) (xy 251.46 92.71)
 		)
 		(stroke
 			(width 0)
@@ -4234,17 +4224,7 @@
 	)
 	(wire
 		(pts
-			(xy 213.36 86.36) (xy 229.87 86.36)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e4e11f7d-be2b-4b29-9e81-fc5e8760ec43")
-	)
-	(wire
-		(pts
-			(xy 236.22 86.36) (xy 238.76 86.36)
+			(xy 236.22 85.09) (xy 238.76 85.09)
 		)
 		(stroke
 			(width 0)
@@ -4274,7 +4254,7 @@
 	)
 	(wire
 		(pts
-			(xy 229.87 86.36) (xy 236.22 86.36)
+			(xy 229.87 85.09) (xy 236.22 85.09)
 		)
 		(stroke
 			(width 0)
@@ -4393,7 +4373,7 @@
 		(uuid "af31f428-7076-47bd-ac01-116cf92830ee")
 	)
 	(label "EN_out"
-		(at 231.14 109.22 180)
+		(at 231.14 107.95 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4433,7 +4413,7 @@
 		(uuid "de953bff-1be6-4fbc-8ab2-5355f5321fa2")
 	)
 	(label "Vout"
-		(at 259.08 86.36 0)
+		(at 259.08 85.09 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5103,7 +5083,7 @@
 	)
 	(symbol
 		(lib_id "Transistor_FET:CSD18531Q5A")
-		(at 243.84 88.9 270)
+		(at 243.84 87.63 270)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -5114,7 +5094,7 @@
 		(dnp no)
 		(uuid "16f9e234-dcdb-4b3f-9b46-169b1fd39781")
 		(property "Reference" "Q3"
-			(at 243.84 82.55 90)
+			(at 243.84 81.28 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5124,7 +5104,7 @@
 			)
 		)
 		(property "Value" "CSD18531Q5A"
-			(at 243.84 80.01 90)
+			(at 243.84 78.74 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5134,7 +5114,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:TDSON-8-1"
-			(at 241.935 83.82 0)
+			(at 241.935 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5147,7 +5127,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/gpn/csd18531q5a"
-			(at 240.03 83.82 0)
+			(at 240.03 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5159,7 +5139,7 @@
 			)
 		)
 		(property "Description" "100A Id, 60V Vds, NexFET N-Channel Power MOSFET, 4.6mOhm Ron, 36nC Qg(typ), SON8 5x6mm"
-			(at 243.84 88.9 0)
+			(at 243.84 87.63 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5969,7 +5949,7 @@
 	)
 	(symbol
 		(lib_id "Power_Management:LM74700")
-		(at 243.84 104.14 0)
+		(at 243.84 102.87 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5980,7 +5960,7 @@
 		(fields_autoplaced yes)
 		(uuid "41eca14e-03a9-4a89-9796-62f96d0480b3")
 		(property "Reference" "U1"
-			(at 255.27 102.8699 0)
+			(at 255.27 101.5999 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5991,7 +5971,7 @@
 			)
 		)
 		(property "Value" "LM74700"
-			(at 255.27 105.4099 0)
+			(at 255.27 104.1399 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6002,7 +5982,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-6"
-			(at 234.315 113.03 0)
+			(at 234.315 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6013,7 +5993,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/gpn/LM74700-Q1"
-			(at 234.315 113.03 0)
+			(at 234.315 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6024,7 +6004,7 @@
 			)
 		)
 		(property "Description" "Low Iq reverse battery protection ideal diode controller, SOT-23-6"
-			(at 243.84 104.14 0)
+			(at 243.84 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8067,7 +8047,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 229.87 95.25 0)
+		(at 229.87 93.98 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8077,7 +8057,7 @@
 		(dnp no)
 		(uuid "7fb7eca9-8f7e-46c5-9627-93ad4f52c64e")
 		(property "Reference" "C14"
-			(at 225.552 93.98 90)
+			(at 225.552 92.71 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8088,7 +8068,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 223.012 93.98 90)
+			(at 223.012 92.71 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8099,7 +8079,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 230.8352 99.06 0)
+			(at 230.8352 97.79 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8110,7 +8090,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 229.87 95.25 0)
+			(at 229.87 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8121,7 +8101,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 229.87 95.25 0)
+			(at 229.87 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9659,7 +9639,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 243.84 114.3 0)
+		(at 243.84 113.03 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9670,7 +9650,7 @@
 		(fields_autoplaced yes)
 		(uuid "e0bc42fe-dc15-4db1-9d82-512d609fbc65")
 		(property "Reference" "#PWR023"
-			(at 243.84 120.65 0)
+			(at 243.84 119.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9681,7 +9661,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 243.84 119.38 0)
+			(at 243.84 118.11 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9691,7 +9671,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 243.84 114.3 0)
+			(at 243.84 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9702,7 +9682,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 243.84 114.3 0)
+			(at 243.84 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9713,7 +9693,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 243.84 114.3 0)
+			(at 243.84 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
