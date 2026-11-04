@@ -1,0 +1,115 @@
+==================================================
+SIMULINK MODEL STRUCTURE, SETTINGS & CODE DUMP
+Model Name: slpidlib
+Generated on: 04-Nov-2026 15:01:42
+==================================================
+
+--- 1. SYSTEM BLOCK HIERARCHY, SETTINGS & STATES ---
+  - [SubSystem] slpidlib/PID Controller
+      * Settings & States:
+          Controller = PID
+          Form = Parallel
+          TimeDomain = Continuous-time
+          UseExternalTs = off
+          SampleTime = -1
+          IntegratorMethod = Forward Euler
+          FilterMethod = Forward Euler
+          ControllerParametersSource = internal
+          P = 1
+          I = 1
+          UseKiTs = off
+          D = 0
+          UseExternalDerivativeSource = off
+          N = 100
+          UseFilter = on
+          TunerSelectOption = Transfer Function Based (PID Tuner App)
+          ZeroCross = on
+          InitialConditionSource = internal
+          InitialConditionForIntegrator [State/IC] = 0
+          InitialConditionForFilter [State/IC] = 0
+          DifferentiatorICPrevScaledInput = 0
+          ExternalReset = none
+          IgnoreLimit = off
+          TrackingMode = off
+          Kt = 1
+          LimitOutput = off
+          SatLimitsSource = internal
+          UpperSaturationLimit = inf
+          LowerSaturationLimit = -inf
+          LinearizeAsGain = on
+          AntiWindupMode = none
+          Kb = 1
+          LimitIntegrator = off
+          UpperIntegratorSaturationLimit = inf
+          LowerIntegratorSaturationLimit = -inf
+          IntegratorStateMustResolveToSignalObject = off
+          FilterStateMustResolveToSignalObject = off
+          InitialConditionSetting [State/IC] = Auto
+  - [SubSystem] slpidlib/PID Controller (2DOF)
+      * Settings & States:
+          Controller = PID
+          Form = Parallel
+          TimeDomain = Continuous-time
+          UseExternalTs = off
+          SampleTime = -1
+          IntegratorMethod = Forward Euler
+          FilterMethod = Forward Euler
+          ControllerParametersSource = internal
+          P = 1
+          I = 1
+          UseKiTs = off
+          D = 0
+          UseExternalDerivativeSource = off
+          N = 100
+          UseFilter = on
+          b = 1
+          c = 1
+          TunerSelectOption = Transfer Function Based (PID Tuner App)
+          ZeroCross = on
+          InitialConditionSource = internal
+          InitialConditionForIntegrator [State/IC] = 0
+          InitialConditionForFilter [State/IC] = 0
+          DifferentiatorICPrevScaledInput = 0
+          ExternalReset = none
+          IgnoreLimit = off
+          TrackingMode = off
+          Kt = 1
+          LimitOutput = off
+          SatLimitsSource = internal
+          UpperSaturationLimit = inf
+          LowerSaturationLimit = -inf
+          LinearizeAsGain = on
+          AntiWindupMode = none
+          Kb = 1
+          LimitIntegrator = off
+          UpperIntegratorSaturationLimit = inf
+          LowerIntegratorSaturationLimit = -inf
+          IntegratorStateMustResolveToSignalObject = off
+          FilterStateMustResolveToSignalObject = off
+          InitialConditionSetting [State/IC] = Auto
+
+--- 2. ROOT LEVEL PORTS ---
+Root Inports:
+  (none)
+Root Outports:
+  (none)
+
+--- 3. EMBEDDED MATLAB FUNCTION BLOCKS ---
+No integrated MATLAB Function Blocks found.
+
+--- 4. STATEFLOW CHARTS & STATE LOGIC ---
+No Stateflow Charts found.
+
+--- 5. MODEL SIMULATION & SOLVER SETTINGS ---
+  SolverType                     = Variable-step
+  Solver                         = VariableStepAuto
+  SolverName                     = VariableStepAuto
+  StartTime                      = 0.0
+  StopTime                       = 10.0
+  FixedStep                      = auto
+  MaxStep                        = auto
+  MinStep                        = auto
+  RelTol                         = 1e-3
+  AbsTol                         = auto
+  ZeroCrossControl               = UseLocalSettings
+

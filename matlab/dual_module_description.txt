@@ -1,0 +1,2539 @@
+==================================================
+SIMULINK MODEL STRUCTURE, SETTINGS & CODE DUMP
+Model Name: dual_module
+Generated on: 04-Nov-2026 15:02:35
+==================================================
+
+--- 1. SYSTEM BLOCK HIERARCHY, SETTINGS & STATES ---
+  - [SimscapeBlock] dual_module/Battery (Component: batteryecm.battery)
+      * Settings & States:
+          Vnom = bat_1.Voltage V
+          prm_dir = simscape.enum.battery.prm_dir.disabled
+          R1_dis = 2 Ohm
+          R1_ch = 2 Ohm
+          R1 = 20 mOhm
+          prm_AH = simscape.enum.battery.prm_AH.infinite
+          AH = 50 mAh
+          V1 = 16 V
+          AH1 = 21 A*hr
+          prm_R2 = simscape.enum.battery.prm_R2.disabled
+          R2 = 2000 Ohm
+          Tmeas = 298.15 K
+          charge_measurement_port = simscape.enum.battery.enable.no
+          prm_dyn = simscape.enum.battery.prm_dyn.off
+          Rp1 = 0.005 Ohm
+          tau1 = 30 s
+          Rp2 = 0.005 Ohm
+          tau2 = 30 s
+          Rp3 = 0.005 Ohm
+          tau3 = 30 s
+          Rp4 = 0.005 Ohm
+          tau4 = 30 s
+          Rp5 = 0.005 Ohm
+          tau5 = 30 s
+          prm_fade = simscape.enum.battery.prm_fade.disabled
+          N_fade = 100
+          AH_fade = 45 A*hr
+          R1_fade = 2.02 Ohm
+          R1_ch_fade = 2.02 Ohm
+          V1_fade = 10.35 V
+          prm_age = simscape.enum.battery.prm_age.disabled
+          prm_age_OCV = simscape.enum.battery.prm_age_OCV.OCV
+          OCV_age = 0.9
+          SOC_age = 60
+          Tmeas_age = 298.15 K
+          delta_time_age_vec = [0] d
+          temperature_age_vec = [273] K
+          OCV_scaling_age = 2.2134e6
+          OCV_offset_age = 1.632e6
+          temp_exp_age = 0.515833569 V
+          t_exp_age = 0.75
+          Vnom_T2 = 12 V
+          R1_T2 = 2.2 Ohm
+          R1_T2_dis = 2.2 Ohm
+          R1_T2_ch = 2.2 Ohm
+          V1_T2 = 11.4 V
+          R2_T2 = 2200 Ohm
+          Rp1_T2 = 0.005 Ohm
+          tau1_T2 = 30 s
+          Rp2_T2 = 0.005 Ohm
+          tau2_T2 = 30 s
+          Rp3_T2 = 0.005 Ohm
+          tau3_T2 = 30 s
+          Rp4_T2 = 0.005 Ohm
+          tau4_T2 = 30 s
+          Rp5_T2 = 0.005 Ohm
+          tau5_T2 = 30 s
+          Tmeas2 = 273.15 K
+          thermal_port = simscape.enum.thermaleffects.omit
+          thermal_mass = 30000 J/K
+          i = 0 A
+          v = 0 V
+          charge = 50 A*hr [State Target: specify=off, priority=High]
+          num_cycles = 0 [State Target: specify=off, priority=High]
+          temperature = 298.15 K [State Target: specify=off, priority=High]
+  - [SimscapeBlock] dual_module/Battery1 (Component: batteryecm.battery)
+      * Settings & States:
+          Vnom = bat_2.Voltage V
+          prm_dir = simscape.enum.battery.prm_dir.disabled
+          R1_dis = 2 Ohm
+          R1_ch = 2 Ohm
+          R1 = 20 mOhm
+          prm_AH = simscape.enum.battery.prm_AH.infinite
+          AH = 50 mAh
+          V1 = 16 V
+          AH1 = 21 A*hr
+          prm_R2 = simscape.enum.battery.prm_R2.disabled
+          R2 = 2000 Ohm
+          Tmeas = 298.15 K
+          charge_measurement_port = simscape.enum.battery.enable.no
+          prm_dyn = simscape.enum.battery.prm_dyn.off
+          Rp1 = 0.005 Ohm
+          tau1 = 30 s
+          Rp2 = 0.005 Ohm
+          tau2 = 30 s
+          Rp3 = 0.005 Ohm
+          tau3 = 30 s
+          Rp4 = 0.005 Ohm
+          tau4 = 30 s
+          Rp5 = 0.005 Ohm
+          tau5 = 30 s
+          prm_fade = simscape.enum.battery.prm_fade.disabled
+          N_fade = 100
+          AH_fade = 45 A*hr
+          R1_fade = 2.02 Ohm
+          R1_ch_fade = 2.02 Ohm
+          V1_fade = 10.35 V
+          prm_age = simscape.enum.battery.prm_age.disabled
+          prm_age_OCV = simscape.enum.battery.prm_age_OCV.OCV
+          OCV_age = 0.9
+          SOC_age = 60
+          Tmeas_age = 298.15 K
+          delta_time_age_vec = [0] d
+          temperature_age_vec = [273] K
+          OCV_scaling_age = 2.2134e6
+          OCV_offset_age = 1.632e6
+          temp_exp_age = 0.515833569 V
+          t_exp_age = 0.75
+          Vnom_T2 = 12 V
+          R1_T2 = 2.2 Ohm
+          R1_T2_dis = 2.2 Ohm
+          R1_T2_ch = 2.2 Ohm
+          V1_T2 = 11.4 V
+          R2_T2 = 2200 Ohm
+          Rp1_T2 = 0.005 Ohm
+          tau1_T2 = 30 s
+          Rp2_T2 = 0.005 Ohm
+          tau2_T2 = 30 s
+          Rp3_T2 = 0.005 Ohm
+          tau3_T2 = 30 s
+          Rp4_T2 = 0.005 Ohm
+          tau4_T2 = 30 s
+          Rp5_T2 = 0.005 Ohm
+          tau5_T2 = 30 s
+          Tmeas2 = 273.15 K
+          thermal_port = simscape.enum.thermaleffects.omit
+          thermal_mass = 30000 J/K
+          i = 0 A
+          v = 0 V
+          charge = 50 A*hr [State Target: specify=off, priority=High]
+          num_cycles = 0 [State Target: specify=off, priority=High]
+          temperature = 298.15 K [State Target: specify=off, priority=High]
+  - [SimscapeBlock] dual_module/Capacitor (Component: foundation.electrical.elements.capacitor)
+      * Settings & States:
+          c = C_mod F
+          r = 50 mOhm
+          g = 0.0001 1/Ohm
+          i = 0 A
+          v = 0 V
+          vc = 0 V [State Target: specify=off, priority=High]
+  - [SimscapeBlock] dual_module/Capacitor1 (Component: foundation.electrical.elements.capacitor)
+      * Settings & States:
+          c = C_out F
+          r = 50 mOhm
+          g = 0.0001 1/Ohm
+          i = 0 A
+          v = 0 V
+          vc = 0 V [State Target: specify=off, priority=High]
+  - [SimscapeBlock] dual_module/Capacitor2 (Component: foundation.electrical.elements.capacitor)
+      * Settings & States:
+          c = C_mod F
+          r = 50 mOhm
+          g = 0.0001 1/Ohm
+          i = 0 A
+          v = 0 V
+          vc = 0 V [State Target: specify=off, priority=High]
+  - [Clock] dual_module/Clock
+      * Settings & States:
+          DisplayTime = off
+          Decimation = 10
+  - [Clock] dual_module/Clock1
+      * Settings & States:
+          DisplayTime = off
+          Decimation = 10
+  - [Clock] dual_module/Clock2
+      * Settings & States:
+          DisplayTime = off
+          Decimation = 10
+  - [Clock] dual_module/Clock3
+      * Settings & States:
+          DisplayTime = off
+          Decimation = 10
+  - [Constant] dual_module/Constant
+      * Settings & States:
+          Value = P
+          SampleTime = inf
+  - [Constant] dual_module/Constant2
+      * Settings & States:
+          Value = stage2_begin_time
+          SampleTime = inf
+  - [Constant] dual_module/Constant3
+      * Settings & States:
+          Value = 2
+          SampleTime = inf
+  - [Constant] dual_module/Constant4
+      * Settings & States:
+          Value = 0.001
+          SampleTime = inf
+  - [Constant] dual_module/Constant6
+      * Settings & States:
+          Value = battery_1_cutoff_time
+          SampleTime = inf
+  - [Constant] dual_module/Constant7
+      * Settings & States:
+          Value = 1
+          SampleTime = inf
+  - [Constant] dual_module/Constant8
+      * Settings & States:
+          Value = 0
+          SampleTime = inf
+  - [Constant] dual_module/Constant9
+      * Settings & States:
+          Value = battery_1_cutoff_time
+          SampleTime = inf
+  - [SimscapeBlock] dual_module/Current Sensor (Component: foundation.electrical.sensors.current)
+  - [SimscapeBlock] dual_module/Current Sensor1 (Component: foundation.electrical.sensors.current)
+  - [DataTypeConversion] dual_module/Data Type Conversion1
+      * Settings & States:
+          OutDataTypeStr = double
+          ConvertRealWorld = Real World Value (RWV)
+          SampleTime = -1
+  - [DataTypeConversion] dual_module/Data Type Conversion2
+      * Settings & States:
+          OutDataTypeStr = double
+          ConvertRealWorld = Real World Value (RWV)
+          SampleTime = -1
+  - [DataTypeConversion] dual_module/Data Type Conversion3
+      * Settings & States:
+          OutDataTypeStr = double
+          ConvertRealWorld = Real World Value (RWV)
+          SampleTime = -1
+  - [Delay] dual_module/Delay One Step
+      * Settings & States:
+          DelayLengthSource = Dialog
+          DelayLength = 1
+          DelayLengthUpperLimit = 100
+          InitialConditionSource = Dialog
+          InitialCondition [State/IC] = 0.0
+          ExternalReset = None
+          ShowEnablePort = off
+          PreventDirectFeedthrough = off
+          DiagnosticForDelayLength = None
+          RemoveDelayLengthCheckInGeneratedCode = off
+          InputProcessing = Elements as channels (sample based)
+          UseCircularBuffer = off
+          SampleTime = -1
+          StateName = 
+          StateMustResolveToSignalObject = off
+          StateStorageClass = Auto
+          CodeGenStateStorageTypeQualifier = 
+  - [SimscapeBlock] dual_module/Diode (Component: ee.semiconductors.diode)
+      * Settings & States:
+          ModelType = ee.enum.diode.modelType.pwl
+          TableType = ee.enum.diode.tableType.IfMat
+          IfMat = [.07, .12, .19, 1.75, 4.24, 7.32, 11.2; .16, .3, .72, 2.14, 5.02, 8.35, 13.12] A
+          VfMat = [.9, 1.15, 1.25, 1.5, 1.75, 2.17, 2.6, 2.85; .58, .68, .75, 1.1, 1.38, 1.77, 2.27, 2.7] V
+          TjVec = [25, 125] degC
+          VfVec = [.5, .7, .9, 1.3, 1.7, 2.1, 2.5] V
+          IfVec = [.1, .2, .5, 1, 2, 4, 7, 10] A
+          IrMat = [1e-06, 2e-06, 5e-06, 1e-05, 2.5e-05, 5e-05, .0001; 2e-06, 5e-06, 1e-05, 4e-05, 8e-05, .0002, .0005] A
+          VrMat = [10, 100, 200, 250, 300, 325, 350; 10, 70, 160, 220, 270, 300, 320] V
+          VrVec = [10, 20, 40, 50, 70, 80, 100] V
+          IrVec = [1e-06, 2e-06, 5e-06, 1e-05, 2e-05, 5e-05, .0001] A
+          Vf = 0.02 V
+          Ron = 1.3 mOhm
+          Goff = 1e-6 S
+          prmExp = ee.enum.diode.expParam.useTwo
+          I12 = [.0137, .545] A
+          V12 = [.6, .7] V
+          RS = 0 Ohm
+          Tmeas = 298.15 K
+          IS = 1e-12 A
+          ec = 1
+          I1 = 0.0137 A
+          V1 = 0.6 V
+          N_series = 1
+          N_parallel = 1
+          ZenerEnable = false
+          Rz = 0.3 Ohm
+          BV = inf V
+          C_param = ee.enum.diode.capParam.fixed
+          CJ = 0 pF
+          CJ0 = 5 pF
+          Vvec = [.1, 10, 100] V
+          Cvec = [3.5, 1, .4] pF
+          VJ = 1 V
+          Mgrad = 0.5
+          FC = 0.5
+          Q_param = ee.enum.diode.recoveryParam.off
+          iRM = -7.15 A
+          iF = 4 A
+          didt = -750 A/us
+          trr_factor = 3
+          trr = 115 ns
+          Qrr = 150 nA*s
+          Vr = -600 V
+          Ls = 150 nH
+          Erec = 0.03 J
+          TT = 50 ns
+          tau = 100 ns
+          T_param = ee.enum.diode.temperatureParam.off
+          Tdevice = 298.15 K
+          I1_T2 = 0.245 A
+          V1_T2 = 0.5 V
+          IS_T2 = 1.25e-7 A
+          Tmeas2 = 125 degC
+          XTI_param = ee.enum.diode.xtiParam.pn
+          XTI = 3
+          EG_param = ee.enum.diode.egapParam.material_si
+          EG = 1.11 eV
+          dBVdT = 0 V/K
+          fault_action = simscape.enum.assert.action.none
+          t_fault = inf s
+          enable_fault_input = simscape.enum.onoff.off
+          i = 0 A
+          v = 0 V
+          v_capacitor = 0 V
+          Qj = 0 C [State Target: specify=off, priority=High]
+          i_diode = 0 A
+          v_diode = 0 V
+          i_capacitor = 0 A
+          power_dissipated = 0 W
+          fidelity_level = ee.enum.diode.fidelity.includeChargeDyn
+          rec_loss_model = ee.enum.diode.reverseRecoveryModel.fixed
+          ErecVal = 0 J
+          scaleWithIandV = true
+          ErecMat = zeros(2, 3) J
+          TjrecVec = [298.15, 398.15] K
+          IfrecVec = [.1, 1, 10] A
+          IrecVal = 10 A
+          VrecVal = 10 V
+          tFilter = 1 / 1000 / 100 s
+          thermal_network_parameterization = ee.enum.thermalNetworkTopology.junctionCase
+          Rth = [0, 10] K/W
+          Rth_Cauer = [1, 3, 10] K/W
+          Rth_Foster = [.08, .14, .22, .16] K/W
+          thermal_mass_parameterization = ee.enum.thermalNetwork.timeconstant
+          thermal_mass = [0, 1] J/K
+          thermal_mass_Cauer = [.1, .3, 1] J/K
+          thermal_mass_Foster = [.001, .005, .05, .5] J/K
+          thermal_time_constant = [0, 10] s
+          thermal_time_constant_Cauer = [1, 3, 10] s
+          thermal_time_constant_Foster = [7e-05, .0007, .01, .08] s
+          thermal_mass_initial_temperatures = [25, 25] degC
+          thermal_mass_initial_temperatures_Cauer = [25, 25, 25] degC
+          junction_thermal_mass = 0.01 J/K
+          Tvec_initial_Foster = [25, 25, 25, 25] degC
+          no_thermal_network = 0
+          junction_temperature = 25 degC
+  - [SimscapeBlock] dual_module/Diode1 (Component: ee.semiconductors.diode)
+      * Settings & States:
+          ModelType = ee.enum.diode.modelType.pwl
+          TableType = ee.enum.diode.tableType.IfMat
+          IfMat = [.07, .12, .19, 1.75, 4.24, 7.32, 11.2; .16, .3, .72, 2.14, 5.02, 8.35, 13.12] A
+          VfMat = [.9, 1.15, 1.25, 1.5, 1.75, 2.17, 2.6, 2.85; .58, .68, .75, 1.1, 1.38, 1.77, 2.27, 2.7] V
+          TjVec = [25, 125] degC
+          VfVec = [.5, .7, .9, 1.3, 1.7, 2.1, 2.5] V
+          IfVec = [.1, .2, .5, 1, 2, 4, 7, 10] A
+          IrMat = [1e-06, 2e-06, 5e-06, 1e-05, 2.5e-05, 5e-05, .0001; 2e-06, 5e-06, 1e-05, 4e-05, 8e-05, .0002, .0005] A
+          VrMat = [10, 100, 200, 250, 300, 325, 350; 10, 70, 160, 220, 270, 300, 320] V
+          VrVec = [10, 20, 40, 50, 70, 80, 100] V
+          IrVec = [1e-06, 2e-06, 5e-06, 1e-05, 2e-05, 5e-05, .0001] A
+          Vf = 0.39 V
+          Ron = 0.3 Ohm
+          Goff = 1e-8 S
+          prmExp = ee.enum.diode.expParam.useTwo
+          I12 = [.0137, .545] A
+          V12 = [.6, .7] V
+          RS = 0 Ohm
+          Tmeas = 298.15 K
+          IS = 1e-12 A
+          ec = 1
+          I1 = 0.0137 A
+          V1 = 0.6 V
+          N_series = 1
+          N_parallel = 1
+          ZenerEnable = false
+          Rz = 0.3 Ohm
+          BV = inf V
+          C_param = ee.enum.diode.capParam.fixed
+          CJ = 0 pF
+          CJ0 = 5 pF
+          Vvec = [.1, 10, 100] V
+          Cvec = [3.5, 1, .4] pF
+          VJ = 1 V
+          Mgrad = 0.5
+          FC = 0.5
+          Q_param = ee.enum.diode.recoveryParam.off
+          iRM = -7.15 A
+          iF = 4 A
+          didt = -750 A/us
+          trr_factor = 3
+          trr = 115 ns
+          Qrr = 150 nA*s
+          Vr = -600 V
+          Ls = 150 nH
+          Erec = 0.03 J
+          TT = 50 ns
+          tau = 100 ns
+          T_param = ee.enum.diode.temperatureParam.off
+          Tdevice = 298.15 K
+          I1_T2 = 0.245 A
+          V1_T2 = 0.5 V
+          IS_T2 = 1.25e-7 A
+          Tmeas2 = 125 degC
+          XTI_param = ee.enum.diode.xtiParam.pn
+          XTI = 3
+          EG_param = ee.enum.diode.egapParam.material_si
+          EG = 1.11 eV
+          dBVdT = 0 V/K
+          fault_action = simscape.enum.assert.action.none
+          t_fault = inf s
+          enable_fault_input = simscape.enum.onoff.off
+          i = 0 A
+          v = 0 V
+          v_capacitor = 0 V
+          Qj = 0 C [State Target: specify=off, priority=High]
+          i_diode = 0 A
+          v_diode = 0 V
+          i_capacitor = 0 A
+          power_dissipated = 0 W
+          fidelity_level = ee.enum.diode.fidelity.includeChargeDyn
+          rec_loss_model = ee.enum.diode.reverseRecoveryModel.fixed
+          ErecVal = 0 J
+          scaleWithIandV = true
+          ErecMat = zeros(2, 3) J
+          TjrecVec = [298.15, 398.15] K
+          IfrecVec = [.1, 1, 10] A
+          IrecVal = 10 A
+          VrecVal = 10 V
+          tFilter = 1 / 1000 / 100 s
+          thermal_network_parameterization = ee.enum.thermalNetworkTopology.junctionCase
+          Rth = [0, 10] K/W
+          Rth_Cauer = [1, 3, 10] K/W
+          Rth_Foster = [.08, .14, .22, .16] K/W
+          thermal_mass_parameterization = ee.enum.thermalNetwork.timeconstant
+          thermal_mass = [0, 1] J/K
+          thermal_mass_Cauer = [.1, .3, 1] J/K
+          thermal_mass_Foster = [.001, .005, .05, .5] J/K
+          thermal_time_constant = [0, 10] s
+          thermal_time_constant_Cauer = [1, 3, 10] s
+          thermal_time_constant_Foster = [7e-05, .0007, .01, .08] s
+          thermal_mass_initial_temperatures = [25, 25] degC
+          thermal_mass_initial_temperatures_Cauer = [25, 25, 25] degC
+          junction_thermal_mass = 0.01 J/K
+          Tvec_initial_Foster = [25, 25, 25, 25] degC
+          no_thermal_network = 0
+          junction_temperature = 25 degC
+  - [SimscapeBlock] dual_module/Diode2 (Component: ee.semiconductors.diode)
+      * Settings & States:
+          ModelType = ee.enum.diode.modelType.pwl
+          TableType = ee.enum.diode.tableType.IfMat
+          IfMat = [.07, .12, .19, 1.75, 4.24, 7.32, 11.2; .16, .3, .72, 2.14, 5.02, 8.35, 13.12] A
+          VfMat = [.9, 1.15, 1.25, 1.5, 1.75, 2.17, 2.6, 2.85; .58, .68, .75, 1.1, 1.38, 1.77, 2.27, 2.7] V
+          TjVec = [25, 125] degC
+          VfVec = [.5, .7, .9, 1.3, 1.7, 2.1, 2.5] V
+          IfVec = [.1, .2, .5, 1, 2, 4, 7, 10] A
+          IrMat = [1e-06, 2e-06, 5e-06, 1e-05, 2.5e-05, 5e-05, .0001; 2e-06, 5e-06, 1e-05, 4e-05, 8e-05, .0002, .0005] A
+          VrMat = [10, 100, 200, 250, 300, 325, 350; 10, 70, 160, 220, 270, 300, 320] V
+          VrVec = [10, 20, 40, 50, 70, 80, 100] V
+          IrVec = [1e-06, 2e-06, 5e-06, 1e-05, 2e-05, 5e-05, .0001] A
+          Vf = 0.02 V
+          Ron = 1.3 mOhm
+          Goff = 1e-6 S
+          prmExp = ee.enum.diode.expParam.useTwo
+          I12 = [.0137, .545] A
+          V12 = [.6, .7] V
+          RS = 0 Ohm
+          Tmeas = 298.15 K
+          IS = 1e-12 A
+          ec = 1
+          I1 = 0.0137 A
+          V1 = 0.6 V
+          N_series = 1
+          N_parallel = 1
+          ZenerEnable = false
+          Rz = 0.3 Ohm
+          BV = inf V
+          C_param = ee.enum.diode.capParam.fixed
+          CJ = 0 pF
+          CJ0 = 5 pF
+          Vvec = [.1, 10, 100] V
+          Cvec = [3.5, 1, .4] pF
+          VJ = 1 V
+          Mgrad = 0.5
+          FC = 0.5
+          Q_param = ee.enum.diode.recoveryParam.off
+          iRM = -7.15 A
+          iF = 4 A
+          didt = -750 A/us
+          trr_factor = 3
+          trr = 115 ns
+          Qrr = 150 nA*s
+          Vr = -600 V
+          Ls = 150 nH
+          Erec = 0.03 J
+          TT = 50 ns
+          tau = 100 ns
+          T_param = ee.enum.diode.temperatureParam.off
+          Tdevice = 298.15 K
+          I1_T2 = 0.245 A
+          V1_T2 = 0.5 V
+          IS_T2 = 1.25e-7 A
+          Tmeas2 = 125 degC
+          XTI_param = ee.enum.diode.xtiParam.pn
+          XTI = 3
+          EG_param = ee.enum.diode.egapParam.material_si
+          EG = 1.11 eV
+          dBVdT = 0 V/K
+          fault_action = simscape.enum.assert.action.none
+          t_fault = inf s
+          enable_fault_input = simscape.enum.onoff.off
+          i = 0 A
+          v = 0 V
+          v_capacitor = 0 V
+          Qj = 0 C [State Target: specify=off, priority=High]
+          i_diode = 0 A
+          v_diode = 0 V
+          i_capacitor = 0 A
+          power_dissipated = 0 W
+          fidelity_level = ee.enum.diode.fidelity.includeChargeDyn
+          rec_loss_model = ee.enum.diode.reverseRecoveryModel.fixed
+          ErecVal = 0 J
+          scaleWithIandV = true
+          ErecMat = zeros(2, 3) J
+          TjrecVec = [298.15, 398.15] K
+          IfrecVec = [.1, 1, 10] A
+          IrecVal = 10 A
+          VrecVal = 10 V
+          tFilter = 1 / 1000 / 100 s
+          thermal_network_parameterization = ee.enum.thermalNetworkTopology.junctionCase
+          Rth = [0, 10] K/W
+          Rth_Cauer = [1, 3, 10] K/W
+          Rth_Foster = [.08, .14, .22, .16] K/W
+          thermal_mass_parameterization = ee.enum.thermalNetwork.timeconstant
+          thermal_mass = [0, 1] J/K
+          thermal_mass_Cauer = [.1, .3, 1] J/K
+          thermal_mass_Foster = [.001, .005, .05, .5] J/K
+          thermal_time_constant = [0, 10] s
+          thermal_time_constant_Cauer = [1, 3, 10] s
+          thermal_time_constant_Foster = [7e-05, .0007, .01, .08] s
+          thermal_mass_initial_temperatures = [25, 25] degC
+          thermal_mass_initial_temperatures_Cauer = [25, 25, 25] degC
+          junction_thermal_mass = 0.01 J/K
+          Tvec_initial_Foster = [25, 25, 25, 25] degC
+          no_thermal_network = 0
+          junction_temperature = 25 degC
+  - [SimscapeBlock] dual_module/Diode3 (Component: ee.semiconductors.diode)
+      * Settings & States:
+          ModelType = ee.enum.diode.modelType.pwl
+          TableType = ee.enum.diode.tableType.IfMat
+          IfMat = [.07, .12, .19, 1.75, 4.24, 7.32, 11.2; .16, .3, .72, 2.14, 5.02, 8.35, 13.12] A
+          VfMat = [.9, 1.15, 1.25, 1.5, 1.75, 2.17, 2.6, 2.85; .58, .68, .75, 1.1, 1.38, 1.77, 2.27, 2.7] V
+          TjVec = [25, 125] degC
+          VfVec = [.5, .7, .9, 1.3, 1.7, 2.1, 2.5] V
+          IfVec = [.1, .2, .5, 1, 2, 4, 7, 10] A
+          IrMat = [1e-06, 2e-06, 5e-06, 1e-05, 2.5e-05, 5e-05, .0001; 2e-06, 5e-06, 1e-05, 4e-05, 8e-05, .0002, .0005] A
+          VrMat = [10, 100, 200, 250, 300, 325, 350; 10, 70, 160, 220, 270, 300, 320] V
+          VrVec = [10, 20, 40, 50, 70, 80, 100] V
+          IrVec = [1e-06, 2e-06, 5e-06, 1e-05, 2e-05, 5e-05, .0001] A
+          Vf = 0.39 V
+          Ron = 0.3 Ohm
+          Goff = 1e-8 S
+          prmExp = ee.enum.diode.expParam.useTwo
+          I12 = [.0137, .545] A
+          V12 = [.6, .7] V
+          RS = 0 Ohm
+          Tmeas = 298.15 K
+          IS = 1e-12 A
+          ec = 1
+          I1 = 0.0137 A
+          V1 = 0.6 V
+          N_series = 1
+          N_parallel = 1
+          ZenerEnable = false
+          Rz = 0.3 Ohm
+          BV = inf V
+          C_param = ee.enum.diode.capParam.fixed
+          CJ = 0 pF
+          CJ0 = 5 pF
+          Vvec = [.1, 10, 100] V
+          Cvec = [3.5, 1, .4] pF
+          VJ = 1 V
+          Mgrad = 0.5
+          FC = 0.5
+          Q_param = ee.enum.diode.recoveryParam.off
+          iRM = -7.15 A
+          iF = 4 A
+          didt = -750 A/us
+          trr_factor = 3
+          trr = 115 ns
+          Qrr = 150 nA*s
+          Vr = -600 V
+          Ls = 150 nH
+          Erec = 0.03 J
+          TT = 50 ns
+          tau = 100 ns
+          T_param = ee.enum.diode.temperatureParam.off
+          Tdevice = 298.15 K
+          I1_T2 = 0.245 A
+          V1_T2 = 0.5 V
+          IS_T2 = 1.25e-7 A
+          Tmeas2 = 125 degC
+          XTI_param = ee.enum.diode.xtiParam.pn
+          XTI = 3
+          EG_param = ee.enum.diode.egapParam.material_si
+          EG = 1.11 eV
+          dBVdT = 0 V/K
+          fault_action = simscape.enum.assert.action.none
+          t_fault = inf s
+          enable_fault_input = simscape.enum.onoff.off
+          i = 0 A
+          v = 0 V
+          v_capacitor = 0 V
+          Qj = 0 C [State Target: specify=off, priority=High]
+          i_diode = 0 A
+          v_diode = 0 V
+          i_capacitor = 0 A
+          power_dissipated = 0 W
+          fidelity_level = ee.enum.diode.fidelity.includeChargeDyn
+          rec_loss_model = ee.enum.diode.reverseRecoveryModel.fixed
+          ErecVal = 0 J
+          scaleWithIandV = true
+          ErecMat = zeros(2, 3) J
+          TjrecVec = [298.15, 398.15] K
+          IfrecVec = [.1, 1, 10] A
+          IrecVal = 10 A
+          VrecVal = 10 V
+          tFilter = 1 / 1000 / 100 s
+          thermal_network_parameterization = ee.enum.thermalNetworkTopology.junctionCase
+          Rth = [0, 10] K/W
+          Rth_Cauer = [1, 3, 10] K/W
+          Rth_Foster = [.08, .14, .22, .16] K/W
+          thermal_mass_parameterization = ee.enum.thermalNetwork.timeconstant
+          thermal_mass = [0, 1] J/K
+          thermal_mass_Cauer = [.1, .3, 1] J/K
+          thermal_mass_Foster = [.001, .005, .05, .5] J/K
+          thermal_time_constant = [0, 10] s
+          thermal_time_constant_Cauer = [1, 3, 10] s
+          thermal_time_constant_Foster = [7e-05, .0007, .01, .08] s
+          thermal_mass_initial_temperatures = [25, 25] degC
+          thermal_mass_initial_temperatures_Cauer = [25, 25, 25] degC
+          junction_thermal_mass = 0.01 J/K
+          Tvec_initial_Foster = [25, 25, 25, 25] degC
+          no_thermal_network = 0
+          junction_temperature = 25 degC
+  - [Product] dual_module/Divide
+      * Settings & States:
+          Inputs = */
+          Multiplication = Element-wise(.*)
+          CollapseMode = All dimensions
+          CollapseDim = 1
+          InputSameDT = off
+          SampleTime = -1
+  - [SimscapeBlock] dual_module/Dynamic Load (Component: ee.passive.dynamic_load)
+      * Settings & States:
+          load_type = ee.enum.dc_ac.dc
+          min_supply_voltage = 20 V
+          pow_min = 1e-3 W
+          G_reverse = 1e-6 S
+          deltaV = 1e-3 V
+          f0 = 60 Hz
+          Vrms_min = 200 V
+          tau = 0.01 s
+          Vrms_ini = 300 V
+          Vang_ini = 0 deg
+          fault_action = simscape.enum.assert.action.none
+          t_fault = 1 s
+  - [SimscapeBlock] dual_module/Electrical Reference (Component: foundation.electrical.elements.reference)
+  - [From] dual_module/From
+      * Settings & States:
+          GotoTag = T1
+  - [From] dual_module/From1
+      * Settings & States:
+          GotoTag = V_out
+  - [From] dual_module/From10
+      * Settings & States:
+          GotoTag = PI_clock
+  - [From] dual_module/From11
+      * Settings & States:
+          GotoTag = SW_clock
+  - [From] dual_module/From12
+      * Settings & States:
+          GotoTag = V_0_2
+  - [From] dual_module/From13
+      * Settings & States:
+          GotoTag = V_out
+  - [From] dual_module/From14
+      * Settings & States:
+          GotoTag = i_0_2
+  - [From] dual_module/From15
+      * Settings & States:
+          GotoTag = V_0_2
+  - [From] dual_module/From16
+      * Settings & States:
+          GotoTag = V_0_1
+  - [From] dual_module/From17
+      * Settings & States:
+          GotoTag = i_0_1
+  - [From] dual_module/From18
+      * Settings & States:
+          GotoTag = i_0_2
+  - [From] dual_module/From19
+      * Settings & States:
+          GotoTag = V_out
+  - [From] dual_module/From2
+      * Settings & States:
+          GotoTag = V_0_1
+  - [From] dual_module/From20
+      * Settings & States:
+          GotoTag = D1
+  - [From] dual_module/From21
+      * Settings & States:
+          GotoTag = V_0_1
+  - [From] dual_module/From22
+      * Settings & States:
+          GotoTag = i_0_1
+  - [From] dual_module/From23
+      * Settings & States:
+          GotoTag = D1
+  - [From] dual_module/From24
+      * Settings & States:
+          GotoTag = D2
+  - [From] dual_module/From25
+      * Settings & States:
+          GotoTag = V_0_2
+  - [From] dual_module/From26
+      * Settings & States:
+          GotoTag = V_out
+  - [From] dual_module/From27
+      * Settings & States:
+          GotoTag = i_0_2
+  - [From] dual_module/From28
+      * Settings & States:
+          GotoTag = V_0_1
+  - [From] dual_module/From3
+      * Settings & States:
+          GotoTag = i_0_1
+  - [From] dual_module/From4
+      * Settings & States:
+          GotoTag = T2
+  - [From] dual_module/From5
+      * Settings & States:
+          GotoTag = V_out
+  - [From] dual_module/From6
+      * Settings & States:
+          GotoTag = V_0_2
+  - [From] dual_module/From7
+      * Settings & States:
+          GotoTag = i_0_2
+  - [From] dual_module/From8
+      * Settings & States:
+          GotoTag = PI_clock
+  - [From] dual_module/From9
+      * Settings & States:
+          GotoTag = SW_clock
+  - [SimscapeBlock] dual_module/Gate Driver (Component: ee.semiconductors.gate_driver)
+      * Settings & States:
+          port_option = ee.enum.controlport.ps
+          uHigh = 2.0 V
+          uLow = 0.8 V
+          uHighValue = 0.7
+          uLowValue = 0.3
+          vHigh = 20 V
+          vLow = 0 V
+          tHigh = 50 ns
+          tLow = 50 ns
+          parameterization = ee.enum.semiconductors.gateDriverParam.outputImpedance
+          rHigh = 4.7 Ohm
+          rLow = 4.7 Ohm
+          tRise = 20 ns
+          tFall = 20 ns
+          cLoad = 10 nF
+          t_fault = 1 s
+          ZonTime = 0 s
+          ZoffTime = 0 s
+  - [SimscapeBlock] dual_module/Gate Driver1 (Component: ee.semiconductors.gate_driver)
+      * Settings & States:
+          port_option = ee.enum.controlport.ps
+          uHigh = 2.0 V
+          uLow = 0.8 V
+          uHighValue = 0.7
+          uLowValue = 0.3
+          vHigh = 20 V
+          vLow = 0 V
+          tHigh = 50 ns
+          tLow = 50 ns
+          parameterization = ee.enum.semiconductors.gateDriverParam.outputImpedance
+          rHigh = 4.7 Ohm
+          rLow = 4.7 Ohm
+          tRise = 20 ns
+          tFall = 20 ns
+          cLoad = 10 nF
+          t_fault = 1 s
+          ZonTime = 0 s
+          ZoffTime = 0 s
+  - [Goto] dual_module/Goto
+      * Settings & States:
+          GotoTag = T1
+          TagVisibility = local
+  - [Goto] dual_module/Goto1
+      * Settings & States:
+          GotoTag = V_out
+          TagVisibility = local
+  - [Goto] dual_module/Goto10
+      * Settings & States:
+          GotoTag = D2
+          TagVisibility = local
+  - [Goto] dual_module/Goto2
+      * Settings & States:
+          GotoTag = V_0_1
+          TagVisibility = local
+  - [Goto] dual_module/Goto3
+      * Settings & States:
+          GotoTag = i_0_1
+          TagVisibility = local
+  - [Goto] dual_module/Goto4
+      * Settings & States:
+          GotoTag = i_0_2
+          TagVisibility = local
+  - [Goto] dual_module/Goto5
+      * Settings & States:
+          GotoTag = V_0_2
+          TagVisibility = local
+  - [Goto] dual_module/Goto6
+      * Settings & States:
+          GotoTag = T2
+          TagVisibility = local
+  - [Goto] dual_module/Goto7
+      * Settings & States:
+          GotoTag = SW_clock
+          TagVisibility = local
+  - [Goto] dual_module/Goto8
+      * Settings & States:
+          GotoTag = PI_clock
+          TagVisibility = local
+  - [Goto] dual_module/Goto9
+      * Settings & States:
+          GotoTag = D1
+          TagVisibility = local
+  - [SimscapeBlock] dual_module/Inductor (Component: ee.passive.inductor)
+      * Settings & States:
+          l = L H
+          enable_L_tol = ee.enum.toleranceApplication.none
+          L_tol = 20
+          tol_distribution = ee.enum.toleranceDistribution.uniform
+          nSigma = 4
+          r = 2.64 mOhm
+          g = 1e-9 1/Ohm
+          enable_operating_limits = ee.enum.enable.no
+          operating_limit_action = ee.enum.passive.reportOpLim.warn
+          max_working_current = 1 A
+          power_rating = 1 W
+          fault_action = simscape.enum.assert.action.none
+          t_fault = 1 s
+          i_L = 0 A [State Target: specify=off, priority=High]
+  - [SimscapeBlock] dual_module/Inductor1 (Component: ee.passive.inductor)
+      * Settings & States:
+          l = L H
+          enable_L_tol = ee.enum.toleranceApplication.none
+          L_tol = 20
+          tol_distribution = ee.enum.toleranceDistribution.uniform
+          nSigma = 4
+          r = 2.64 mOhm
+          g = 1e-9 1/Ohm
+          enable_operating_limits = ee.enum.enable.no
+          operating_limit_action = ee.enum.passive.reportOpLim.warn
+          max_working_current = 1 A
+          power_rating = 1 W
+          fault_action = simscape.enum.assert.action.none
+          t_fault = 1 s
+          i_L = 0 A [State Target: specify=off, priority=High]
+  - [RelationalOperator] dual_module/LessThanOrEqual1
+      * Settings & States:
+          Operator = <=
+          InputSameDT = off
+          OutDataTypeStr = boolean
+          ZeroCross = on
+          SampleTime = -1
+  - [RelationalOperator] dual_module/LessThanOrEqual2
+      * Settings & States:
+          Operator = >=
+          InputSameDT = off
+          OutDataTypeStr = boolean
+          ZeroCross = on
+          SampleTime = -1
+  - [RelationalOperator] dual_module/LessThanOrEqual3
+      * Settings & States:
+          Operator = >=
+          InputSameDT = off
+          OutDataTypeStr = boolean
+          ZeroCross = on
+          SampleTime = -1
+  - [RelationalOperator] dual_module/LessThanOrEqual4
+      * Settings & States:
+          Operator = <=
+          InputSameDT = off
+          OutDataTypeStr = boolean
+          ZeroCross = on
+          SampleTime = -1
+  - [RelationalOperator] dual_module/LessThanOrEqual5
+      * Settings & States:
+          Operator = >=
+          InputSameDT = off
+          OutDataTypeStr = boolean
+          ZeroCross = on
+          SampleTime = -1
+  - [RelationalOperator] dual_module/LessThanOrEqual6
+      * Settings & States:
+          Operator = >=
+          InputSameDT = off
+          OutDataTypeStr = boolean
+          ZeroCross = on
+          SampleTime = -1
+  - [Mux] dual_module/Mux1
+      * Settings & States:
+          Inputs = 6
+  - [Mux] dual_module/Mux2
+      * Settings & States:
+          Inputs = 6
+  - [Mux] dual_module/Mux3
+      * Settings & States:
+          Inputs = 6
+  - [Mux] dual_module/Mux4
+      * Settings & States:
+          Inputs = 6
+  - [Mux] dual_module/Mux5
+      * Settings & States:
+          Inputs = 9
+  - [SimscapeBlock] dual_module/N-Channel MOSFET (Component: ee.semiconductors.n_mosfet)
+      * Settings & States:
+          paramTerminal = ee.enum.mosfet.numberOfTerminals.three
+          parameterization = ee.enum.mosfet.parameterization.datasheet
+          Beta = 5.0 A/V^2
+          Rds = 3.5 mOhm
+          Id = 134 A
+          Vgs = 20 V
+          Vth = 1.7 V
+          Vth0 = 1.7 V
+          lam = 0 1/V
+          gamma_vth = 0.5 V^(1/2)
+          phib = 0.5 V
+          Vth1 = 1.9071 V
+          Vbs1 = -1 V
+          Vth2 = 2.066 V
+          Vbs2 = -2 V
+          Tmeas = 25 degC
+          Vgs_vec = [-1, -.5, 2, 3, 4, 5] V
+          Vds_vec = [0, 2, 4, 8, 12, 16, 20] V
+          Vbs_vec = [0, -4, -6, -12] V
+          T_vec = [25, 125] degC
+          Vth_vec = [.4, 1.2, 1.4, 1.45] V
+          Vth_mat = [.4, .35; 1.2, 1.15; 1.4, 1.35; 1.45, 1.4] V
+          Ids_mat = [0, 0, 0, 0, 0, 0, 0; 0, 0, 0, 0, 0, 0, 0; 0, .003, .0038, .0043, .0046, .0048, .0049; 0, .0055,... A
+          Ids_mat0 = [0, 0, 0, 0, 0, 0, 0; 0, 0, 0, 0, 0, 0, 0; 0, .003, .0038, .0043, .0046, .0048, .0049; 0, .0055,... A
+          Ids_mat_3D = zeros(6, 7, 2) A
+          Ids_mat_3D0 = zeros(6, 7, 2) A
+          IV_table_symmetry = ee.enum.mosfet.symmetricNIV.no
+          RS = 0.0001 Ohm
+          RD = 0.0001 Ohm
+          RB = 0.001 Ohm
+          LeadRs = 0 Ohm
+          LeadRd = 0 Ohm
+          LeadRg = 0 Ohm
+          LeadRb = 0 Ohm
+          LS = 0 nH
+          LD = 0 nH
+          LG = 0 nH
+          LB = 0 nH
+          C_param = ee.enum.mosfet.capacitanceParam.fixedciss
+          C_GS = 270 pF
+          C_GD = 80 pF
+          C_GB = 0 pF
+          C_DS = 0 pF
+          C_iss = 350 pF
+          C_rss = 80 pF
+          C_oss = 0 pF
+          C_iss_vec = [720, 700, 590, 470, 390, 310] pF
+          C_rss_vec = [450, 400, 300, 190, 95, 55] pF
+          C_oss_vec = [900, 810, 690, 420, 270, 170] pF
+          C_GS_vec = [270, 300, 290, 280, 295, 255] pF
+          C_GD_vec = [450, 400, 300, 190, 95, 55] pF
+          C_GB_vec = [270, 300, 290, 280, 295, 255] pF
+          C_Vgs_vec = 0 V
+          C_DS_vec = [450, 410, 390, 230, 175, 115] pF
+          C_Vds_vec = [.1, .3, 1, 3, 10, 30] V
+          V_GS_for_cap_data = 0 V
+          charge_linearity_param = ee.enum.mosfet.cgdLinearity.constant
+          C_OX = 200 pF
+          V_C_OX = -0.5 V
+          charge_linearity_param_vgb = ee.enum.mosfet.cgbLinearity.instantly
+          charge_linearity_param_with_vgb = ee.enum.mosfet.cgbLinearityWithSeparateCgb.instantly
+          Di_param = ee.enum.mosfet.diodeParam.exponential
+          IsDiode = 1e-12 A
+          Vbi = 0.6 V
+          n = 1
+          Cj0Diode = 0 pF
+          TT = 50e-9 s
+          Tmeas_dio = 25 degC
+          TableTypeNoT = ee.enum.mosfet.tableType.IfMat
+          TableType = ee.enum.diode.tableType.IfMat
+          IfVec = [.07, .12, .19, 1.75, 4.24, 7.32, 11.2] A
+          IfMat = [.07, .12, .19, 1.75, 4.24, 7.32, 11.2; .16, .3, .72, 2.14, 4.02, 6.35, 9.12] A
+          VfVecV = [.9, 1.15, 1.25, 1.5, 1.75, 2.17, 2.6, 2.85] V
+          VfMatV = [.9, 1.15, 1.25, 1.5, 1.75, 2.17, 2.6, 2.85; .58, .68, .75, 1.1, 1.38, 1.77, 2.27, 2.7] V
+          TjVec = [25, 125] degC
+          VfVec = [.5, .7, .9, 1.3, 1.7, 2.1, 2.5] V
+          IfVecV = [.1, .2, .5, 1, 2, 4, 7, 10] A
+          diode_Goff = 1e-12 1/Ohm
+          prmDatasheet = ee.enum.temperatureParameterization.none
+          prmEquCoeff = ee.enum.temperatureParameterization.none
+          dVth_dT = -6 mV/K
+          dVth0_dT = -6 mV/K
+          Rds_T2 = 0.037 Ohm
+          BEXDatasheet = -1.5
+          BEXEquCoeff = -1.5
+          etaisDatasheet = 3
+          etaisEquCoeff = 3
+          Tmeas2 = 125 degC
+          etaisTabulated = 3
+          TdeviceDatasheet = 25 degC
+          TdeviceEquCoeff = 25 degC
+          TdeviceTabulated = 25 degC
+          t_fault = inf s
+          i_g = 0 A
+          i_d = 0 A
+          i_b = 0 A
+          voltage_gs = 0 V
+          voltage_ds = 0 V
+          voltage_bs = 0 V
+          v_Cgs = 0 V [State Target: specify=off, priority=High]
+          v_Cds = 0 V [State Target: specify=off, priority=High]
+          v_Cbs = 0 V [State Target: specify=off, priority=High]
+          thermal_network_parameterization = ee.enum.thermalNetworkTopology.junctionCase
+          Rth = [0, 10] K/W
+          Rth_Cauer = [1, 3, 10] K/W
+          Rth_Foster = [.08, .14, .22, .16] K/W
+          thermal_mass_parameterization = ee.enum.thermalNetwork.timeconstant
+          thermal_mass = [0, 1] J/K
+          thermal_mass_Cauer = [.1, .3, 1] J/K
+          thermal_mass_Foster = [.001, .005, .05, .5] J/K
+          thermal_time_constant = [0, 10] s
+          thermal_time_constant_Cauer = [1, 3, 10] s
+          thermal_time_constant_Foster = [7e-05, .0007, .01, .08] s
+          thermal_mass_initial_temperatures = [25, 25] degC
+          thermal_mass_initial_temperatures_Cauer = [25, 25, 25] degC
+          Tvec_initial_Foster = [25, 25, 25, 25] degC
+          betaref = 18 A/V^2
+          Vfbref = -1.1 V
+          gamma = 3.5 V^(1/2)
+          phib2ref = 1 V
+          thesatref = 0.4 1/V
+          alpha = 0
+          Vp = 5e-2 V
+          thesrref = 0 1/V
+          m = 8
+          Tref = 25 degC
+          Rsref = 2e-3 Ohm
+          Rdref = 0.17 Ohm
+          Rgref = 8.4 Ohm
+          Rbref = 2e-3 Ohm
+          Cox = 1500 pF
+          Cgso = 100 pF
+          Cgdo = 14 pF
+          Isref = 5.2e-13 A
+          Cj0 = 480 pF
+          Tprm = 1
+          etabet = 1.3
+          Stvfb = 5e-4 V/K
+          Stphib = -8.5e-4 V/K
+          etasat = 1.04
+          etasr = 0.65
+          etar = 0.95
+          etais = 3
+          Tsim = 25 degC
+          Ig = 0 A
+          Ids = 0 A
+          Ib = 0 A
+          V_gs = 0 V
+          V_ds = 0 V
+          V_bs = 0 V
+          QGoverCox = 0 V
+          QDoverCox = 0 V
+          QBoverCox = 0 V
+          T0 = [25, 25] degC
+          T0_Cauer = [25, 25, 25] degC
+  - [SimscapeBlock] dual_module/N-Channel MOSFET1 (Component: ee.semiconductors.n_mosfet)
+      * Settings & States:
+          paramTerminal = ee.enum.mosfet.numberOfTerminals.three
+          parameterization = ee.enum.mosfet.parameterization.datasheet
+          Beta = 5.0 A/V^2
+          Rds = 3.5 mOhm
+          Id = 134 A
+          Vgs = 20 V
+          Vth = 1.7 V
+          Vth0 = 1.7 V
+          lam = 0 1/V
+          gamma_vth = 0.5 V^(1/2)
+          phib = 0.5 V
+          Vth1 = 1.9071 V
+          Vbs1 = -1 V
+          Vth2 = 2.066 V
+          Vbs2 = -2 V
+          Tmeas = 25 degC
+          Vgs_vec = [-1, -.5, 2, 3, 4, 5] V
+          Vds_vec = [0, 2, 4, 8, 12, 16, 20] V
+          Vbs_vec = [0, -4, -6, -12] V
+          T_vec = [25, 125] degC
+          Vth_vec = [.4, 1.2, 1.4, 1.45] V
+          Vth_mat = [.4, .35; 1.2, 1.15; 1.4, 1.35; 1.45, 1.4] V
+          Ids_mat = [0, 0, 0, 0, 0, 0, 0; 0, 0, 0, 0, 0, 0, 0; 0, .003, .0038, .0043, .0046, .0048, .0049; 0, .0055,... A
+          Ids_mat0 = [0, 0, 0, 0, 0, 0, 0; 0, 0, 0, 0, 0, 0, 0; 0, .003, .0038, .0043, .0046, .0048, .0049; 0, .0055,... A
+          Ids_mat_3D = zeros(6, 7, 2) A
+          Ids_mat_3D0 = zeros(6, 7, 2) A
+          IV_table_symmetry = ee.enum.mosfet.symmetricNIV.no
+          RS = 0.0001 Ohm
+          RD = 0.0001 Ohm
+          RB = 0.001 Ohm
+          LeadRs = 0 Ohm
+          LeadRd = 0 Ohm
+          LeadRg = 0 Ohm
+          LeadRb = 0 Ohm
+          LS = 0 nH
+          LD = 0 nH
+          LG = 0 nH
+          LB = 0 nH
+          C_param = ee.enum.mosfet.capacitanceParam.fixedciss
+          C_GS = 270 pF
+          C_GD = 80 pF
+          C_GB = 0 pF
+          C_DS = 0 pF
+          C_iss = 350 pF
+          C_rss = 80 pF
+          C_oss = 0 pF
+          C_iss_vec = [720, 700, 590, 470, 390, 310] pF
+          C_rss_vec = [450, 400, 300, 190, 95, 55] pF
+          C_oss_vec = [900, 810, 690, 420, 270, 170] pF
+          C_GS_vec = [270, 300, 290, 280, 295, 255] pF
+          C_GD_vec = [450, 400, 300, 190, 95, 55] pF
+          C_GB_vec = [270, 300, 290, 280, 295, 255] pF
+          C_Vgs_vec = 0 V
+          C_DS_vec = [450, 410, 390, 230, 175, 115] pF
+          C_Vds_vec = [.1, .3, 1, 3, 10, 30] V
+          V_GS_for_cap_data = 0 V
+          charge_linearity_param = ee.enum.mosfet.cgdLinearity.constant
+          C_OX = 200 pF
+          V_C_OX = -0.5 V
+          charge_linearity_param_vgb = ee.enum.mosfet.cgbLinearity.instantly
+          charge_linearity_param_with_vgb = ee.enum.mosfet.cgbLinearityWithSeparateCgb.instantly
+          Di_param = ee.enum.mosfet.diodeParam.exponential
+          IsDiode = 1e-12 A
+          Vbi = 0.6 V
+          n = 1
+          Cj0Diode = 0 pF
+          TT = 50e-9 s
+          Tmeas_dio = 25 degC
+          TableTypeNoT = ee.enum.mosfet.tableType.IfMat
+          TableType = ee.enum.diode.tableType.IfMat
+          IfVec = [.07, .12, .19, 1.75, 4.24, 7.32, 11.2] A
+          IfMat = [.07, .12, .19, 1.75, 4.24, 7.32, 11.2; .16, .3, .72, 2.14, 4.02, 6.35, 9.12] A
+          VfVecV = [.9, 1.15, 1.25, 1.5, 1.75, 2.17, 2.6, 2.85] V
+          VfMatV = [.9, 1.15, 1.25, 1.5, 1.75, 2.17, 2.6, 2.85; .58, .68, .75, 1.1, 1.38, 1.77, 2.27, 2.7] V
+          TjVec = [25, 125] degC
+          VfVec = [.5, .7, .9, 1.3, 1.7, 2.1, 2.5] V
+          IfVecV = [.1, .2, .5, 1, 2, 4, 7, 10] A
+          diode_Goff = 1e-12 1/Ohm
+          prmDatasheet = ee.enum.temperatureParameterization.none
+          prmEquCoeff = ee.enum.temperatureParameterization.none
+          dVth_dT = -6 mV/K
+          dVth0_dT = -6 mV/K
+          Rds_T2 = 0.037 Ohm
+          BEXDatasheet = -1.5
+          BEXEquCoeff = -1.5
+          etaisDatasheet = 3
+          etaisEquCoeff = 3
+          Tmeas2 = 125 degC
+          etaisTabulated = 3
+          TdeviceDatasheet = 25 degC
+          TdeviceEquCoeff = 25 degC
+          TdeviceTabulated = 25 degC
+          t_fault = inf s
+          i_g = 0 A
+          i_d = 0 A
+          i_b = 0 A
+          voltage_gs = 0 V
+          voltage_ds = 0 V
+          voltage_bs = 0 V
+          v_Cgs = 0 V [State Target: specify=off, priority=High]
+          v_Cds = 0 V [State Target: specify=off, priority=High]
+          v_Cbs = 0 V [State Target: specify=off, priority=High]
+          thermal_network_parameterization = ee.enum.thermalNetworkTopology.junctionCase
+          Rth = [0, 10] K/W
+          Rth_Cauer = [1, 3, 10] K/W
+          Rth_Foster = [.08, .14, .22, .16] K/W
+          thermal_mass_parameterization = ee.enum.thermalNetwork.timeconstant
+          thermal_mass = [0, 1] J/K
+          thermal_mass_Cauer = [.1, .3, 1] J/K
+          thermal_mass_Foster = [.001, .005, .05, .5] J/K
+          thermal_time_constant = [0, 10] s
+          thermal_time_constant_Cauer = [1, 3, 10] s
+          thermal_time_constant_Foster = [7e-05, .0007, .01, .08] s
+          thermal_mass_initial_temperatures = [25, 25] degC
+          thermal_mass_initial_temperatures_Cauer = [25, 25, 25] degC
+          Tvec_initial_Foster = [25, 25, 25, 25] degC
+          betaref = 18 A/V^2
+          Vfbref = -1.1 V
+          gamma = 3.5 V^(1/2)
+          phib2ref = 1 V
+          thesatref = 0.4 1/V
+          alpha = 0
+          Vp = 5e-2 V
+          thesrref = 0 1/V
+          m = 8
+          Tref = 25 degC
+          Rsref = 2e-3 Ohm
+          Rdref = 0.17 Ohm
+          Rgref = 8.4 Ohm
+          Rbref = 2e-3 Ohm
+          Cox = 1500 pF
+          Cgso = 100 pF
+          Cgdo = 14 pF
+          Isref = 5.2e-13 A
+          Cj0 = 480 pF
+          Tprm = 1
+          etabet = 1.3
+          Stvfb = 5e-4 V/K
+          Stphib = -8.5e-4 V/K
+          etasat = 1.04
+          etasr = 0.65
+          etar = 0.95
+          etais = 3
+          Tsim = 25 degC
+          Ig = 0 A
+          Ids = 0 A
+          Ib = 0 A
+          V_gs = 0 V
+          V_ds = 0 V
+          V_bs = 0 V
+          QGoverCox = 0 V
+          QDoverCox = 0 V
+          QBoverCox = 0 V
+          T0 = [25, 25] degC
+          T0_Cauer = [25, 25, 25] degC
+  - [Logic] dual_module/NOT
+      * Settings & States:
+          Operator = NOT
+          Inputs = 2
+          AllPortsSameDT = off
+          OutDataTypeStr = boolean
+          SampleTime = -1
+  - [DiscretePulseGenerator] dual_module/Pulse Generator2
+      * Settings & States:
+          PulseType = Time based
+          TimeSource = Use simulation time
+          Amplitude = 1
+          Period = 1/f_pi
+          PulseWidth = 50
+          PhaseDelay = 0
+          SampleTime = 1
+  - [SubSystem] dual_module/Repeating Sequence2
+      * Settings & States:
+          rep_seq_t = GENERATED_TRIANGLE_WAVE
+          rep_seq_y = [0 1 0]
+  - [Scope] dual_module/Scope1
+      * Settings & States:
+          NumInputPorts = 1
+          LayoutDimensionsString = [1 1]
+          SampleTime = -1
+          TimeSpan = Auto
+          Title = %<SignalLabel>
+          ShowLegend = on
+          ShowGrid = on
+          PlotAsMagnitudePhase = off
+          ActiveDisplayYMinimum = -22.5146
+          ActiveDisplayYMaximum = 46.9461
+          YLabel = 
+          DataLoggingLimitDataPoints = off
+          DataLoggingMaxPoints = 5000
+          DataLoggingDecimateData = off
+          DataLoggingDecimation = 2
+          DataLogging = off
+          DataLoggingVariableName = ScopeData1
+          DataLoggingSaveFormat = Dataset
+  - [Scope] dual_module/Scope11
+      * Settings & States:
+          NumInputPorts = 1
+          LayoutDimensionsString = [1 1]
+          SampleTime = -1
+          TimeSpan = Auto
+          Title = %<SignalLabel>
+          ShowLegend = off
+          ShowGrid = on
+          PlotAsMagnitudePhase = off
+          ActiveDisplayYMinimum = -0.11875
+          ActiveDisplayYMaximum = 1.0688
+          YLabel = 
+          DataLoggingLimitDataPoints = off
+          DataLoggingMaxPoints = 5000
+          DataLoggingDecimateData = off
+          DataLoggingDecimation = 2
+          DataLogging = off
+          DataLoggingVariableName = ScopeData10
+          DataLoggingSaveFormat = Dataset
+  - [Scope] dual_module/Scope12
+      * Settings & States:
+          NumInputPorts = 1
+          LayoutDimensionsString = [1 1]
+          SampleTime = -1
+          TimeSpan = Auto
+          Title = %<SignalLabel>
+          ShowLegend = off
+          ShowGrid = on
+          PlotAsMagnitudePhase = off
+          ActiveDisplayYMinimum = -0.02471
+          ActiveDisplayYMaximum = 1.017
+          YLabel = 
+          DataLoggingLimitDataPoints = off
+          DataLoggingMaxPoints = 5000
+          DataLoggingDecimateData = off
+          DataLoggingDecimation = 2
+          DataLogging = off
+          DataLoggingVariableName = ScopeData11
+          DataLoggingSaveFormat = Dataset
+  - [Scope] dual_module/Scope2
+      * Settings & States:
+          NumInputPorts = 1
+          LayoutDimensionsString = [1 1]
+          SampleTime = -1
+          TimeSpan = Auto
+          Title = %<SignalLabel>
+          ShowLegend = off
+          ShowGrid = on
+          PlotAsMagnitudePhase = off
+          ActiveDisplayYMinimum = -20.8742
+          ActiveDisplayYMaximum = 2.3554
+          YLabel = 
+          DataLoggingLimitDataPoints = off
+          DataLoggingMaxPoints = 5000
+          DataLoggingDecimateData = off
+          DataLoggingDecimation = 2
+          DataLogging = off
+          DataLoggingVariableName = ScopeData1
+          DataLoggingSaveFormat = Dataset
+  - [Scope] dual_module/Scope3
+      * Settings & States:
+          NumInputPorts = 1
+          LayoutDimensionsString = [1 1]
+          SampleTime = -1
+          TimeSpan = Auto
+          Title = %<SignalLabel>
+          ShowLegend = on
+          ShowGrid = on
+          PlotAsMagnitudePhase = off
+          ActiveDisplayYMinimum = -5.0206
+          ActiveDisplayYMaximum = 22.7801
+          YLabel = 
+          DataLoggingLimitDataPoints = off
+          DataLoggingMaxPoints = 5000
+          DataLoggingDecimateData = off
+          DataLoggingDecimation = 2
+          DataLogging = off
+          DataLoggingVariableName = ScopeData2
+          DataLoggingSaveFormat = Dataset
+  - [Scope] dual_module/Scope4
+      * Settings & States:
+          NumInputPorts = 1
+          LayoutDimensionsString = [1 1]
+          SampleTime = -1
+          TimeSpan = Auto
+          Title = %<SignalLabel>
+          ShowLegend = on
+          ShowGrid = on
+          PlotAsMagnitudePhase = off
+          ActiveDisplayYMinimum = -5.375
+          ActiveDisplayYMaximum = 28.375
+          YLabel = 
+          DataLoggingLimitDataPoints = off
+          DataLoggingMaxPoints = 5000
+          DataLoggingDecimateData = off
+          DataLoggingDecimation = 2
+          DataLogging = off
+          DataLoggingVariableName = ScopeData1
+          DataLoggingSaveFormat = Dataset
+  - [Scope] dual_module/Scope7
+      * Settings & States:
+          NumInputPorts = 1
+          LayoutDimensionsString = [1 1]
+          SampleTime = -1
+          TimeSpan = Auto
+          Title = %<SignalLabel>
+          ShowLegend = off
+          ShowGrid = on
+          PlotAsMagnitudePhase = off
+          ActiveDisplayYMinimum = -18.515
+          ActiveDisplayYMaximum = 2.0808
+          YLabel = 
+          DataLoggingLimitDataPoints = off
+          DataLoggingMaxPoints = 5000
+          DataLoggingDecimateData = off
+          DataLoggingDecimation = 2
+          DataLogging = off
+          DataLoggingVariableName = ScopeData7
+          DataLoggingSaveFormat = Dataset
+  - [Scope] dual_module/Scope9
+      * Settings & States:
+          NumInputPorts = 2
+          LayoutDimensionsString = [2 1]
+          SampleTime = -1
+          TimeSpan = Auto
+          Title = %<SignalLabel>
+          ShowLegend = on
+          ShowGrid = on
+          PlotAsMagnitudePhase = off
+          ActiveDisplayYMinimum = -21.1028
+          ActiveDisplayYMaximum = 26.0278
+          YLabel = 
+          DataLoggingLimitDataPoints = off
+          DataLoggingMaxPoints = 5000
+          DataLoggingDecimateData = off
+          DataLoggingDecimation = 2
+          DataLogging = off
+          DataLoggingVariableName = ScopeData9
+          DataLoggingSaveFormat = Dataset
+  - [SubSystem] dual_module/Simulink-PS Converter
+      * Settings & States:
+          PhysicalDomain = network_engine_domain
+          SubClassName = ps_input
+          LeftPortType = input
+          RightPortType = output
+          PseudoPeriodic = off
+          NoiseDistribution = none
+          Unit = 1
+          AffineConversion = off
+          FilteringAndDerivatives = provide
+          SimscapeFilterOrder = 1
+          InputFilterTimeConstant = 0.001
+          UdotUserProvided = 0
+  - [SubSystem] dual_module/Simulink-PS Converter1
+      * Settings & States:
+          PhysicalDomain = network_engine_domain
+          SubClassName = ps_input
+          LeftPortType = input
+          RightPortType = output
+          PseudoPeriodic = off
+          NoiseDistribution = none
+          Unit = 1
+          AffineConversion = off
+          FilteringAndDerivatives = provide
+          SimscapeFilterOrder = 1
+          InputFilterTimeConstant = 0.001
+          UdotUserProvided = 0
+  - [SubSystem] dual_module/Simulink-PS Converter2
+      * Settings & States:
+          PhysicalDomain = network_engine_domain
+          SubClassName = ps_input
+          LeftPortType = input
+          RightPortType = output
+          PseudoPeriodic = off
+          NoiseDistribution = none
+          Unit = 1
+          AffineConversion = off
+          FilteringAndDerivatives = provide
+          SimscapeFilterOrder = 1
+          InputFilterTimeConstant = 0.001
+          UdotUserProvided = 0
+  - [SubSystem] dual_module/Simulink-PS Converter3
+      * Settings & States:
+          PhysicalDomain = network_engine_domain
+          SubClassName = ps_input
+          LeftPortType = input
+          RightPortType = output
+          PseudoPeriodic = off
+          NoiseDistribution = none
+          Unit = 1
+          AffineConversion = off
+          FilteringAndDerivatives = provide
+          SimscapeFilterOrder = 1
+          InputFilterTimeConstant = 0.001
+          UdotUserProvided = 0
+  - [SubSystem] dual_module/Solver Configuration
+      * Settings & States:
+          PhysicalDomain = network_engine_domain
+          SubClassName = solver
+          LeftPortType = input
+          RightPortType = generic
+          SimulateNoise = off
+          Profile = off
+          UseLocalSampling = off
+          EnableSwitchedLinearOptims = on
+          FrequencyDomain = off
+          UseCCode = off
+          RelTol = 0.001
+          AbsTol = 0.001
+          MinStep = 1e-09
+          ToWorkspace = off
+          RevertToSquareIcSolve = off
+          NumHomotopyIterations = 100
+          PhasorMode = off
+          PhasorModeNumHarmonics = 1
+          ConsistencySolver = NEWTON_XTOL_AFTER_FTOL
+          IndexReductionMethod = DerivativeReplacement
+          DoDC = off
+          ResidualTolerance = 1e-09
+          ConsistencyTolSource = GLOBAL
+          ConsistencyAbsTol = 0.001
+          ConsistencyRelTol = 0.001
+          ConsistencyTolFactor = 0.001
+          UseLocalSolver = off
+          LocalSolverChoice = NE_BACKWARD_EULER_ADVANCER
+          ResolveIndetEquations = on
+          FunctionEvalNumThread = 1
+          LocalSolverSampleTime = 0.001
+          DoFixedCost = off
+          MaxNonlinIter = 3
+          MaxModeIter = 2
+          ComputeImpulses = off
+          ImpulseIterations = 2
+          LinearAlgebra = auto
+          LinearAlgebraNumThread = 0
+          EquationFormulation = NE_TIME_EF
+          DelaysMemoryBudget = 1024
+          AutomaticFiltering = on
+          FilteringTimeConstant = 0.001
+          PartitionStorageMethod = AS_NEEDED
+          PartitionMemoryBudget = 1024
+          PartitionMethod = ROBUST
+          MultibodyUseLocalSolver = off
+          MultibodyLocalSolverChoice = ODE1
+          MultibodyLocalSolverSampleTime = 0.001
+  - [Sum] dual_module/Subtract
+      * Settings & States:
+          Inputs = +-
+          CollapseMode = All dimensions
+          CollapseDim = 1
+          InputSameDT = off
+          SampleTime = -1
+  - [Switch] dual_module/Switch
+      * Settings & States:
+          Criteria = u2 > Threshold
+          Threshold = 0
+          InputSameDT = off
+          ZeroCross = on
+          SampleTime = -1
+          AllowDiffInputSizes = off
+  - [Switch] dual_module/Switch1
+      * Settings & States:
+          Criteria = u2 > Threshold
+          Threshold = 0
+          InputSameDT = off
+          ZeroCross = on
+          SampleTime = -1
+          AllowDiffInputSizes = off
+  - [Switch] dual_module/Switch2
+      * Settings & States:
+          Criteria = u2 > Threshold
+          Threshold = 0
+          InputSameDT = off
+          ZeroCross = on
+          SampleTime = -1
+          AllowDiffInputSizes = off
+  - [Switch] dual_module/Switch4
+      * Settings & States:
+          Criteria = u2 > Threshold
+          Threshold = 0
+          InputSameDT = off
+          ZeroCross = on
+          SampleTime = -1
+          AllowDiffInputSizes = off
+  - [SimscapeBlock] dual_module/Switch5 (Component: foundation.electrical.elements.controlled_switch)
+      * Settings & States:
+          R_closed = 0.01 Ohm
+          G_open = 1e-8 1/Ohm
+          Threshold = 0.5
+          i = 0 A
+          v = 0 V
+  - [Switch] dual_module/Switch6
+      * Settings & States:
+          Criteria = u2 > Threshold
+          Threshold = 0
+          InputSameDT = off
+          ZeroCross = on
+          SampleTime = -1
+          AllowDiffInputSizes = off
+  - [SubSystem] dual_module/Triggered Subsystem
+      * Settings & States:
+          TreatAsAtomicUnit = on
+    - [Inport] dual_module/Triggered Subsystem/mesured_i
+        * Settings & States:
+            Port = 1
+            OutputFunctionCall = off
+            BusOutputAsStruct = off
+            BusVirtuality = inherit
+            Unit = inherit
+            VarSizeSig = Inherit
+            SampleTime = -1
+            SignalType = auto
+            LatchByDelayingOutsideSignal = on
+            LatchInputForFeedbackSignals = off
+            InputConnect = 
+            DataMode = inherit
+            MessageQueueUseDefaultAttributes = on
+            MessageQueueCapacity = 1
+            MessageQueueType = LIFO
+            MessageQueueOverwriting = on
+    - [Inport] dual_module/Triggered Subsystem/mesureed_V
+        * Settings & States:
+            Port = 2
+            OutputFunctionCall = off
+            BusOutputAsStruct = off
+            BusVirtuality = inherit
+            Unit = inherit
+            VarSizeSig = Inherit
+            SampleTime = -1
+            SignalType = auto
+            LatchByDelayingOutsideSignal = on
+            LatchInputForFeedbackSignals = off
+            InputConnect = 
+            DataMode = inherit
+            MessageQueueUseDefaultAttributes = on
+            MessageQueueCapacity = 1
+            MessageQueueType = LIFO
+            MessageQueueOverwriting = on
+    - [Inport] dual_module/Triggered Subsystem/set_V
+        * Settings & States:
+            Port = 3
+            OutputFunctionCall = off
+            BusOutputAsStruct = off
+            BusVirtuality = inherit
+            Unit = inherit
+            VarSizeSig = Inherit
+            SampleTime = -1
+            SignalType = auto
+            LatchByDelayingOutsideSignal = off
+            LatchInputForFeedbackSignals = off
+            InputConnect = 
+            DataMode = inherit
+            MessageQueueUseDefaultAttributes = on
+            MessageQueueCapacity = 1
+            MessageQueueType = LIFO
+            MessageQueueOverwriting = on
+    - [Inport] dual_module/Triggered Subsystem/set_I
+        * Settings & States:
+            Port = 4
+            OutputFunctionCall = off
+            BusOutputAsStruct = off
+            BusVirtuality = inherit
+            Unit = inherit
+            VarSizeSig = Inherit
+            SampleTime = -1
+            SignalType = auto
+            LatchByDelayingOutsideSignal = off
+            LatchInputForFeedbackSignals = off
+            InputConnect = 
+            DataMode = inherit
+            MessageQueueUseDefaultAttributes = on
+            MessageQueueCapacity = 1
+            MessageQueueType = LIFO
+            MessageQueueOverwriting = on
+    - [TriggerPort] dual_module/Triggered Subsystem/Trigger
+        * Settings & States:
+            TriggerType = falling
+            TriggerTime = on message available
+            ScheduleAsAperiodic = on
+            IsSimulinkFunction = off
+            AsynchronousFunction = off
+            FunctionName = 
+            FunctionVisibility = global
+            ScopeName = 
+            Variant = off
+            VariantControl = (inherit)
+            GeneratePreprocessorConditionals = off
+            StatesWhenEnabling = held
+            PropagateVarSize = During execution
+            ShowOutputPort = off
+            OutputDataType = auto
+            SampleTime = 1
+            ZeroCross = on
+            InitialTriggerSignalState [State/IC] = compatibility (no trigger on first evaluation)
+            TriggerSignalSampleTime = -1
+            FunctionPrototype = f()
+    - [Constant] dual_module/Triggered Subsystem/Constant1
+        * Settings & States:
+            Value = 1
+            SampleTime = inf
+    - [Constant] dual_module/Triggered Subsystem/Constant11
+        * Settings & States:
+            Value = 0.9
+            SampleTime = inf
+    - [Constant] dual_module/Triggered Subsystem/Constant12
+        * Settings & States:
+            Value = 0.1
+            SampleTime = inf
+    - [Constant] dual_module/Triggered Subsystem/Constant3
+        * Settings & States:
+            Value = 0.002
+            SampleTime = inf
+    - [Constant] dual_module/Triggered Subsystem/Constant4
+        * Settings & States:
+            Value = 0.1
+            SampleTime = inf
+    - [Constant] dual_module/Triggered Subsystem/Constant5
+        * Settings & States:
+            Value = 0.05
+            SampleTime = inf
+    - [Product] dual_module/Triggered Subsystem/Divide2
+        * Settings & States:
+            Inputs = **
+            Multiplication = Element-wise(.*)
+            CollapseMode = All dimensions
+            CollapseDim = 1
+            InputSameDT = off
+            SampleTime = -1
+    - [Product] dual_module/Triggered Subsystem/Divide3
+        * Settings & States:
+            Inputs = **
+            Multiplication = Element-wise(.*)
+            CollapseMode = All dimensions
+            CollapseDim = 1
+            InputSameDT = off
+            SampleTime = -1
+    - [RelationalOperator] dual_module/Triggered Subsystem/LessThanOrEqual
+        * Settings & States:
+            Operator = >=
+            InputSameDT = off
+            OutDataTypeStr = boolean
+            ZeroCross = on
+            SampleTime = -1
+    - [RelationalOperator] dual_module/Triggered Subsystem/LessThanOrEqual6
+        * Settings & States:
+            Operator = <=
+            InputSameDT = off
+            OutDataTypeStr = boolean
+            ZeroCross = on
+            SampleTime = -1
+    - [SubSystem] dual_module/Triggered Subsystem/PID Controller
+        * Settings & States:
+            Controller = PI
+            Form = Parallel
+            TimeDomain = Discrete-time
+            UseExternalTs = off
+            SampleTime = -1
+            IntegratorMethod = Forward Euler
+            FilterMethod = Forward Euler
+            ControllerParametersSource = external
+            P = 0.6
+            I = 50
+            UseKiTs = on
+            D = 0
+            UseExternalDerivativeSource = off
+            N = 100
+            UseFilter = on
+            TunerSelectOption = Transfer Function Based (PID Tuner App)
+            ZeroCross = on
+            InitialConditionSource = internal
+            InitialConditionForIntegrator [State/IC] = 0
+            InitialConditionForFilter [State/IC] = 0
+            DifferentiatorICPrevScaledInput = 0
+            ExternalReset = none
+            IgnoreLimit = off
+            TrackingMode = off
+            Kt = 1
+            LimitOutput = on
+            SatLimitsSource = internal
+            UpperSaturationLimit = 40
+            LowerSaturationLimit = 0
+            LinearizeAsGain = on
+            AntiWindupMode = none
+            Kb = 1
+            LimitIntegrator = off
+            UpperIntegratorSaturationLimit = inf
+            LowerIntegratorSaturationLimit = -inf
+            IntegratorStateMustResolveToSignalObject = off
+            FilterStateMustResolveToSignalObject = off
+            InitialConditionSetting [State/IC] = Auto
+    - [SubSystem] dual_module/Triggered Subsystem/PID Controller1
+        * Settings & States:
+            Controller = PI
+            Form = Parallel
+            TimeDomain = Discrete-time
+            UseExternalTs = off
+            SampleTime = -1
+            IntegratorMethod = Forward Euler
+            FilterMethod = Forward Euler
+            ControllerParametersSource = external
+            P = 0.6
+            I = 0.1
+            UseKiTs = on
+            D = 0
+            UseExternalDerivativeSource = off
+            N = 100
+            UseFilter = on
+            TunerSelectOption = Transfer Function Based (PID Tuner App)
+            ZeroCross = on
+            InitialConditionSource = internal
+            InitialConditionForIntegrator [State/IC] = 0
+            InitialConditionForFilter [State/IC] = 0
+            DifferentiatorICPrevScaledInput = 0
+            ExternalReset = none
+            IgnoreLimit = off
+            TrackingMode = off
+            Kt = 1
+            LimitOutput = on
+            SatLimitsSource = internal
+            UpperSaturationLimit = 23
+            LowerSaturationLimit = 0
+            LinearizeAsGain = on
+            AntiWindupMode = none
+            Kb = 1
+            LimitIntegrator = off
+            UpperIntegratorSaturationLimit = inf
+            LowerIntegratorSaturationLimit = -inf
+            IntegratorStateMustResolveToSignalObject = off
+            FilterStateMustResolveToSignalObject = off
+            InitialConditionSetting [State/IC] = Auto
+    - [SubSystem] dual_module/Triggered Subsystem/S-R Flip-Flop
+        * Settings & States:
+            initial_condition = 0
+    - [Sum] dual_module/Triggered Subsystem/Sum
+        * Settings & States:
+            Inputs = |+-
+            CollapseMode = All dimensions
+            CollapseDim = 1
+            InputSameDT = off
+            SampleTime = -1
+    - [Sum] dual_module/Triggered Subsystem/Sum1
+        * Settings & States:
+            Inputs = |+-
+            CollapseMode = All dimensions
+            CollapseDim = 1
+            InputSameDT = off
+            SampleTime = -1
+    - [Switch] dual_module/Triggered Subsystem/Switch6
+        * Settings & States:
+            Criteria = u2 > Threshold
+            Threshold = 0
+            InputSameDT = off
+            ZeroCross = on
+            SampleTime = -1
+            AllowDiffInputSizes = off
+    - [UnitDelay] dual_module/Triggered Subsystem/Unit Delay
+        * Settings & States:
+            InitialCondition [State/IC] = 0
+            InputProcessing = Elements as channels (sample based)
+            SampleTime = -1
+            StateName = 
+            StateMustResolveToSignalObject = off
+            StateStorageClass = Auto
+            CodeGenStateStorageTypeQualifier = 
+    - [Outport] dual_module/Triggered Subsystem/out
+        * Settings & States:
+            Port = 1
+            OutputFunctionCall = off
+            BusOutputAsStruct = off
+            BusVirtuality = inherit
+            DataMode = inherit
+            Unit = inherit
+            VarSizeSig = Inherit
+            SampleTime = -1
+            SignalType = auto
+            EnsureOutportIsVirtual = off
+            OutputWhenDisabled = held
+            MustResolveToSignalObject = off
+            OutputWhenUnConnected = off
+            OutputWhenUnconnectedValue = 0
+            VectorParamsAs1DForOutWhenUnconnected = on
+    - [Outport] dual_module/Triggered Subsystem/set_i_internal
+        * Settings & States:
+            Port = 2
+            OutputFunctionCall = off
+            BusOutputAsStruct = off
+            BusVirtuality = inherit
+            DataMode = inherit
+            Unit = inherit
+            VarSizeSig = Inherit
+            SampleTime = -1
+            SignalType = auto
+            EnsureOutportIsVirtual = off
+            OutputWhenDisabled = held
+            MustResolveToSignalObject = off
+            OutputWhenUnConnected = off
+            OutputWhenUnconnectedValue = 0
+            VectorParamsAs1DForOutWhenUnconnected = on
+    - [Outport] dual_module/Triggered Subsystem/pi_set_i
+        * Settings & States:
+            Port = 3
+            OutputFunctionCall = off
+            BusOutputAsStruct = off
+            BusVirtuality = inherit
+            DataMode = inherit
+            Unit = inherit
+            VarSizeSig = Inherit
+            SampleTime = -1
+            SignalType = auto
+            EnsureOutportIsVirtual = off
+            OutputWhenDisabled = held
+            MustResolveToSignalObject = off
+            OutputWhenUnConnected = off
+            OutputWhenUnconnectedValue = 0
+            VectorParamsAs1DForOutWhenUnconnected = on
+    - [Outport] dual_module/Triggered Subsystem/i_error
+        * Settings & States:
+            Port = 4
+            OutputFunctionCall = off
+            BusOutputAsStruct = off
+            BusVirtuality = inherit
+            DataMode = inherit
+            Unit = inherit
+            VarSizeSig = Inherit
+            SampleTime = -1
+            SignalType = auto
+            EnsureOutportIsVirtual = off
+            OutputWhenDisabled = held
+            MustResolveToSignalObject = off
+            OutputWhenUnConnected = off
+            OutputWhenUnconnectedValue = 0
+            VectorParamsAs1DForOutWhenUnconnected = on
+  - [SubSystem] dual_module/Triggered Subsystem1
+      * Settings & States:
+          TreatAsAtomicUnit = on
+    - [Inport] dual_module/Triggered Subsystem1/mesured_i
+        * Settings & States:
+            Port = 1
+            OutputFunctionCall = off
+            BusOutputAsStruct = off
+            BusVirtuality = inherit
+            Unit = inherit
+            VarSizeSig = Inherit
+            SampleTime = -1
+            SignalType = auto
+            LatchByDelayingOutsideSignal = on
+            LatchInputForFeedbackSignals = off
+            InputConnect = 
+            DataMode = inherit
+            MessageQueueUseDefaultAttributes = on
+            MessageQueueCapacity = 1
+            MessageQueueType = LIFO
+            MessageQueueOverwriting = on
+    - [Inport] dual_module/Triggered Subsystem1/mesureed_V
+        * Settings & States:
+            Port = 2
+            OutputFunctionCall = off
+            BusOutputAsStruct = off
+            BusVirtuality = inherit
+            Unit = inherit
+            VarSizeSig = Inherit
+            SampleTime = -1
+            SignalType = auto
+            LatchByDelayingOutsideSignal = on
+            LatchInputForFeedbackSignals = off
+            InputConnect = 
+            DataMode = inherit
+            MessageQueueUseDefaultAttributes = on
+            MessageQueueCapacity = 1
+            MessageQueueType = LIFO
+            MessageQueueOverwriting = on
+    - [Inport] dual_module/Triggered Subsystem1/set_V
+        * Settings & States:
+            Port = 3
+            OutputFunctionCall = off
+            BusOutputAsStruct = off
+            BusVirtuality = inherit
+            Unit = inherit
+            VarSizeSig = Inherit
+            SampleTime = -1
+            SignalType = auto
+            LatchByDelayingOutsideSignal = off
+            LatchInputForFeedbackSignals = off
+            InputConnect = 
+            DataMode = inherit
+            MessageQueueUseDefaultAttributes = on
+            MessageQueueCapacity = 1
+            MessageQueueType = LIFO
+            MessageQueueOverwriting = on
+    - [Inport] dual_module/Triggered Subsystem1/set_I
+        * Settings & States:
+            Port = 4
+            OutputFunctionCall = off
+            BusOutputAsStruct = off
+            BusVirtuality = inherit
+            Unit = inherit
+            VarSizeSig = Inherit
+            SampleTime = -1
+            SignalType = auto
+            LatchByDelayingOutsideSignal = off
+            LatchInputForFeedbackSignals = off
+            InputConnect = 
+            DataMode = inherit
+            MessageQueueUseDefaultAttributes = on
+            MessageQueueCapacity = 1
+            MessageQueueType = LIFO
+            MessageQueueOverwriting = on
+    - [Inport] dual_module/Triggered Subsystem1/get_V_dc
+        * Settings & States:
+            Port = 5
+            OutputFunctionCall = off
+            BusOutputAsStruct = off
+            BusVirtuality = inherit
+            Unit = inherit
+            VarSizeSig = Inherit
+            SampleTime = -1
+            SignalType = auto
+            LatchByDelayingOutsideSignal = off
+            LatchInputForFeedbackSignals = off
+            InputConnect = 
+            DataMode = inherit
+            MessageQueueUseDefaultAttributes = on
+            MessageQueueCapacity = 1
+            MessageQueueType = LIFO
+            MessageQueueOverwriting = on
+    - [TriggerPort] dual_module/Triggered Subsystem1/Trigger
+        * Settings & States:
+            TriggerType = falling
+            TriggerTime = on message available
+            ScheduleAsAperiodic = on
+            IsSimulinkFunction = off
+            AsynchronousFunction = off
+            FunctionName = 
+            FunctionVisibility = global
+            ScopeName = 
+            Variant = off
+            VariantControl = (inherit)
+            GeneratePreprocessorConditionals = off
+            StatesWhenEnabling = held
+            PropagateVarSize = During execution
+            ShowOutputPort = off
+            OutputDataType = auto
+            SampleTime = 1
+            ZeroCross = on
+            InitialTriggerSignalState [State/IC] = compatibility (no trigger on first evaluation)
+            TriggerSignalSampleTime = -1
+            FunctionPrototype = f()
+    - [Constant] dual_module/Triggered Subsystem1/Constant1
+        * Settings & States:
+            Value = 1
+            SampleTime = inf
+    - [Constant] dual_module/Triggered Subsystem1/Constant11
+        * Settings & States:
+            Value = switch_chargecurrent_2_voltage_controll_level
+            SampleTime = inf
+    - [Constant] dual_module/Triggered Subsystem1/Constant12
+        * Settings & States:
+            Value = 0.1
+            SampleTime = inf
+    - [Constant] dual_module/Triggered Subsystem1/Constant2
+        * Settings & States:
+            Value = 0
+            SampleTime = inf
+    - [Constant] dual_module/Triggered Subsystem1/Constant3
+        * Settings & States:
+            Value = 0.002
+            SampleTime = inf
+    - [Constant] dual_module/Triggered Subsystem1/Constant4
+        * Settings & States:
+            Value = 0.1
+            SampleTime = inf
+    - [Constant] dual_module/Triggered Subsystem1/Constant5
+        * Settings & States:
+            Value = 0.05
+            SampleTime = inf
+    - [DataStoreMemory] dual_module/Triggered Subsystem1/Data Store Memory
+        * Settings & States:
+            DataStoreName = bat_1_state
+            ReadBeforeWriteMsg = none
+            WriteAfterWriteMsg = warning
+            WriteAfterReadMsg = none
+            InitialValue = bat_1.PIstate
+            ShareAcrossModelInstances = off
+            StateMustResolveToSignalObject = off
+            DataStoreReference = off
+            StateStorageClass = Auto
+            RTWStateStorageTypeQualifier = 
+            ShowAdditionalParam = off
+            SignalType = auto
+            Dimensions = -1
+            DataLogging = off
+            DataLoggingLimitDataPoints = off
+            DataLoggingMaxPoints = 5000
+            DataLoggingDecimateData = off
+            DataLoggingDecimation = 2
+            DataLoggingNameMode = SignalName
+            DataLoggingName = 
+    - [DataStoreMemory] dual_module/Triggered Subsystem1/Data Store Memory1
+        * Settings & States:
+            DataStoreName = bat_1_priority
+            ReadBeforeWriteMsg = none
+            WriteAfterWriteMsg = warning
+            WriteAfterReadMsg = none
+            InitialValue = bat_1.priority
+            ShareAcrossModelInstances = off
+            StateMustResolveToSignalObject = off
+            DataStoreReference = off
+            StateStorageClass = Auto
+            RTWStateStorageTypeQualifier = 
+            ShowAdditionalParam = off
+            SignalType = auto
+            Dimensions = -1
+            DataLogging = off
+            DataLoggingLimitDataPoints = off
+            DataLoggingMaxPoints = 5000
+            DataLoggingDecimateData = off
+            DataLoggingDecimation = 2
+            DataLoggingNameMode = SignalName
+            DataLoggingName = 
+    - [DataStoreRead] dual_module/Triggered Subsystem1/Data Store Read
+        * Settings & States:
+            DataStoreName = bat_1_state
+            SampleTime = -1
+            DataStoreElements = 
+            EnableIndexing = off
+            NumberOfDimensions = 1
+            IndexMode = One-based
+            IndexOptionArray = Index vector (dialog)
+            IndexParamArray = 1
+            OutputSizeArray = 1
+            IndexOptions = Index vector (dialog)
+            Indices = 1
+            OutputSizes = 1
+    - [DataStoreRead] dual_module/Triggered Subsystem1/Data Store Read1
+        * Settings & States:
+            DataStoreName = bat_1_priority
+            SampleTime = -1
+            DataStoreElements = 
+            EnableIndexing = off
+            NumberOfDimensions = 1
+            IndexMode = One-based
+            IndexOptionArray = Index vector (dialog)
+            IndexParamArray = 1
+            OutputSizeArray = 1
+            IndexOptions = Index vector (dialog)
+            Indices = 1
+            OutputSizes = 1
+    - [DataStoreWrite] dual_module/Triggered Subsystem1/Data Store Write
+        * Settings & States:
+            DataStoreName = bat_1_state
+            SampleTime = -1
+            DataStoreElements = 
+            EnableIndexing = off
+            NumberOfDimensions = 1
+            IndexMode = One-based
+            IndexOptionArray = Index vector (dialog)
+            IndexParamArray = 1
+            OutputSizeArray = 1
+            IndexOptions = Index vector (dialog)
+            Indices = 1
+            OutputSizes = 1
+    - [Product] dual_module/Triggered Subsystem1/Divide1
+        * Settings & States:
+            Inputs = */
+            Multiplication = Element-wise(.*)
+            CollapseMode = All dimensions
+            CollapseDim = 1
+            InputSameDT = off
+            SampleTime = -1
+    - [Product] dual_module/Triggered Subsystem1/Divide2
+        * Settings & States:
+            Inputs = **
+            Multiplication = Element-wise(.*)
+            CollapseMode = All dimensions
+            CollapseDim = 1
+            InputSameDT = off
+            SampleTime = -1
+    - [Product] dual_module/Triggered Subsystem1/Divide3
+        * Settings & States:
+            Inputs = **
+            Multiplication = Element-wise(.*)
+            CollapseMode = All dimensions
+            CollapseDim = 1
+            InputSameDT = off
+            SampleTime = -1
+    - [RelationalOperator] dual_module/Triggered Subsystem1/LessThanOrEqual
+        * Settings & States:
+            Operator = >=
+            InputSameDT = off
+            OutDataTypeStr = boolean
+            ZeroCross = on
+            SampleTime = -1
+    - [RelationalOperator] dual_module/Triggered Subsystem1/LessThanOrEqual6
+        * Settings & States:
+            Operator = <=
+            InputSameDT = off
+            OutDataTypeStr = boolean
+            ZeroCross = on
+            SampleTime = -1
+    - [SubSystem] dual_module/Triggered Subsystem1/MATLAB Function
+        * Settings & States:
+            TreatAsAtomicUnit = on
+    - [SubSystem] dual_module/Triggered Subsystem1/PID Controller
+        * Settings & States:
+            Controller = PI
+            Form = Parallel
+            TimeDomain = Discrete-time
+            UseExternalTs = off
+            SampleTime = -1
+            IntegratorMethod = Forward Euler
+            FilterMethod = Forward Euler
+            ControllerParametersSource = external
+            P = 0.6
+            I = 50
+            UseKiTs = on
+            D = 0
+            UseExternalDerivativeSource = off
+            N = 100
+            UseFilter = on
+            TunerSelectOption = Transfer Function Based (PID Tuner App)
+            ZeroCross = on
+            InitialConditionSource = internal
+            InitialConditionForIntegrator [State/IC] = 0
+            InitialConditionForFilter [State/IC] = 0
+            DifferentiatorICPrevScaledInput = 0
+            ExternalReset = none
+            IgnoreLimit = off
+            TrackingMode = off
+            Kt = 1
+            LimitOutput = on
+            SatLimitsSource = internal
+            UpperSaturationLimit = 25
+            LowerSaturationLimit = -5
+            LinearizeAsGain = on
+            AntiWindupMode = none
+            Kb = 1
+            LimitIntegrator = off
+            UpperIntegratorSaturationLimit = inf
+            LowerIntegratorSaturationLimit = -inf
+            IntegratorStateMustResolveToSignalObject = off
+            FilterStateMustResolveToSignalObject = off
+            InitialConditionSetting [State/IC] = Auto
+    - [SubSystem] dual_module/Triggered Subsystem1/PID Controller1
+        * Settings & States:
+            Controller = PI
+            Form = Parallel
+            TimeDomain = Discrete-time
+            UseExternalTs = off
+            SampleTime = -1
+            IntegratorMethod = Forward Euler
+            FilterMethod = Forward Euler
+            ControllerParametersSource = external
+            P = 0.6
+            I = 0.1
+            UseKiTs = on
+            D = 0
+            UseExternalDerivativeSource = off
+            N = 100
+            UseFilter = on
+            TunerSelectOption = Transfer Function Based (PID Tuner App)
+            ZeroCross = on
+            InitialConditionSource = internal
+            InitialConditionForIntegrator [State/IC] = 0
+            InitialConditionForFilter [State/IC] = 0
+            DifferentiatorICPrevScaledInput = 0
+            ExternalReset = falling
+            IgnoreLimit = off
+            TrackingMode = off
+            Kt = 1
+            LimitOutput = on
+            SatLimitsSource = internal
+            UpperSaturationLimit = 23
+            LowerSaturationLimit = 0
+            LinearizeAsGain = on
+            AntiWindupMode = clamping
+            Kb = 1
+            LimitIntegrator = off
+            UpperIntegratorSaturationLimit = inf
+            LowerIntegratorSaturationLimit = -inf
+            IntegratorStateMustResolveToSignalObject = off
+            FilterStateMustResolveToSignalObject = off
+            InitialConditionSetting [State/IC] = Auto
+    - [SubSystem] dual_module/Triggered Subsystem1/S-R Flip-Flop
+        * Settings & States:
+            initial_condition = 0
+    - [Sum] dual_module/Triggered Subsystem1/Sum
+        * Settings & States:
+            Inputs = |+-
+            CollapseMode = All dimensions
+            CollapseDim = 1
+            InputSameDT = off
+            SampleTime = -1
+    - [Sum] dual_module/Triggered Subsystem1/Sum1
+        * Settings & States:
+            Inputs = |+-
+            CollapseMode = All dimensions
+            CollapseDim = 1
+            InputSameDT = off
+            SampleTime = -1
+    - [Switch] dual_module/Triggered Subsystem1/Switch1
+        * Settings & States:
+            Criteria = u2 > Threshold
+            Threshold = 0
+            InputSameDT = off
+            ZeroCross = on
+            SampleTime = -1
+            AllowDiffInputSizes = off
+    - [Switch] dual_module/Triggered Subsystem1/Switch2
+        * Settings & States:
+            Criteria = u2 > Threshold
+            Threshold = 0
+            InputSameDT = off
+            ZeroCross = on
+            SampleTime = -1
+            AllowDiffInputSizes = off
+    - [Switch] dual_module/Triggered Subsystem1/Switch6
+        * Settings & States:
+            Criteria = u2 > Threshold
+            Threshold = 0
+            InputSameDT = off
+            ZeroCross = on
+            SampleTime = -1
+            AllowDiffInputSizes = off
+    - [UnitDelay] dual_module/Triggered Subsystem1/Unit Delay
+        * Settings & States:
+            InitialCondition [State/IC] = 0
+            InputProcessing = Elements as channels (sample based)
+            SampleTime = -1
+            StateName = 
+            StateMustResolveToSignalObject = off
+            StateStorageClass = Auto
+            CodeGenStateStorageTypeQualifier = 
+    - [Outport] dual_module/Triggered Subsystem1/D_out
+        * Settings & States:
+            Port = 1
+            OutputFunctionCall = off
+            BusOutputAsStruct = off
+            BusVirtuality = inherit
+            DataMode = inherit
+            Unit = inherit
+            VarSizeSig = Inherit
+            SampleTime = -1
+            SignalType = auto
+            EnsureOutportIsVirtual = off
+            OutputWhenDisabled = held
+            MustResolveToSignalObject = off
+            OutputWhenUnConnected = off
+            OutputWhenUnconnectedValue = 0
+            VectorParamsAs1DForOutWhenUnconnected = on
+    - [Outport] dual_module/Triggered Subsystem1/set_i_internal
+        * Settings & States:
+            Port = 2
+            OutputFunctionCall = off
+            BusOutputAsStruct = off
+            BusVirtuality = inherit
+            DataMode = inherit
+            Unit = inherit
+            VarSizeSig = Inherit
+            SampleTime = -1
+            SignalType = auto
+            EnsureOutportIsVirtual = off
+            OutputWhenDisabled = held
+            MustResolveToSignalObject = off
+            OutputWhenUnConnected = off
+            OutputWhenUnconnectedValue = 0
+            VectorParamsAs1DForOutWhenUnconnected = on
+    - [Outport] dual_module/Triggered Subsystem1/pi_set_i
+        * Settings & States:
+            Port = 3
+            OutputFunctionCall = off
+            BusOutputAsStruct = off
+            BusVirtuality = inherit
+            DataMode = inherit
+            Unit = inherit
+            VarSizeSig = Inherit
+            SampleTime = -1
+            SignalType = auto
+            EnsureOutportIsVirtual = off
+            OutputWhenDisabled = held
+            MustResolveToSignalObject = off
+            OutputWhenUnConnected = off
+            OutputWhenUnconnectedValue = 0
+            VectorParamsAs1DForOutWhenUnconnected = on
+    - [Outport] dual_module/Triggered Subsystem1/i_error
+        * Settings & States:
+            Port = 4
+            OutputFunctionCall = off
+            BusOutputAsStruct = off
+            BusVirtuality = inherit
+            DataMode = inherit
+            Unit = inherit
+            VarSizeSig = Inherit
+            SampleTime = -1
+            SignalType = auto
+            EnsureOutportIsVirtual = off
+            OutputWhenDisabled = held
+            MustResolveToSignalObject = off
+            OutputWhenUnConnected = off
+            OutputWhenUnconnectedValue = 0
+            VectorParamsAs1DForOutWhenUnconnected = on
+    - [Outport] dual_module/Triggered Subsystem1/v_error
+        * Settings & States:
+            Port = 5
+            OutputFunctionCall = off
+            BusOutputAsStruct = off
+            BusVirtuality = inherit
+            DataMode = inherit
+            Unit = inherit
+            VarSizeSig = Inherit
+            SampleTime = -1
+            SignalType = auto
+            EnsureOutportIsVirtual = off
+            OutputWhenDisabled = held
+            MustResolveToSignalObject = off
+            OutputWhenUnConnected = off
+            OutputWhenUnconnectedValue = 0
+            VectorParamsAs1DForOutWhenUnconnected = on
+  - [SubSystem] dual_module/V_0_1
+      * Settings & States:
+          PhysicalDomain = network_engine_domain
+          SubClassName = ps_output
+          LeftPortType = input
+          RightPortType = output
+          PseudoPeriodic = off
+          VectorFormat = inherit
+          Unit = inherit
+          AffineConversion = off
+  - [SubSystem] dual_module/V_0_2
+      * Settings & States:
+          PhysicalDomain = network_engine_domain
+          SubClassName = ps_output
+          LeftPortType = input
+          RightPortType = output
+          PseudoPeriodic = off
+          VectorFormat = inherit
+          Unit = inherit
+          AffineConversion = off
+  - [SubSystem] dual_module/V_D1
+      * Settings & States:
+          PhysicalDomain = network_engine_domain
+          SubClassName = ps_output
+          LeftPortType = input
+          RightPortType = output
+          PseudoPeriodic = off
+          VectorFormat = inherit
+          Unit = inherit
+          AffineConversion = off
+  - [SubSystem] dual_module/V_D2
+      * Settings & States:
+          PhysicalDomain = network_engine_domain
+          SubClassName = ps_output
+          LeftPortType = input
+          RightPortType = output
+          PseudoPeriodic = off
+          VectorFormat = inherit
+          Unit = inherit
+          AffineConversion = off
+  - [SubSystem] dual_module/V_dc_1
+      * Settings & States:
+          PhysicalDomain = network_engine_domain
+          SubClassName = ps_output
+          LeftPortType = input
+          RightPortType = output
+          PseudoPeriodic = off
+          VectorFormat = inherit
+          Unit = inherit
+          AffineConversion = off
+  - [SubSystem] dual_module/V_dc_2
+      * Settings & States:
+          PhysicalDomain = network_engine_domain
+          SubClassName = ps_output
+          LeftPortType = input
+          RightPortType = output
+          PseudoPeriodic = off
+          VectorFormat = inherit
+          Unit = inherit
+          AffineConversion = off
+  - [SubSystem] dual_module/V_out
+      * Settings & States:
+          PhysicalDomain = network_engine_domain
+          SubClassName = ps_output
+          LeftPortType = input
+          RightPortType = output
+          PseudoPeriodic = off
+          VectorFormat = inherit
+          Unit = inherit
+          AffineConversion = off
+  - [SimscapeBlock] dual_module/Voltage Sensor (Component: foundation.electrical.sensors.voltage)
+  - [SimscapeBlock] dual_module/Voltage Sensor1 (Component: foundation.electrical.sensors.voltage)
+  - [SimscapeBlock] dual_module/Voltage Sensor2 (Component: foundation.electrical.sensors.voltage)
+  - [SimscapeBlock] dual_module/Voltage Sensor3 (Component: foundation.electrical.sensors.voltage)
+  - [SimscapeBlock] dual_module/Voltage Sensor4 (Component: foundation.electrical.sensors.voltage)
+  - [SimscapeBlock] dual_module/Voltage Sensor5 (Component: foundation.electrical.sensors.voltage)
+  - [SimscapeBlock] dual_module/Voltage Sensor6 (Component: foundation.electrical.sensors.voltage)
+  - [Constant] dual_module/current limit
+      * Settings & States:
+          Value = 20
+          SampleTime = inf
+  - [Constant] dual_module/current limit1
+      * Settings & States:
+          Value = 20
+          SampleTime = inf
+  - [SubSystem] dual_module/i_0_1
+      * Settings & States:
+          PhysicalDomain = network_engine_domain
+          SubClassName = ps_output
+          LeftPortType = input
+          RightPortType = output
+          PseudoPeriodic = off
+          VectorFormat = inherit
+          Unit = inherit
+          AffineConversion = off
+  - [SubSystem] dual_module/i_0_2
+      * Settings & States:
+          PhysicalDomain = network_engine_domain
+          SubClassName = ps_output
+          LeftPortType = input
+          RightPortType = output
+          PseudoPeriodic = off
+          VectorFormat = inherit
+          Unit = inherit
+          AffineConversion = off
+  - [Constant] dual_module/set voltage
+      * Settings & States:
+          Value = 18
+          SampleTime = inf
+  - [Constant] dual_module/set voltage1
+      * Settings & States:
+          Value = 25
+          SampleTime = inf
+
+--- 2. ROOT LEVEL PORTS ---
+Root Inports:
+  (none)
+Root Outports:
+  (none)
+
+--- 3. EMBEDDED MATLAB FUNCTION BLOCKS ---
+No integrated MATLAB Function Blocks found.
+
+--- 4. STATEFLOW CHARTS & STATE LOGIC ---
+No Stateflow Charts found.
+
+--- 5. MODEL SIMULATION & SOLVER SETTINGS ---
+  SolverType                     = Variable-step
+  Solver                         = VariableStepAuto
+  SolverName                     = VariableStepAuto
+  StartTime                      = 0.0
+  StopTime                       = SIMULATION_TIME
+  FixedStep                      = auto
+  MaxStep                        = 1e-07
+  MinStep                        = auto
+  RelTol                         = 1e-3
+  AbsTol                         = auto
+  ZeroCrossControl               = UseLocalSettings
+
