@@ -1,7 +1,7 @@
 ==================================================
 SIMULINK MODEL STRUCTURE, SETTINGS & CODE DUMP
 Model Name: dual_module
-Generated on: 04-Nov-2026 15:02:35
+Generated on: 05-Nov-2026 14:31:41
 ==================================================
 
 --- 1. SYSTEM BLOCK HIERARCHY, SETTINGS & STATES ---
@@ -163,10 +163,6 @@ Generated on: 04-Nov-2026 15:02:35
           i = 0 A
           v = 0 V
           vc = 0 V [State Target: specify=off, priority=High]
-  - [Clock] dual_module/Clock
-      * Settings & States:
-          DisplayTime = off
-          Decimation = 10
   - [Clock] dual_module/Clock1
       * Settings & States:
           DisplayTime = off
@@ -175,37 +171,41 @@ Generated on: 04-Nov-2026 15:02:35
       * Settings & States:
           DisplayTime = off
           Decimation = 10
-  - [Clock] dual_module/Clock3
-      * Settings & States:
-          DisplayTime = off
-          Decimation = 10
   - [Constant] dual_module/Constant
       * Settings & States:
           Value = P
           SampleTime = inf
-  - [Constant] dual_module/Constant2
+  - [Constant] dual_module/Constant1
       * Settings & States:
-          Value = stage2_begin_time
+          Value = 18
           SampleTime = inf
-  - [Constant] dual_module/Constant3
+  - [Constant] dual_module/Constant10
       * Settings & States:
-          Value = 2
+          Value = battery_2_priority_to_zero
           SampleTime = inf
-  - [Constant] dual_module/Constant4
+  - [Constant] dual_module/Constant11
       * Settings & States:
-          Value = 0.001
+          Value = 0
           SampleTime = inf
-  - [Constant] dual_module/Constant6
+  - [Constant] dual_module/Constant12
       * Settings & States:
-          Value = battery_1_cutoff_time
+          Value = bat_2.priority
+          SampleTime = inf
+  - [Constant] dual_module/Constant13
+      * Settings & States:
+          Value = 1
+          SampleTime = inf
+  - [Constant] dual_module/Constant14
+      * Settings & States:
+          Value = bat_1.priority
+          SampleTime = inf
+  - [Constant] dual_module/Constant5
+      * Settings & States:
+          Value = 18
           SampleTime = inf
   - [Constant] dual_module/Constant7
       * Settings & States:
           Value = 1
-          SampleTime = inf
-  - [Constant] dual_module/Constant8
-      * Settings & States:
-          Value = 0
           SampleTime = inf
   - [Constant] dual_module/Constant9
       * Settings & States:
@@ -213,6 +213,263 @@ Generated on: 04-Nov-2026 15:02:35
           SampleTime = inf
   - [SimscapeBlock] dual_module/Current Sensor (Component: foundation.electrical.sensors.current)
   - [SimscapeBlock] dual_module/Current Sensor1 (Component: foundation.electrical.sensors.current)
+  - [SimscapeBlock] dual_module/Current Sensor2 (Component: foundation.electrical.sensors.current)
+  - [DataStoreMemory] dual_module/Data Store Memory
+      * Settings & States:
+          DataStoreName = bat_2_state
+          ReadBeforeWriteMsg = none
+          WriteAfterWriteMsg = warning
+          WriteAfterReadMsg = none
+          InitialValue = bat_2.PIstate
+          ShareAcrossModelInstances = off
+          StateMustResolveToSignalObject = off
+          DataStoreReference = off
+          StateStorageClass = Auto
+          RTWStateStorageTypeQualifier = 
+          ShowAdditionalParam = off
+          SignalType = auto
+          Dimensions = -1
+          DataLogging = off
+          DataLoggingLimitDataPoints = off
+          DataLoggingMaxPoints = 5000
+          DataLoggingDecimateData = off
+          DataLoggingDecimation = 2
+          DataLoggingNameMode = SignalName
+          DataLoggingName = 
+  - [DataStoreMemory] dual_module/Data Store Memory1
+      * Settings & States:
+          DataStoreName = bat_2_priority
+          ReadBeforeWriteMsg = none
+          WriteAfterWriteMsg = warning
+          WriteAfterReadMsg = none
+          InitialValue = bat_2.priority
+          ShareAcrossModelInstances = off
+          StateMustResolveToSignalObject = off
+          DataStoreReference = off
+          StateStorageClass = Auto
+          RTWStateStorageTypeQualifier = 
+          ShowAdditionalParam = off
+          SignalType = auto
+          Dimensions = -1
+          DataLogging = off
+          DataLoggingLimitDataPoints = off
+          DataLoggingMaxPoints = 5000
+          DataLoggingDecimateData = off
+          DataLoggingDecimation = 2
+          DataLoggingNameMode = SignalName
+          DataLoggingName = 
+  - [DataStoreMemory] dual_module/Data Store Memory2
+      * Settings & States:
+          DataStoreName = bat_1_state
+          ReadBeforeWriteMsg = none
+          WriteAfterWriteMsg = warning
+          WriteAfterReadMsg = none
+          InitialValue = bat_1.PIstate
+          ShareAcrossModelInstances = off
+          StateMustResolveToSignalObject = off
+          DataStoreReference = off
+          StateStorageClass = Auto
+          RTWStateStorageTypeQualifier = 
+          ShowAdditionalParam = off
+          SignalType = auto
+          Dimensions = -1
+          DataLogging = off
+          DataLoggingLimitDataPoints = off
+          DataLoggingMaxPoints = 5000
+          DataLoggingDecimateData = off
+          DataLoggingDecimation = 2
+          DataLoggingNameMode = SignalName
+          DataLoggingName = 
+  - [DataStoreMemory] dual_module/Data Store Memory3
+      * Settings & States:
+          DataStoreName = bat_1_priority
+          ReadBeforeWriteMsg = none
+          WriteAfterWriteMsg = warning
+          WriteAfterReadMsg = none
+          InitialValue = bat_1.priority
+          ShareAcrossModelInstances = off
+          StateMustResolveToSignalObject = off
+          DataStoreReference = off
+          StateStorageClass = Auto
+          RTWStateStorageTypeQualifier = 
+          ShowAdditionalParam = off
+          SignalType = auto
+          Dimensions = -1
+          DataLogging = off
+          DataLoggingLimitDataPoints = off
+          DataLoggingMaxPoints = 5000
+          DataLoggingDecimateData = off
+          DataLoggingDecimation = 2
+          DataLoggingNameMode = SignalName
+          DataLoggingName = 
+  - [DataStoreRead] dual_module/Data Store Read
+      * Settings & States:
+          DataStoreName = bat_2_state
+          SampleTime = -1
+          DataStoreElements = 
+          EnableIndexing = off
+          NumberOfDimensions = 1
+          IndexMode = One-based
+          IndexOptionArray = Index vector (dialog)
+          IndexParamArray = 1
+          OutputSizeArray = 1
+          IndexOptions = Index vector (dialog)
+          Indices = 1
+          OutputSizes = 1
+  - [DataStoreRead] dual_module/Data Store Read1
+      * Settings & States:
+          DataStoreName = bat_2_priority
+          SampleTime = -1
+          DataStoreElements = 
+          EnableIndexing = off
+          NumberOfDimensions = 1
+          IndexMode = One-based
+          IndexOptionArray = Index vector (dialog)
+          IndexParamArray = 1
+          OutputSizeArray = 1
+          IndexOptions = Index vector (dialog)
+          Indices = 1
+          OutputSizes = 1
+  - [DataStoreRead] dual_module/Data Store Read2
+      * Settings & States:
+          DataStoreName = bat_1_state
+          SampleTime = -1
+          DataStoreElements = 
+          EnableIndexing = off
+          NumberOfDimensions = 1
+          IndexMode = One-based
+          IndexOptionArray = Index vector (dialog)
+          IndexParamArray = 1
+          OutputSizeArray = 1
+          IndexOptions = Index vector (dialog)
+          Indices = 1
+          OutputSizes = 1
+  - [DataStoreRead] dual_module/Data Store Read3
+      * Settings & States:
+          DataStoreName = bat_1_priority
+          SampleTime = -1
+          DataStoreElements = 
+          EnableIndexing = off
+          NumberOfDimensions = 1
+          IndexMode = One-based
+          IndexOptionArray = Index vector (dialog)
+          IndexParamArray = 1
+          OutputSizeArray = 1
+          IndexOptions = Index vector (dialog)
+          Indices = 1
+          OutputSizes = 1
+  - [DataStoreRead] dual_module/Data Store Read4
+      * Settings & States:
+          DataStoreName = bat_1_state
+          SampleTime = -1
+          DataStoreElements = 
+          EnableIndexing = off
+          NumberOfDimensions = 1
+          IndexMode = One-based
+          IndexOptionArray = Index vector (dialog)
+          IndexParamArray = 1
+          OutputSizeArray = 1
+          IndexOptions = Index vector (dialog)
+          Indices = 1
+          OutputSizes = 1
+  - [DataStoreRead] dual_module/Data Store Read5
+      * Settings & States:
+          DataStoreName = bat_2_state
+          SampleTime = -1
+          DataStoreElements = 
+          EnableIndexing = off
+          NumberOfDimensions = 1
+          IndexMode = One-based
+          IndexOptionArray = Index vector (dialog)
+          IndexParamArray = 1
+          OutputSizeArray = 1
+          IndexOptions = Index vector (dialog)
+          Indices = 1
+          OutputSizes = 1
+  - [DataStoreRead] dual_module/Data Store Read6
+      * Settings & States:
+          DataStoreName = bat_1_state
+          SampleTime = -1
+          DataStoreElements = 
+          EnableIndexing = off
+          NumberOfDimensions = 1
+          IndexMode = One-based
+          IndexOptionArray = Index vector (dialog)
+          IndexParamArray = 1
+          OutputSizeArray = 1
+          IndexOptions = Index vector (dialog)
+          Indices = 1
+          OutputSizes = 1
+  - [DataStoreRead] dual_module/Data Store Read7
+      * Settings & States:
+          DataStoreName = bat_1_state
+          SampleTime = -1
+          DataStoreElements = 
+          EnableIndexing = off
+          NumberOfDimensions = 1
+          IndexMode = One-based
+          IndexOptionArray = Index vector (dialog)
+          IndexParamArray = 1
+          OutputSizeArray = 1
+          IndexOptions = Index vector (dialog)
+          Indices = 1
+          OutputSizes = 1
+  - [DataStoreWrite] dual_module/Data Store Write
+      * Settings & States:
+          DataStoreName = bat_2_state
+          SampleTime = -1
+          DataStoreElements = 
+          EnableIndexing = off
+          NumberOfDimensions = 1
+          IndexMode = One-based
+          IndexOptionArray = Index vector (dialog)
+          IndexParamArray = 1
+          OutputSizeArray = 1
+          IndexOptions = Index vector (dialog)
+          Indices = 1
+          OutputSizes = 1
+  - [DataStoreWrite] dual_module/Data Store Write1
+      * Settings & States:
+          DataStoreName = bat_1_state
+          SampleTime = -1
+          DataStoreElements = 
+          EnableIndexing = off
+          NumberOfDimensions = 1
+          IndexMode = One-based
+          IndexOptionArray = Index vector (dialog)
+          IndexParamArray = 1
+          OutputSizeArray = 1
+          IndexOptions = Index vector (dialog)
+          Indices = 1
+          OutputSizes = 1
+  - [DataStoreWrite] dual_module/Data Store Write3
+      * Settings & States:
+          DataStoreName = bat_2_priority
+          SampleTime = -1
+          DataStoreElements = 
+          EnableIndexing = off
+          NumberOfDimensions = 1
+          IndexMode = One-based
+          IndexOptionArray = Index vector (dialog)
+          IndexParamArray = 1
+          OutputSizeArray = 1
+          IndexOptions = Index vector (dialog)
+          Indices = 1
+          OutputSizes = 1
+  - [DataStoreWrite] dual_module/Data Store Write4
+      * Settings & States:
+          DataStoreName = bat_1_priority
+          SampleTime = -1
+          DataStoreElements = 
+          EnableIndexing = off
+          NumberOfDimensions = 1
+          IndexMode = One-based
+          IndexOptionArray = Index vector (dialog)
+          IndexParamArray = 1
+          OutputSizeArray = 1
+          IndexOptions = Index vector (dialog)
+          Indices = 1
+          OutputSizes = 1
   - [DataTypeConversion] dual_module/Data Type Conversion1
       * Settings & States:
           OutDataTypeStr = double
@@ -228,7 +485,292 @@ Generated on: 04-Nov-2026 15:02:35
           OutDataTypeStr = double
           ConvertRealWorld = Real World Value (RWV)
           SampleTime = -1
-  - [Delay] dual_module/Delay One Step
+  - [Delay] dual_module/Delay One Step1
+      * Settings & States:
+          DelayLengthSource = Dialog
+          DelayLength = 1
+          DelayLengthUpperLimit = 100
+          InitialConditionSource = Dialog
+          InitialCondition [State/IC] = 0.0
+          ExternalReset = None
+          ShowEnablePort = off
+          PreventDirectFeedthrough = off
+          DiagnosticForDelayLength = None
+          RemoveDelayLengthCheckInGeneratedCode = off
+          InputProcessing = Elements as channels (sample based)
+          UseCircularBuffer = off
+          SampleTime = -1
+          StateName = 
+          StateMustResolveToSignalObject = off
+          StateStorageClass = Auto
+          CodeGenStateStorageTypeQualifier = 
+  - [Delay] dual_module/Delay One Step10
+      * Settings & States:
+          DelayLengthSource = Dialog
+          DelayLength = 1
+          DelayLengthUpperLimit = 100
+          InitialConditionSource = Dialog
+          InitialCondition [State/IC] = 0.0
+          ExternalReset = None
+          ShowEnablePort = off
+          PreventDirectFeedthrough = off
+          DiagnosticForDelayLength = None
+          RemoveDelayLengthCheckInGeneratedCode = off
+          InputProcessing = Elements as channels (sample based)
+          UseCircularBuffer = off
+          SampleTime = -1
+          StateName = 
+          StateMustResolveToSignalObject = off
+          StateStorageClass = Auto
+          CodeGenStateStorageTypeQualifier = 
+  - [Delay] dual_module/Delay One Step11
+      * Settings & States:
+          DelayLengthSource = Dialog
+          DelayLength = 1
+          DelayLengthUpperLimit = 100
+          InitialConditionSource = Dialog
+          InitialCondition [State/IC] = 0.0
+          ExternalReset = None
+          ShowEnablePort = off
+          PreventDirectFeedthrough = off
+          DiagnosticForDelayLength = None
+          RemoveDelayLengthCheckInGeneratedCode = off
+          InputProcessing = Elements as channels (sample based)
+          UseCircularBuffer = off
+          SampleTime = -1
+          StateName = 
+          StateMustResolveToSignalObject = off
+          StateStorageClass = Auto
+          CodeGenStateStorageTypeQualifier = 
+  - [Delay] dual_module/Delay One Step12
+      * Settings & States:
+          DelayLengthSource = Dialog
+          DelayLength = 1
+          DelayLengthUpperLimit = 100
+          InitialConditionSource = Dialog
+          InitialCondition [State/IC] = 0.0
+          ExternalReset = None
+          ShowEnablePort = off
+          PreventDirectFeedthrough = off
+          DiagnosticForDelayLength = None
+          RemoveDelayLengthCheckInGeneratedCode = off
+          InputProcessing = Elements as channels (sample based)
+          UseCircularBuffer = off
+          SampleTime = -1
+          StateName = 
+          StateMustResolveToSignalObject = off
+          StateStorageClass = Auto
+          CodeGenStateStorageTypeQualifier = 
+  - [Delay] dual_module/Delay One Step13
+      * Settings & States:
+          DelayLengthSource = Dialog
+          DelayLength = 1
+          DelayLengthUpperLimit = 100
+          InitialConditionSource = Dialog
+          InitialCondition [State/IC] = 0.0
+          ExternalReset = None
+          ShowEnablePort = off
+          PreventDirectFeedthrough = off
+          DiagnosticForDelayLength = None
+          RemoveDelayLengthCheckInGeneratedCode = off
+          InputProcessing = Elements as channels (sample based)
+          UseCircularBuffer = off
+          SampleTime = -1
+          StateName = 
+          StateMustResolveToSignalObject = off
+          StateStorageClass = Auto
+          CodeGenStateStorageTypeQualifier = 
+  - [Delay] dual_module/Delay One Step14
+      * Settings & States:
+          DelayLengthSource = Dialog
+          DelayLength = 1
+          DelayLengthUpperLimit = 100
+          InitialConditionSource = Dialog
+          InitialCondition [State/IC] = 0.0
+          ExternalReset = None
+          ShowEnablePort = off
+          PreventDirectFeedthrough = off
+          DiagnosticForDelayLength = None
+          RemoveDelayLengthCheckInGeneratedCode = off
+          InputProcessing = Elements as channels (sample based)
+          UseCircularBuffer = off
+          SampleTime = -1
+          StateName = 
+          StateMustResolveToSignalObject = off
+          StateStorageClass = Auto
+          CodeGenStateStorageTypeQualifier = 
+  - [Delay] dual_module/Delay One Step15
+      * Settings & States:
+          DelayLengthSource = Dialog
+          DelayLength = 1
+          DelayLengthUpperLimit = 100
+          InitialConditionSource = Dialog
+          InitialCondition [State/IC] = 0.0
+          ExternalReset = None
+          ShowEnablePort = off
+          PreventDirectFeedthrough = off
+          DiagnosticForDelayLength = None
+          RemoveDelayLengthCheckInGeneratedCode = off
+          InputProcessing = Elements as channels (sample based)
+          UseCircularBuffer = off
+          SampleTime = -1
+          StateName = 
+          StateMustResolveToSignalObject = off
+          StateStorageClass = Auto
+          CodeGenStateStorageTypeQualifier = 
+  - [Delay] dual_module/Delay One Step16
+      * Settings & States:
+          DelayLengthSource = Dialog
+          DelayLength = 1
+          DelayLengthUpperLimit = 100
+          InitialConditionSource = Dialog
+          InitialCondition [State/IC] = 0.0
+          ExternalReset = None
+          ShowEnablePort = off
+          PreventDirectFeedthrough = off
+          DiagnosticForDelayLength = None
+          RemoveDelayLengthCheckInGeneratedCode = off
+          InputProcessing = Elements as channels (sample based)
+          UseCircularBuffer = off
+          SampleTime = -1
+          StateName = 
+          StateMustResolveToSignalObject = off
+          StateStorageClass = Auto
+          CodeGenStateStorageTypeQualifier = 
+  - [Delay] dual_module/Delay One Step2
+      * Settings & States:
+          DelayLengthSource = Dialog
+          DelayLength = 1
+          DelayLengthUpperLimit = 100
+          InitialConditionSource = Dialog
+          InitialCondition [State/IC] = 0.0
+          ExternalReset = None
+          ShowEnablePort = off
+          PreventDirectFeedthrough = off
+          DiagnosticForDelayLength = None
+          RemoveDelayLengthCheckInGeneratedCode = off
+          InputProcessing = Elements as channels (sample based)
+          UseCircularBuffer = off
+          SampleTime = -1
+          StateName = 
+          StateMustResolveToSignalObject = off
+          StateStorageClass = Auto
+          CodeGenStateStorageTypeQualifier = 
+  - [Delay] dual_module/Delay One Step3
+      * Settings & States:
+          DelayLengthSource = Dialog
+          DelayLength = 1
+          DelayLengthUpperLimit = 100
+          InitialConditionSource = Dialog
+          InitialCondition [State/IC] = 0.0
+          ExternalReset = None
+          ShowEnablePort = off
+          PreventDirectFeedthrough = off
+          DiagnosticForDelayLength = None
+          RemoveDelayLengthCheckInGeneratedCode = off
+          InputProcessing = Elements as channels (sample based)
+          UseCircularBuffer = off
+          SampleTime = -1
+          StateName = 
+          StateMustResolveToSignalObject = off
+          StateStorageClass = Auto
+          CodeGenStateStorageTypeQualifier = 
+  - [Delay] dual_module/Delay One Step4
+      * Settings & States:
+          DelayLengthSource = Dialog
+          DelayLength = 1
+          DelayLengthUpperLimit = 100
+          InitialConditionSource = Dialog
+          InitialCondition [State/IC] = 0.0
+          ExternalReset = None
+          ShowEnablePort = off
+          PreventDirectFeedthrough = off
+          DiagnosticForDelayLength = None
+          RemoveDelayLengthCheckInGeneratedCode = off
+          InputProcessing = Elements as channels (sample based)
+          UseCircularBuffer = off
+          SampleTime = -1
+          StateName = 
+          StateMustResolveToSignalObject = off
+          StateStorageClass = Auto
+          CodeGenStateStorageTypeQualifier = 
+  - [Delay] dual_module/Delay One Step5
+      * Settings & States:
+          DelayLengthSource = Dialog
+          DelayLength = 1
+          DelayLengthUpperLimit = 100
+          InitialConditionSource = Dialog
+          InitialCondition [State/IC] = 0.0
+          ExternalReset = None
+          ShowEnablePort = off
+          PreventDirectFeedthrough = off
+          DiagnosticForDelayLength = None
+          RemoveDelayLengthCheckInGeneratedCode = off
+          InputProcessing = Elements as channels (sample based)
+          UseCircularBuffer = off
+          SampleTime = -1
+          StateName = 
+          StateMustResolveToSignalObject = off
+          StateStorageClass = Auto
+          CodeGenStateStorageTypeQualifier = 
+  - [Delay] dual_module/Delay One Step6
+      * Settings & States:
+          DelayLengthSource = Dialog
+          DelayLength = 1
+          DelayLengthUpperLimit = 100
+          InitialConditionSource = Dialog
+          InitialCondition [State/IC] = 0.0
+          ExternalReset = None
+          ShowEnablePort = off
+          PreventDirectFeedthrough = off
+          DiagnosticForDelayLength = None
+          RemoveDelayLengthCheckInGeneratedCode = off
+          InputProcessing = Elements as channels (sample based)
+          UseCircularBuffer = off
+          SampleTime = -1
+          StateName = 
+          StateMustResolveToSignalObject = off
+          StateStorageClass = Auto
+          CodeGenStateStorageTypeQualifier = 
+  - [Delay] dual_module/Delay One Step7
+      * Settings & States:
+          DelayLengthSource = Dialog
+          DelayLength = 1
+          DelayLengthUpperLimit = 100
+          InitialConditionSource = Dialog
+          InitialCondition [State/IC] = 0.0
+          ExternalReset = None
+          ShowEnablePort = off
+          PreventDirectFeedthrough = off
+          DiagnosticForDelayLength = None
+          RemoveDelayLengthCheckInGeneratedCode = off
+          InputProcessing = Elements as channels (sample based)
+          UseCircularBuffer = off
+          SampleTime = -1
+          StateName = 
+          StateMustResolveToSignalObject = off
+          StateStorageClass = Auto
+          CodeGenStateStorageTypeQualifier = 
+  - [Delay] dual_module/Delay One Step8
+      * Settings & States:
+          DelayLengthSource = Dialog
+          DelayLength = 1
+          DelayLengthUpperLimit = 100
+          InitialConditionSource = Dialog
+          InitialCondition [State/IC] = 0.0
+          ExternalReset = None
+          ShowEnablePort = off
+          PreventDirectFeedthrough = off
+          DiagnosticForDelayLength = None
+          RemoveDelayLengthCheckInGeneratedCode = off
+          InputProcessing = Elements as channels (sample based)
+          UseCircularBuffer = off
+          SampleTime = -1
+          StateName = 
+          StateMustResolveToSignalObject = off
+          StateStorageClass = Auto
+          CodeGenStateStorageTypeQualifier = 
+  - [Delay] dual_module/Delay One Step9
       * Settings & States:
           DelayLengthSource = Dialog
           DelayLength = 1
@@ -643,14 +1185,6 @@ Generated on: 04-Nov-2026 15:02:35
           Tvec_initial_Foster = [25, 25, 25, 25] degC
           no_thermal_network = 0
           junction_temperature = 25 degC
-  - [Product] dual_module/Divide
-      * Settings & States:
-          Inputs = */
-          Multiplication = Element-wise(.*)
-          CollapseMode = All dimensions
-          CollapseDim = 1
-          InputSameDT = off
-          SampleTime = -1
   - [SimscapeBlock] dual_module/Dynamic Load (Component: ee.passive.dynamic_load)
       * Settings & States:
           load_type = ee.enum.dc_ac.dc
@@ -674,46 +1208,19 @@ Generated on: 04-Nov-2026 15:02:35
           GotoTag = V_out
   - [From] dual_module/From10
       * Settings & States:
-          GotoTag = PI_clock
+          GotoTag = bat_2_PI_controll
   - [From] dual_module/From11
       * Settings & States:
           GotoTag = SW_clock
   - [From] dual_module/From12
       * Settings & States:
-          GotoTag = V_0_2
+          GotoTag = bat_1_diagnostics
   - [From] dual_module/From13
       * Settings & States:
-          GotoTag = V_out
-  - [From] dual_module/From14
-      * Settings & States:
-          GotoTag = i_0_2
-  - [From] dual_module/From15
-      * Settings & States:
-          GotoTag = V_0_2
-  - [From] dual_module/From16
-      * Settings & States:
-          GotoTag = V_0_1
-  - [From] dual_module/From17
-      * Settings & States:
-          GotoTag = i_0_1
-  - [From] dual_module/From18
-      * Settings & States:
-          GotoTag = i_0_2
-  - [From] dual_module/From19
-      * Settings & States:
-          GotoTag = V_out
+          GotoTag = bat_2_diagnostics
   - [From] dual_module/From2
       * Settings & States:
           GotoTag = V_0_1
-  - [From] dual_module/From20
-      * Settings & States:
-          GotoTag = D1
-  - [From] dual_module/From21
-      * Settings & States:
-          GotoTag = V_0_1
-  - [From] dual_module/From22
-      * Settings & States:
-          GotoTag = i_0_1
   - [From] dual_module/From23
       * Settings & States:
           GotoTag = D1
@@ -729,16 +1236,91 @@ Generated on: 04-Nov-2026 15:02:35
   - [From] dual_module/From27
       * Settings & States:
           GotoTag = i_0_2
-  - [From] dual_module/From28
-      * Settings & States:
-          GotoTag = V_0_1
   - [From] dual_module/From3
       * Settings & States:
           GotoTag = i_0_1
+  - [From] dual_module/From30
+      * Settings & States:
+          GotoTag = V_dc_2
+  - [From] dual_module/From31
+      * Settings & States:
+          GotoTag = V_dc_2
+  - [From] dual_module/From32
+      * Settings & States:
+          GotoTag = V_0_2
+  - [From] dual_module/From33
+      * Settings & States:
+          GotoTag = i_0_2
+  - [From] dual_module/From34
+      * Settings & States:
+          GotoTag = V_0_2
+  - [From] dual_module/From35
+      * Settings & States:
+          GotoTag = i_0_2
+  - [From] dual_module/From36
+      * Settings & States:
+          GotoTag = V_0_1
+  - [From] dual_module/From37
+      * Settings & States:
+          GotoTag = I_out
+  - [From] dual_module/From39
+      * Settings & States:
+          GotoTag = PI_clock
   - [From] dual_module/From4
       * Settings & States:
           GotoTag = T2
+  - [From] dual_module/From40
+      * Settings & States:
+          GotoTag = V_0_1
+  - [From] dual_module/From41
+      * Settings & States:
+          GotoTag = V_out
+  - [From] dual_module/From42
+      * Settings & States:
+          GotoTag = i_0_1
+  - [From] dual_module/From43
+      * Settings & States:
+          GotoTag = V_dc_1
+  - [From] dual_module/From44
+      * Settings & States:
+          GotoTag = V_dc_1
+  - [From] dual_module/From45
+      * Settings & States:
+          GotoTag = V_0_1
+  - [From] dual_module/From46
+      * Settings & States:
+          GotoTag = i_0_1
+  - [From] dual_module/From47
+      * Settings & States:
+          GotoTag = V_0_1
+  - [From] dual_module/From48
+      * Settings & States:
+          GotoTag = i_0_1
+  - [From] dual_module/From49
+      * Settings & States:
+          GotoTag = V_0_1
   - [From] dual_module/From5
+      * Settings & States:
+          GotoTag = V_out
+  - [From] dual_module/From50
+      * Settings & States:
+          GotoTag = I_out
+  - [From] dual_module/From51
+      * Settings & States:
+          GotoTag = PI_clock
+  - [From] dual_module/From52
+      * Settings & States:
+          GotoTag = V_out
+  - [From] dual_module/From53
+      * Settings & States:
+          GotoTag = I_out
+  - [From] dual_module/From54
+      * Settings & States:
+          GotoTag = V_0_1
+  - [From] dual_module/From55
+      * Settings & States:
+          GotoTag = V_out
+  - [From] dual_module/From56
       * Settings & States:
           GotoTag = V_out
   - [From] dual_module/From6
@@ -749,7 +1331,7 @@ Generated on: 04-Nov-2026 15:02:35
           GotoTag = i_0_2
   - [From] dual_module/From8
       * Settings & States:
-          GotoTag = PI_clock
+          GotoTag = bat_1_PI_controll
   - [From] dual_module/From9
       * Settings & States:
           GotoTag = SW_clock
@@ -805,6 +1387,34 @@ Generated on: 04-Nov-2026 15:02:35
       * Settings & States:
           GotoTag = D2
           TagVisibility = local
+  - [Goto] dual_module/Goto11
+      * Settings & States:
+          GotoTag = V_dc_2
+          TagVisibility = local
+  - [Goto] dual_module/Goto12
+      * Settings & States:
+          GotoTag = I_out
+          TagVisibility = local
+  - [Goto] dual_module/Goto13
+      * Settings & States:
+          GotoTag = V_dc_1
+          TagVisibility = local
+  - [Goto] dual_module/Goto14
+      * Settings & States:
+          GotoTag = bat_2_PI_controll
+          TagVisibility = local
+  - [Goto] dual_module/Goto15
+      * Settings & States:
+          GotoTag = bat_1_PI_controll
+          TagVisibility = local
+  - [Goto] dual_module/Goto16
+      * Settings & States:
+          GotoTag = bat_1_diagnostics
+          TagVisibility = local
+  - [Goto] dual_module/Goto17
+      * Settings & States:
+          GotoTag = bat_2_diagnostics
+          TagVisibility = local
   - [Goto] dual_module/Goto2
       * Settings & States:
           GotoTag = V_0_1
@@ -837,6 +1447,16 @@ Generated on: 04-Nov-2026 15:02:35
       * Settings & States:
           GotoTag = D1
           TagVisibility = local
+  - [SubSystem] dual_module/I_out
+      * Settings & States:
+          PhysicalDomain = network_engine_domain
+          SubClassName = ps_output
+          LeftPortType = input
+          RightPortType = output
+          PseudoPeriodic = off
+          VectorFormat = inherit
+          Unit = inherit
+          AffineConversion = off
   - [SimscapeBlock] dual_module/Inductor (Component: ee.passive.inductor)
       * Settings & States:
           l = L H
@@ -876,20 +1496,6 @@ Generated on: 04-Nov-2026 15:02:35
           OutDataTypeStr = boolean
           ZeroCross = on
           SampleTime = -1
-  - [RelationalOperator] dual_module/LessThanOrEqual2
-      * Settings & States:
-          Operator = >=
-          InputSameDT = off
-          OutDataTypeStr = boolean
-          ZeroCross = on
-          SampleTime = -1
-  - [RelationalOperator] dual_module/LessThanOrEqual3
-      * Settings & States:
-          Operator = >=
-          InputSameDT = off
-          OutDataTypeStr = boolean
-          ZeroCross = on
-          SampleTime = -1
   - [RelationalOperator] dual_module/LessThanOrEqual4
       * Settings & States:
           Operator = <=
@@ -904,26 +1510,41 @@ Generated on: 04-Nov-2026 15:02:35
           OutDataTypeStr = boolean
           ZeroCross = on
           SampleTime = -1
-  - [RelationalOperator] dual_module/LessThanOrEqual6
+  - [RelationalOperator] dual_module/LessThanOrEqual7
       * Settings & States:
           Operator = >=
           InputSameDT = off
           OutDataTypeStr = boolean
           ZeroCross = on
           SampleTime = -1
+  - [SubSystem] dual_module/MATLAB Function
+      * Settings & States:
+          TreatAsAtomicUnit = on
+  - [SubSystem] dual_module/MATLAB Function1
+      * Settings & States:
+          TreatAsAtomicUnit = on
+  - [Mux] dual_module/Mux
+      * Settings & States:
+          Inputs = 2
   - [Mux] dual_module/Mux1
-      * Settings & States:
-          Inputs = 6
-  - [Mux] dual_module/Mux2
-      * Settings & States:
-          Inputs = 6
-  - [Mux] dual_module/Mux3
       * Settings & States:
           Inputs = 6
   - [Mux] dual_module/Mux4
       * Settings & States:
           Inputs = 6
   - [Mux] dual_module/Mux5
+      * Settings & States:
+          Inputs = 9
+  - [Mux] dual_module/Mux6
+      * Settings & States:
+          Inputs = 9
+  - [Mux] dual_module/Mux7
+      * Settings & States:
+          Inputs = 9
+  - [Mux] dual_module/Mux8
+      * Settings & States:
+          Inputs = 2
+  - [Mux] dual_module/Mux9
       * Settings & States:
           Inputs = 9
   - [SimscapeBlock] dual_module/N-Channel MOSFET (Component: ee.semiconductors.n_mosfet)
@@ -1262,6 +1883,26 @@ Generated on: 04-Nov-2026 15:02:35
           rep_seq_y = [0 1 0]
   - [Scope] dual_module/Scope1
       * Settings & States:
+          NumInputPorts = 2
+          LayoutDimensionsString = [2 1]
+          SampleTime = -1
+          TimeSpan = Auto
+          Title = %<SignalLabel>
+          ShowLegend = on
+          ShowGrid = on
+          PlotAsMagnitudePhase = off
+          ActiveDisplayYMinimum = -22.3928
+          ActiveDisplayYMaximum = 26.1463
+          YLabel = 
+          DataLoggingLimitDataPoints = off
+          DataLoggingMaxPoints = 5000
+          DataLoggingDecimateData = off
+          DataLoggingDecimation = 2
+          DataLogging = off
+          DataLoggingVariableName = ScopeData1
+          DataLoggingSaveFormat = Dataset
+  - [Scope] dual_module/Scope10
+      * Settings & States:
           NumInputPorts = 1
           LayoutDimensionsString = [1 1]
           SampleTime = -1
@@ -1270,15 +1911,15 @@ Generated on: 04-Nov-2026 15:02:35
           ShowLegend = on
           ShowGrid = on
           PlotAsMagnitudePhase = off
-          ActiveDisplayYMinimum = -22.5146
-          ActiveDisplayYMaximum = 46.9461
+          ActiveDisplayYMinimum = -2.2274
+          ActiveDisplayYMaximum = 23.5549
           YLabel = 
           DataLoggingLimitDataPoints = off
           DataLoggingMaxPoints = 5000
           DataLoggingDecimateData = off
           DataLoggingDecimation = 2
           DataLogging = off
-          DataLoggingVariableName = ScopeData1
+          DataLoggingVariableName = ScopeData4
           DataLoggingSaveFormat = Dataset
   - [Scope] dual_module/Scope11
       * Settings & States:
@@ -1342,16 +1983,16 @@ Generated on: 04-Nov-2026 15:02:35
           DataLoggingSaveFormat = Dataset
   - [Scope] dual_module/Scope3
       * Settings & States:
-          NumInputPorts = 1
-          LayoutDimensionsString = [1 1]
+          NumInputPorts = 2
+          LayoutDimensionsString = [2 1]
           SampleTime = -1
           TimeSpan = Auto
           Title = %<SignalLabel>
           ShowLegend = on
           ShowGrid = on
           PlotAsMagnitudePhase = off
-          ActiveDisplayYMinimum = -5.0206
-          ActiveDisplayYMaximum = 22.7801
+          ActiveDisplayYMinimum = -2.2274
+          ActiveDisplayYMaximum = 23.5549
           YLabel = 
           DataLoggingLimitDataPoints = off
           DataLoggingMaxPoints = 5000
@@ -1370,8 +2011,8 @@ Generated on: 04-Nov-2026 15:02:35
           ShowLegend = on
           ShowGrid = on
           PlotAsMagnitudePhase = off
-          ActiveDisplayYMinimum = -5.375
-          ActiveDisplayYMaximum = 28.375
+          ActiveDisplayYMinimum = -10.4647
+          ActiveDisplayYMaximum = 24.4185
           YLabel = 
           DataLoggingLimitDataPoints = off
           DataLoggingMaxPoints = 5000
@@ -1379,6 +2020,46 @@ Generated on: 04-Nov-2026 15:02:35
           DataLoggingDecimation = 2
           DataLogging = off
           DataLoggingVariableName = ScopeData1
+          DataLoggingSaveFormat = Dataset
+  - [Scope] dual_module/Scope5
+      * Settings & States:
+          NumInputPorts = 1
+          LayoutDimensionsString = [1 1]
+          SampleTime = -1
+          TimeSpan = Auto
+          Title = %<SignalLabel>
+          ShowLegend = on
+          ShowGrid = on
+          PlotAsMagnitudePhase = off
+          ActiveDisplayYMinimum = -6.8989
+          ActiveDisplayYMaximum = 20.3234
+          YLabel = 
+          DataLoggingLimitDataPoints = off
+          DataLoggingMaxPoints = 5000
+          DataLoggingDecimateData = off
+          DataLoggingDecimation = 2
+          DataLogging = off
+          DataLoggingVariableName = ScopeData1
+          DataLoggingSaveFormat = Dataset
+  - [Scope] dual_module/Scope6
+      * Settings & States:
+          NumInputPorts = 1
+          LayoutDimensionsString = [1 1]
+          SampleTime = -1
+          TimeSpan = Auto
+          Title = %<SignalLabel>
+          ShowLegend = on
+          ShowGrid = on
+          PlotAsMagnitudePhase = off
+          ActiveDisplayYMinimum = -19.5564
+          ActiveDisplayYMaximum = 21.6122
+          YLabel = 
+          DataLoggingLimitDataPoints = off
+          DataLoggingMaxPoints = 5000
+          DataLoggingDecimateData = off
+          DataLoggingDecimation = 2
+          DataLogging = off
+          DataLoggingVariableName = ScopeData2
           DataLoggingSaveFormat = Dataset
   - [Scope] dual_module/Scope7
       * Settings & States:
@@ -1400,6 +2081,26 @@ Generated on: 04-Nov-2026 15:02:35
           DataLogging = off
           DataLoggingVariableName = ScopeData7
           DataLoggingSaveFormat = Dataset
+  - [Scope] dual_module/Scope8
+      * Settings & States:
+          NumInputPorts = 2
+          LayoutDimensionsString = [2 1]
+          SampleTime = -1
+          TimeSpan = Auto
+          Title = %<SignalLabel>
+          ShowLegend = on
+          ShowGrid = on
+          PlotAsMagnitudePhase = off
+          ActiveDisplayYMinimum = -2.1299
+          ActiveDisplayYMaximum = 14.0262
+          YLabel = 
+          DataLoggingLimitDataPoints = off
+          DataLoggingMaxPoints = 5000
+          DataLoggingDecimateData = off
+          DataLoggingDecimation = 2
+          DataLogging = off
+          DataLoggingVariableName = ScopeData3
+          DataLoggingSaveFormat = Dataset
   - [Scope] dual_module/Scope9
       * Settings & States:
           NumInputPorts = 2
@@ -1410,8 +2111,8 @@ Generated on: 04-Nov-2026 15:02:35
           ShowLegend = on
           ShowGrid = on
           PlotAsMagnitudePhase = off
-          ActiveDisplayYMinimum = -21.1028
-          ActiveDisplayYMaximum = 26.0278
+          ActiveDisplayYMinimum = -9.7132
+          ActiveDisplayYMaximum = 24.7402
           YLabel = 
           DataLoggingLimitDataPoints = off
           DataLoggingMaxPoints = 5000
@@ -1526,21 +2227,6 @@ Generated on: 04-Nov-2026 15:02:35
           MultibodyUseLocalSolver = off
           MultibodyLocalSolverChoice = ODE1
           MultibodyLocalSolverSampleTime = 0.001
-  - [Sum] dual_module/Subtract
-      * Settings & States:
-          Inputs = +-
-          CollapseMode = All dimensions
-          CollapseDim = 1
-          InputSameDT = off
-          SampleTime = -1
-  - [Switch] dual_module/Switch
-      * Settings & States:
-          Criteria = u2 > Threshold
-          Threshold = 0
-          InputSameDT = off
-          ZeroCross = on
-          SampleTime = -1
-          AllowDiffInputSizes = off
   - [Switch] dual_module/Switch1
       * Settings & States:
           Criteria = u2 > Threshold
@@ -1550,6 +2236,14 @@ Generated on: 04-Nov-2026 15:02:35
           SampleTime = -1
           AllowDiffInputSizes = off
   - [Switch] dual_module/Switch2
+      * Settings & States:
+          Criteria = u2 > Threshold
+          Threshold = 0
+          InputSameDT = off
+          ZeroCross = on
+          SampleTime = -1
+          AllowDiffInputSizes = off
+  - [Switch] dual_module/Switch3
       * Settings & States:
           Criteria = u2 > Threshold
           Threshold = 0
@@ -1572,18 +2266,10 @@ Generated on: 04-Nov-2026 15:02:35
           Threshold = 0.5
           i = 0 A
           v = 0 V
-  - [Switch] dual_module/Switch6
-      * Settings & States:
-          Criteria = u2 > Threshold
-          Threshold = 0
-          InputSameDT = off
-          ZeroCross = on
-          SampleTime = -1
-          AllowDiffInputSizes = off
-  - [SubSystem] dual_module/Triggered Subsystem
+  - [SubSystem] dual_module/Triggered Subsystem2
       * Settings & States:
           TreatAsAtomicUnit = on
-    - [Inport] dual_module/Triggered Subsystem/mesured_i
+    - [Inport] dual_module/Triggered Subsystem2/mesured_i
         * Settings & States:
             Port = 1
             OutputFunctionCall = off
@@ -1601,7 +2287,7 @@ Generated on: 04-Nov-2026 15:02:35
             MessageQueueCapacity = 1
             MessageQueueType = LIFO
             MessageQueueOverwriting = on
-    - [Inport] dual_module/Triggered Subsystem/mesureed_V
+    - [Inport] dual_module/Triggered Subsystem2/mesureed_V
         * Settings & States:
             Port = 2
             OutputFunctionCall = off
@@ -1619,7 +2305,7 @@ Generated on: 04-Nov-2026 15:02:35
             MessageQueueCapacity = 1
             MessageQueueType = LIFO
             MessageQueueOverwriting = on
-    - [Inport] dual_module/Triggered Subsystem/set_V
+    - [Inport] dual_module/Triggered Subsystem2/set_V
         * Settings & States:
             Port = 3
             OutputFunctionCall = off
@@ -1637,7 +2323,7 @@ Generated on: 04-Nov-2026 15:02:35
             MessageQueueCapacity = 1
             MessageQueueType = LIFO
             MessageQueueOverwriting = on
-    - [Inport] dual_module/Triggered Subsystem/set_I
+    - [Inport] dual_module/Triggered Subsystem2/set_I
         * Settings & States:
             Port = 4
             OutputFunctionCall = off
@@ -1655,340 +2341,7 @@ Generated on: 04-Nov-2026 15:02:35
             MessageQueueCapacity = 1
             MessageQueueType = LIFO
             MessageQueueOverwriting = on
-    - [TriggerPort] dual_module/Triggered Subsystem/Trigger
-        * Settings & States:
-            TriggerType = falling
-            TriggerTime = on message available
-            ScheduleAsAperiodic = on
-            IsSimulinkFunction = off
-            AsynchronousFunction = off
-            FunctionName = 
-            FunctionVisibility = global
-            ScopeName = 
-            Variant = off
-            VariantControl = (inherit)
-            GeneratePreprocessorConditionals = off
-            StatesWhenEnabling = held
-            PropagateVarSize = During execution
-            ShowOutputPort = off
-            OutputDataType = auto
-            SampleTime = 1
-            ZeroCross = on
-            InitialTriggerSignalState [State/IC] = compatibility (no trigger on first evaluation)
-            TriggerSignalSampleTime = -1
-            FunctionPrototype = f()
-    - [Constant] dual_module/Triggered Subsystem/Constant1
-        * Settings & States:
-            Value = 1
-            SampleTime = inf
-    - [Constant] dual_module/Triggered Subsystem/Constant11
-        * Settings & States:
-            Value = 0.9
-            SampleTime = inf
-    - [Constant] dual_module/Triggered Subsystem/Constant12
-        * Settings & States:
-            Value = 0.1
-            SampleTime = inf
-    - [Constant] dual_module/Triggered Subsystem/Constant3
-        * Settings & States:
-            Value = 0.002
-            SampleTime = inf
-    - [Constant] dual_module/Triggered Subsystem/Constant4
-        * Settings & States:
-            Value = 0.1
-            SampleTime = inf
-    - [Constant] dual_module/Triggered Subsystem/Constant5
-        * Settings & States:
-            Value = 0.05
-            SampleTime = inf
-    - [Product] dual_module/Triggered Subsystem/Divide2
-        * Settings & States:
-            Inputs = **
-            Multiplication = Element-wise(.*)
-            CollapseMode = All dimensions
-            CollapseDim = 1
-            InputSameDT = off
-            SampleTime = -1
-    - [Product] dual_module/Triggered Subsystem/Divide3
-        * Settings & States:
-            Inputs = **
-            Multiplication = Element-wise(.*)
-            CollapseMode = All dimensions
-            CollapseDim = 1
-            InputSameDT = off
-            SampleTime = -1
-    - [RelationalOperator] dual_module/Triggered Subsystem/LessThanOrEqual
-        * Settings & States:
-            Operator = >=
-            InputSameDT = off
-            OutDataTypeStr = boolean
-            ZeroCross = on
-            SampleTime = -1
-    - [RelationalOperator] dual_module/Triggered Subsystem/LessThanOrEqual6
-        * Settings & States:
-            Operator = <=
-            InputSameDT = off
-            OutDataTypeStr = boolean
-            ZeroCross = on
-            SampleTime = -1
-    - [SubSystem] dual_module/Triggered Subsystem/PID Controller
-        * Settings & States:
-            Controller = PI
-            Form = Parallel
-            TimeDomain = Discrete-time
-            UseExternalTs = off
-            SampleTime = -1
-            IntegratorMethod = Forward Euler
-            FilterMethod = Forward Euler
-            ControllerParametersSource = external
-            P = 0.6
-            I = 50
-            UseKiTs = on
-            D = 0
-            UseExternalDerivativeSource = off
-            N = 100
-            UseFilter = on
-            TunerSelectOption = Transfer Function Based (PID Tuner App)
-            ZeroCross = on
-            InitialConditionSource = internal
-            InitialConditionForIntegrator [State/IC] = 0
-            InitialConditionForFilter [State/IC] = 0
-            DifferentiatorICPrevScaledInput = 0
-            ExternalReset = none
-            IgnoreLimit = off
-            TrackingMode = off
-            Kt = 1
-            LimitOutput = on
-            SatLimitsSource = internal
-            UpperSaturationLimit = 40
-            LowerSaturationLimit = 0
-            LinearizeAsGain = on
-            AntiWindupMode = none
-            Kb = 1
-            LimitIntegrator = off
-            UpperIntegratorSaturationLimit = inf
-            LowerIntegratorSaturationLimit = -inf
-            IntegratorStateMustResolveToSignalObject = off
-            FilterStateMustResolveToSignalObject = off
-            InitialConditionSetting [State/IC] = Auto
-    - [SubSystem] dual_module/Triggered Subsystem/PID Controller1
-        * Settings & States:
-            Controller = PI
-            Form = Parallel
-            TimeDomain = Discrete-time
-            UseExternalTs = off
-            SampleTime = -1
-            IntegratorMethod = Forward Euler
-            FilterMethod = Forward Euler
-            ControllerParametersSource = external
-            P = 0.6
-            I = 0.1
-            UseKiTs = on
-            D = 0
-            UseExternalDerivativeSource = off
-            N = 100
-            UseFilter = on
-            TunerSelectOption = Transfer Function Based (PID Tuner App)
-            ZeroCross = on
-            InitialConditionSource = internal
-            InitialConditionForIntegrator [State/IC] = 0
-            InitialConditionForFilter [State/IC] = 0
-            DifferentiatorICPrevScaledInput = 0
-            ExternalReset = none
-            IgnoreLimit = off
-            TrackingMode = off
-            Kt = 1
-            LimitOutput = on
-            SatLimitsSource = internal
-            UpperSaturationLimit = 23
-            LowerSaturationLimit = 0
-            LinearizeAsGain = on
-            AntiWindupMode = none
-            Kb = 1
-            LimitIntegrator = off
-            UpperIntegratorSaturationLimit = inf
-            LowerIntegratorSaturationLimit = -inf
-            IntegratorStateMustResolveToSignalObject = off
-            FilterStateMustResolveToSignalObject = off
-            InitialConditionSetting [State/IC] = Auto
-    - [SubSystem] dual_module/Triggered Subsystem/S-R Flip-Flop
-        * Settings & States:
-            initial_condition = 0
-    - [Sum] dual_module/Triggered Subsystem/Sum
-        * Settings & States:
-            Inputs = |+-
-            CollapseMode = All dimensions
-            CollapseDim = 1
-            InputSameDT = off
-            SampleTime = -1
-    - [Sum] dual_module/Triggered Subsystem/Sum1
-        * Settings & States:
-            Inputs = |+-
-            CollapseMode = All dimensions
-            CollapseDim = 1
-            InputSameDT = off
-            SampleTime = -1
-    - [Switch] dual_module/Triggered Subsystem/Switch6
-        * Settings & States:
-            Criteria = u2 > Threshold
-            Threshold = 0
-            InputSameDT = off
-            ZeroCross = on
-            SampleTime = -1
-            AllowDiffInputSizes = off
-    - [UnitDelay] dual_module/Triggered Subsystem/Unit Delay
-        * Settings & States:
-            InitialCondition [State/IC] = 0
-            InputProcessing = Elements as channels (sample based)
-            SampleTime = -1
-            StateName = 
-            StateMustResolveToSignalObject = off
-            StateStorageClass = Auto
-            CodeGenStateStorageTypeQualifier = 
-    - [Outport] dual_module/Triggered Subsystem/out
-        * Settings & States:
-            Port = 1
-            OutputFunctionCall = off
-            BusOutputAsStruct = off
-            BusVirtuality = inherit
-            DataMode = inherit
-            Unit = inherit
-            VarSizeSig = Inherit
-            SampleTime = -1
-            SignalType = auto
-            EnsureOutportIsVirtual = off
-            OutputWhenDisabled = held
-            MustResolveToSignalObject = off
-            OutputWhenUnConnected = off
-            OutputWhenUnconnectedValue = 0
-            VectorParamsAs1DForOutWhenUnconnected = on
-    - [Outport] dual_module/Triggered Subsystem/set_i_internal
-        * Settings & States:
-            Port = 2
-            OutputFunctionCall = off
-            BusOutputAsStruct = off
-            BusVirtuality = inherit
-            DataMode = inherit
-            Unit = inherit
-            VarSizeSig = Inherit
-            SampleTime = -1
-            SignalType = auto
-            EnsureOutportIsVirtual = off
-            OutputWhenDisabled = held
-            MustResolveToSignalObject = off
-            OutputWhenUnConnected = off
-            OutputWhenUnconnectedValue = 0
-            VectorParamsAs1DForOutWhenUnconnected = on
-    - [Outport] dual_module/Triggered Subsystem/pi_set_i
-        * Settings & States:
-            Port = 3
-            OutputFunctionCall = off
-            BusOutputAsStruct = off
-            BusVirtuality = inherit
-            DataMode = inherit
-            Unit = inherit
-            VarSizeSig = Inherit
-            SampleTime = -1
-            SignalType = auto
-            EnsureOutportIsVirtual = off
-            OutputWhenDisabled = held
-            MustResolveToSignalObject = off
-            OutputWhenUnConnected = off
-            OutputWhenUnconnectedValue = 0
-            VectorParamsAs1DForOutWhenUnconnected = on
-    - [Outport] dual_module/Triggered Subsystem/i_error
-        * Settings & States:
-            Port = 4
-            OutputFunctionCall = off
-            BusOutputAsStruct = off
-            BusVirtuality = inherit
-            DataMode = inherit
-            Unit = inherit
-            VarSizeSig = Inherit
-            SampleTime = -1
-            SignalType = auto
-            EnsureOutportIsVirtual = off
-            OutputWhenDisabled = held
-            MustResolveToSignalObject = off
-            OutputWhenUnConnected = off
-            OutputWhenUnconnectedValue = 0
-            VectorParamsAs1DForOutWhenUnconnected = on
-  - [SubSystem] dual_module/Triggered Subsystem1
-      * Settings & States:
-          TreatAsAtomicUnit = on
-    - [Inport] dual_module/Triggered Subsystem1/mesured_i
-        * Settings & States:
-            Port = 1
-            OutputFunctionCall = off
-            BusOutputAsStruct = off
-            BusVirtuality = inherit
-            Unit = inherit
-            VarSizeSig = Inherit
-            SampleTime = -1
-            SignalType = auto
-            LatchByDelayingOutsideSignal = on
-            LatchInputForFeedbackSignals = off
-            InputConnect = 
-            DataMode = inherit
-            MessageQueueUseDefaultAttributes = on
-            MessageQueueCapacity = 1
-            MessageQueueType = LIFO
-            MessageQueueOverwriting = on
-    - [Inport] dual_module/Triggered Subsystem1/mesureed_V
-        * Settings & States:
-            Port = 2
-            OutputFunctionCall = off
-            BusOutputAsStruct = off
-            BusVirtuality = inherit
-            Unit = inherit
-            VarSizeSig = Inherit
-            SampleTime = -1
-            SignalType = auto
-            LatchByDelayingOutsideSignal = on
-            LatchInputForFeedbackSignals = off
-            InputConnect = 
-            DataMode = inherit
-            MessageQueueUseDefaultAttributes = on
-            MessageQueueCapacity = 1
-            MessageQueueType = LIFO
-            MessageQueueOverwriting = on
-    - [Inport] dual_module/Triggered Subsystem1/set_V
-        * Settings & States:
-            Port = 3
-            OutputFunctionCall = off
-            BusOutputAsStruct = off
-            BusVirtuality = inherit
-            Unit = inherit
-            VarSizeSig = Inherit
-            SampleTime = -1
-            SignalType = auto
-            LatchByDelayingOutsideSignal = off
-            LatchInputForFeedbackSignals = off
-            InputConnect = 
-            DataMode = inherit
-            MessageQueueUseDefaultAttributes = on
-            MessageQueueCapacity = 1
-            MessageQueueType = LIFO
-            MessageQueueOverwriting = on
-    - [Inport] dual_module/Triggered Subsystem1/set_I
-        * Settings & States:
-            Port = 4
-            OutputFunctionCall = off
-            BusOutputAsStruct = off
-            BusVirtuality = inherit
-            Unit = inherit
-            VarSizeSig = Inherit
-            SampleTime = -1
-            SignalType = auto
-            LatchByDelayingOutsideSignal = off
-            LatchInputForFeedbackSignals = off
-            InputConnect = 
-            DataMode = inherit
-            MessageQueueUseDefaultAttributes = on
-            MessageQueueCapacity = 1
-            MessageQueueType = LIFO
-            MessageQueueOverwriting = on
-    - [Inport] dual_module/Triggered Subsystem1/get_V_dc
+    - [Inport] dual_module/Triggered Subsystem2/get_V_dc
         * Settings & States:
             Port = 5
             OutputFunctionCall = off
@@ -2006,7 +2359,133 @@ Generated on: 04-Nov-2026 15:02:35
             MessageQueueCapacity = 1
             MessageQueueType = LIFO
             MessageQueueOverwriting = on
-    - [TriggerPort] dual_module/Triggered Subsystem1/Trigger
+    - [Inport] dual_module/Triggered Subsystem2/I_reset
+        * Settings & States:
+            Port = 6
+            OutputFunctionCall = off
+            BusOutputAsStruct = off
+            BusVirtuality = inherit
+            Unit = inherit
+            VarSizeSig = Inherit
+            SampleTime = -1
+            SignalType = auto
+            LatchByDelayingOutsideSignal = off
+            LatchInputForFeedbackSignals = off
+            InputConnect = 
+            DataMode = inherit
+            MessageQueueUseDefaultAttributes = on
+            MessageQueueCapacity = 1
+            MessageQueueType = LIFO
+            MessageQueueOverwriting = on
+    - [Inport] dual_module/Triggered Subsystem2/V_reset
+        * Settings & States:
+            Port = 7
+            OutputFunctionCall = off
+            BusOutputAsStruct = off
+            BusVirtuality = inherit
+            Unit = inherit
+            VarSizeSig = Inherit
+            SampleTime = -1
+            SignalType = auto
+            LatchByDelayingOutsideSignal = off
+            LatchInputForFeedbackSignals = off
+            InputConnect = 
+            DataMode = inherit
+            MessageQueueUseDefaultAttributes = on
+            MessageQueueCapacity = 1
+            MessageQueueType = LIFO
+            MessageQueueOverwriting = on
+    - [Inport] dual_module/Triggered Subsystem2/out_en
+        * Settings & States:
+            Port = 8
+            OutputFunctionCall = off
+            BusOutputAsStruct = off
+            BusVirtuality = inherit
+            Unit = inherit
+            VarSizeSig = Inherit
+            SampleTime = -1
+            SignalType = auto
+            LatchByDelayingOutsideSignal = off
+            LatchInputForFeedbackSignals = off
+            InputConnect = 
+            DataMode = inherit
+            MessageQueueUseDefaultAttributes = on
+            MessageQueueCapacity = 1
+            MessageQueueType = LIFO
+            MessageQueueOverwriting = on
+    - [Inport] dual_module/Triggered Subsystem2/cur_PI_Kp
+        * Settings & States:
+            Port = 9
+            OutputFunctionCall = off
+            BusOutputAsStruct = off
+            BusVirtuality = inherit
+            Unit = inherit
+            VarSizeSig = Inherit
+            SampleTime = -1
+            SignalType = auto
+            LatchByDelayingOutsideSignal = off
+            LatchInputForFeedbackSignals = off
+            InputConnect = 
+            DataMode = inherit
+            MessageQueueUseDefaultAttributes = on
+            MessageQueueCapacity = 1
+            MessageQueueType = LIFO
+            MessageQueueOverwriting = on
+    - [Inport] dual_module/Triggered Subsystem2/cur_PI_TI
+        * Settings & States:
+            Port = 10
+            OutputFunctionCall = off
+            BusOutputAsStruct = off
+            BusVirtuality = inherit
+            Unit = inherit
+            VarSizeSig = Inherit
+            SampleTime = -1
+            SignalType = auto
+            LatchByDelayingOutsideSignal = off
+            LatchInputForFeedbackSignals = off
+            InputConnect = 
+            DataMode = inherit
+            MessageQueueUseDefaultAttributes = on
+            MessageQueueCapacity = 1
+            MessageQueueType = LIFO
+            MessageQueueOverwriting = on
+    - [Inport] dual_module/Triggered Subsystem2/V_I_controll_select
+        * Settings & States:
+            Port = 11
+            OutputFunctionCall = off
+            BusOutputAsStruct = off
+            BusVirtuality = inherit
+            Unit = inherit
+            VarSizeSig = Inherit
+            SampleTime = -1
+            SignalType = auto
+            LatchByDelayingOutsideSignal = off
+            LatchInputForFeedbackSignals = off
+            InputConnect = 
+            DataMode = inherit
+            MessageQueueUseDefaultAttributes = on
+            MessageQueueCapacity = 1
+            MessageQueueType = LIFO
+            MessageQueueOverwriting = on
+    - [Inport] dual_module/Triggered Subsystem2/D_overrite
+        * Settings & States:
+            Port = 12
+            OutputFunctionCall = off
+            BusOutputAsStruct = off
+            BusVirtuality = inherit
+            Unit = inherit
+            VarSizeSig = Inherit
+            SampleTime = -1
+            SignalType = auto
+            LatchByDelayingOutsideSignal = off
+            LatchInputForFeedbackSignals = off
+            InputConnect = 
+            DataMode = inherit
+            MessageQueueUseDefaultAttributes = on
+            MessageQueueCapacity = 1
+            MessageQueueType = LIFO
+            MessageQueueOverwriting = on
+    - [TriggerPort] dual_module/Triggered Subsystem2/Trigger
         * Settings & States:
             TriggerType = falling
             TriggerTime = on message available
@@ -2028,121 +2507,31 @@ Generated on: 04-Nov-2026 15:02:35
             InitialTriggerSignalState [State/IC] = compatibility (no trigger on first evaluation)
             TriggerSignalSampleTime = -1
             FunctionPrototype = f()
-    - [Constant] dual_module/Triggered Subsystem1/Constant1
+    - [Constant] dual_module/Triggered Subsystem2/Constant1
         * Settings & States:
             Value = 1
             SampleTime = inf
-    - [Constant] dual_module/Triggered Subsystem1/Constant11
-        * Settings & States:
-            Value = switch_chargecurrent_2_voltage_controll_level
-            SampleTime = inf
-    - [Constant] dual_module/Triggered Subsystem1/Constant12
-        * Settings & States:
-            Value = 0.1
-            SampleTime = inf
-    - [Constant] dual_module/Triggered Subsystem1/Constant2
+    - [Constant] dual_module/Triggered Subsystem2/Constant2
         * Settings & States:
             Value = 0
             SampleTime = inf
-    - [Constant] dual_module/Triggered Subsystem1/Constant3
+    - [Constant] dual_module/Triggered Subsystem2/Constant3
         * Settings & States:
             Value = 0.002
             SampleTime = inf
-    - [Constant] dual_module/Triggered Subsystem1/Constant4
+    - [Constant] dual_module/Triggered Subsystem2/Constant4
         * Settings & States:
             Value = 0.1
             SampleTime = inf
-    - [Constant] dual_module/Triggered Subsystem1/Constant5
+    - [Constant] dual_module/Triggered Subsystem2/Constant5
         * Settings & States:
             Value = 0.05
             SampleTime = inf
-    - [DataStoreMemory] dual_module/Triggered Subsystem1/Data Store Memory
+    - [Constant] dual_module/Triggered Subsystem2/Constant6
         * Settings & States:
-            DataStoreName = bat_1_state
-            ReadBeforeWriteMsg = none
-            WriteAfterWriteMsg = warning
-            WriteAfterReadMsg = none
-            InitialValue = bat_1.PIstate
-            ShareAcrossModelInstances = off
-            StateMustResolveToSignalObject = off
-            DataStoreReference = off
-            StateStorageClass = Auto
-            RTWStateStorageTypeQualifier = 
-            ShowAdditionalParam = off
-            SignalType = auto
-            Dimensions = -1
-            DataLogging = off
-            DataLoggingLimitDataPoints = off
-            DataLoggingMaxPoints = 5000
-            DataLoggingDecimateData = off
-            DataLoggingDecimation = 2
-            DataLoggingNameMode = SignalName
-            DataLoggingName = 
-    - [DataStoreMemory] dual_module/Triggered Subsystem1/Data Store Memory1
-        * Settings & States:
-            DataStoreName = bat_1_priority
-            ReadBeforeWriteMsg = none
-            WriteAfterWriteMsg = warning
-            WriteAfterReadMsg = none
-            InitialValue = bat_1.priority
-            ShareAcrossModelInstances = off
-            StateMustResolveToSignalObject = off
-            DataStoreReference = off
-            StateStorageClass = Auto
-            RTWStateStorageTypeQualifier = 
-            ShowAdditionalParam = off
-            SignalType = auto
-            Dimensions = -1
-            DataLogging = off
-            DataLoggingLimitDataPoints = off
-            DataLoggingMaxPoints = 5000
-            DataLoggingDecimateData = off
-            DataLoggingDecimation = 2
-            DataLoggingNameMode = SignalName
-            DataLoggingName = 
-    - [DataStoreRead] dual_module/Triggered Subsystem1/Data Store Read
-        * Settings & States:
-            DataStoreName = bat_1_state
-            SampleTime = -1
-            DataStoreElements = 
-            EnableIndexing = off
-            NumberOfDimensions = 1
-            IndexMode = One-based
-            IndexOptionArray = Index vector (dialog)
-            IndexParamArray = 1
-            OutputSizeArray = 1
-            IndexOptions = Index vector (dialog)
-            Indices = 1
-            OutputSizes = 1
-    - [DataStoreRead] dual_module/Triggered Subsystem1/Data Store Read1
-        * Settings & States:
-            DataStoreName = bat_1_priority
-            SampleTime = -1
-            DataStoreElements = 
-            EnableIndexing = off
-            NumberOfDimensions = 1
-            IndexMode = One-based
-            IndexOptionArray = Index vector (dialog)
-            IndexParamArray = 1
-            OutputSizeArray = 1
-            IndexOptions = Index vector (dialog)
-            Indices = 1
-            OutputSizes = 1
-    - [DataStoreWrite] dual_module/Triggered Subsystem1/Data Store Write
-        * Settings & States:
-            DataStoreName = bat_1_state
-            SampleTime = -1
-            DataStoreElements = 
-            EnableIndexing = off
-            NumberOfDimensions = 1
-            IndexMode = One-based
-            IndexOptionArray = Index vector (dialog)
-            IndexParamArray = 1
-            OutputSizeArray = 1
-            IndexOptions = Index vector (dialog)
-            Indices = 1
-            OutputSizes = 1
-    - [Product] dual_module/Triggered Subsystem1/Divide1
+            Value = 1
+            SampleTime = inf
+    - [Product] dual_module/Triggered Subsystem2/Divide1
         * Settings & States:
             Inputs = */
             Multiplication = Element-wise(.*)
@@ -2150,40 +2539,7 @@ Generated on: 04-Nov-2026 15:02:35
             CollapseDim = 1
             InputSameDT = off
             SampleTime = -1
-    - [Product] dual_module/Triggered Subsystem1/Divide2
-        * Settings & States:
-            Inputs = **
-            Multiplication = Element-wise(.*)
-            CollapseMode = All dimensions
-            CollapseDim = 1
-            InputSameDT = off
-            SampleTime = -1
-    - [Product] dual_module/Triggered Subsystem1/Divide3
-        * Settings & States:
-            Inputs = **
-            Multiplication = Element-wise(.*)
-            CollapseMode = All dimensions
-            CollapseDim = 1
-            InputSameDT = off
-            SampleTime = -1
-    - [RelationalOperator] dual_module/Triggered Subsystem1/LessThanOrEqual
-        * Settings & States:
-            Operator = >=
-            InputSameDT = off
-            OutDataTypeStr = boolean
-            ZeroCross = on
-            SampleTime = -1
-    - [RelationalOperator] dual_module/Triggered Subsystem1/LessThanOrEqual6
-        * Settings & States:
-            Operator = <=
-            InputSameDT = off
-            OutDataTypeStr = boolean
-            ZeroCross = on
-            SampleTime = -1
-    - [SubSystem] dual_module/Triggered Subsystem1/MATLAB Function
-        * Settings & States:
-            TreatAsAtomicUnit = on
-    - [SubSystem] dual_module/Triggered Subsystem1/PID Controller
+    - [SubSystem] dual_module/Triggered Subsystem2/PID Controller
         * Settings & States:
             Controller = PI
             Form = Parallel
@@ -2206,7 +2562,7 @@ Generated on: 04-Nov-2026 15:02:35
             InitialConditionForIntegrator [State/IC] = 0
             InitialConditionForFilter [State/IC] = 0
             DifferentiatorICPrevScaledInput = 0
-            ExternalReset = none
+            ExternalReset = either
             IgnoreLimit = off
             TrackingMode = off
             Kt = 1
@@ -2223,7 +2579,7 @@ Generated on: 04-Nov-2026 15:02:35
             IntegratorStateMustResolveToSignalObject = off
             FilterStateMustResolveToSignalObject = off
             InitialConditionSetting [State/IC] = Auto
-    - [SubSystem] dual_module/Triggered Subsystem1/PID Controller1
+    - [SubSystem] dual_module/Triggered Subsystem2/PID Controller1
         * Settings & States:
             Controller = PI
             Form = Parallel
@@ -2246,7 +2602,7 @@ Generated on: 04-Nov-2026 15:02:35
             InitialConditionForIntegrator [State/IC] = 0
             InitialConditionForFilter [State/IC] = 0
             DifferentiatorICPrevScaledInput = 0
-            ExternalReset = falling
+            ExternalReset = either
             IgnoreLimit = off
             TrackingMode = off
             Kt = 1
@@ -2263,24 +2619,21 @@ Generated on: 04-Nov-2026 15:02:35
             IntegratorStateMustResolveToSignalObject = off
             FilterStateMustResolveToSignalObject = off
             InitialConditionSetting [State/IC] = Auto
-    - [SubSystem] dual_module/Triggered Subsystem1/S-R Flip-Flop
-        * Settings & States:
-            initial_condition = 0
-    - [Sum] dual_module/Triggered Subsystem1/Sum
+    - [Sum] dual_module/Triggered Subsystem2/Sum
         * Settings & States:
             Inputs = |+-
             CollapseMode = All dimensions
             CollapseDim = 1
             InputSameDT = off
             SampleTime = -1
-    - [Sum] dual_module/Triggered Subsystem1/Sum1
+    - [Sum] dual_module/Triggered Subsystem2/Sum1
         * Settings & States:
             Inputs = |+-
             CollapseMode = All dimensions
             CollapseDim = 1
             InputSameDT = off
             SampleTime = -1
-    - [Switch] dual_module/Triggered Subsystem1/Switch1
+    - [Switch] dual_module/Triggered Subsystem2/Switch1
         * Settings & States:
             Criteria = u2 > Threshold
             Threshold = 0
@@ -2288,7 +2641,7 @@ Generated on: 04-Nov-2026 15:02:35
             ZeroCross = on
             SampleTime = -1
             AllowDiffInputSizes = off
-    - [Switch] dual_module/Triggered Subsystem1/Switch2
+    - [Switch] dual_module/Triggered Subsystem2/Switch2
         * Settings & States:
             Criteria = u2 > Threshold
             Threshold = 0
@@ -2296,7 +2649,7 @@ Generated on: 04-Nov-2026 15:02:35
             ZeroCross = on
             SampleTime = -1
             AllowDiffInputSizes = off
-    - [Switch] dual_module/Triggered Subsystem1/Switch6
+    - [Switch] dual_module/Triggered Subsystem2/Switch6
         * Settings & States:
             Criteria = u2 > Threshold
             Threshold = 0
@@ -2304,16 +2657,7 @@ Generated on: 04-Nov-2026 15:02:35
             ZeroCross = on
             SampleTime = -1
             AllowDiffInputSizes = off
-    - [UnitDelay] dual_module/Triggered Subsystem1/Unit Delay
-        * Settings & States:
-            InitialCondition [State/IC] = 0
-            InputProcessing = Elements as channels (sample based)
-            SampleTime = -1
-            StateName = 
-            StateMustResolveToSignalObject = off
-            StateStorageClass = Auto
-            CodeGenStateStorageTypeQualifier = 
-    - [Outport] dual_module/Triggered Subsystem1/D_out
+    - [Outport] dual_module/Triggered Subsystem2/D_out
         * Settings & States:
             Port = 1
             OutputFunctionCall = off
@@ -2330,7 +2674,7 @@ Generated on: 04-Nov-2026 15:02:35
             OutputWhenUnConnected = off
             OutputWhenUnconnectedValue = 0
             VectorParamsAs1DForOutWhenUnconnected = on
-    - [Outport] dual_module/Triggered Subsystem1/set_i_internal
+    - [Outport] dual_module/Triggered Subsystem2/set_i_internal
         * Settings & States:
             Port = 2
             OutputFunctionCall = off
@@ -2347,7 +2691,7 @@ Generated on: 04-Nov-2026 15:02:35
             OutputWhenUnConnected = off
             OutputWhenUnconnectedValue = 0
             VectorParamsAs1DForOutWhenUnconnected = on
-    - [Outport] dual_module/Triggered Subsystem1/pi_set_i
+    - [Outport] dual_module/Triggered Subsystem2/pi_set_i
         * Settings & States:
             Port = 3
             OutputFunctionCall = off
@@ -2364,7 +2708,7 @@ Generated on: 04-Nov-2026 15:02:35
             OutputWhenUnConnected = off
             OutputWhenUnconnectedValue = 0
             VectorParamsAs1DForOutWhenUnconnected = on
-    - [Outport] dual_module/Triggered Subsystem1/i_error
+    - [Outport] dual_module/Triggered Subsystem2/i_error
         * Settings & States:
             Port = 4
             OutputFunctionCall = off
@@ -2381,7 +2725,483 @@ Generated on: 04-Nov-2026 15:02:35
             OutputWhenUnConnected = off
             OutputWhenUnconnectedValue = 0
             VectorParamsAs1DForOutWhenUnconnected = on
-    - [Outport] dual_module/Triggered Subsystem1/v_error
+    - [Outport] dual_module/Triggered Subsystem2/v_error
+        * Settings & States:
+            Port = 5
+            OutputFunctionCall = off
+            BusOutputAsStruct = off
+            BusVirtuality = inherit
+            DataMode = inherit
+            Unit = inherit
+            VarSizeSig = Inherit
+            SampleTime = -1
+            SignalType = auto
+            EnsureOutportIsVirtual = off
+            OutputWhenDisabled = held
+            MustResolveToSignalObject = off
+            OutputWhenUnConnected = off
+            OutputWhenUnconnectedValue = 0
+            VectorParamsAs1DForOutWhenUnconnected = on
+  - [SubSystem] dual_module/Triggered Subsystem3
+      * Settings & States:
+          TreatAsAtomicUnit = on
+    - [Inport] dual_module/Triggered Subsystem3/mesured_i
+        * Settings & States:
+            Port = 1
+            OutputFunctionCall = off
+            BusOutputAsStruct = off
+            BusVirtuality = inherit
+            Unit = inherit
+            VarSizeSig = Inherit
+            SampleTime = -1
+            SignalType = auto
+            LatchByDelayingOutsideSignal = on
+            LatchInputForFeedbackSignals = off
+            InputConnect = 
+            DataMode = inherit
+            MessageQueueUseDefaultAttributes = on
+            MessageQueueCapacity = 1
+            MessageQueueType = LIFO
+            MessageQueueOverwriting = on
+    - [Inport] dual_module/Triggered Subsystem3/mesureed_V
+        * Settings & States:
+            Port = 2
+            OutputFunctionCall = off
+            BusOutputAsStruct = off
+            BusVirtuality = inherit
+            Unit = inherit
+            VarSizeSig = Inherit
+            SampleTime = -1
+            SignalType = auto
+            LatchByDelayingOutsideSignal = on
+            LatchInputForFeedbackSignals = off
+            InputConnect = 
+            DataMode = inherit
+            MessageQueueUseDefaultAttributes = on
+            MessageQueueCapacity = 1
+            MessageQueueType = LIFO
+            MessageQueueOverwriting = on
+    - [Inport] dual_module/Triggered Subsystem3/set_V
+        * Settings & States:
+            Port = 3
+            OutputFunctionCall = off
+            BusOutputAsStruct = off
+            BusVirtuality = inherit
+            Unit = inherit
+            VarSizeSig = Inherit
+            SampleTime = -1
+            SignalType = auto
+            LatchByDelayingOutsideSignal = off
+            LatchInputForFeedbackSignals = off
+            InputConnect = 
+            DataMode = inherit
+            MessageQueueUseDefaultAttributes = on
+            MessageQueueCapacity = 1
+            MessageQueueType = LIFO
+            MessageQueueOverwriting = on
+    - [Inport] dual_module/Triggered Subsystem3/set_I
+        * Settings & States:
+            Port = 4
+            OutputFunctionCall = off
+            BusOutputAsStruct = off
+            BusVirtuality = inherit
+            Unit = inherit
+            VarSizeSig = Inherit
+            SampleTime = -1
+            SignalType = auto
+            LatchByDelayingOutsideSignal = off
+            LatchInputForFeedbackSignals = off
+            InputConnect = 
+            DataMode = inherit
+            MessageQueueUseDefaultAttributes = on
+            MessageQueueCapacity = 1
+            MessageQueueType = LIFO
+            MessageQueueOverwriting = on
+    - [Inport] dual_module/Triggered Subsystem3/get_V_dc
+        * Settings & States:
+            Port = 5
+            OutputFunctionCall = off
+            BusOutputAsStruct = off
+            BusVirtuality = inherit
+            Unit = inherit
+            VarSizeSig = Inherit
+            SampleTime = -1
+            SignalType = auto
+            LatchByDelayingOutsideSignal = off
+            LatchInputForFeedbackSignals = off
+            InputConnect = 
+            DataMode = inherit
+            MessageQueueUseDefaultAttributes = on
+            MessageQueueCapacity = 1
+            MessageQueueType = LIFO
+            MessageQueueOverwriting = on
+    - [Inport] dual_module/Triggered Subsystem3/I_reset
+        * Settings & States:
+            Port = 6
+            OutputFunctionCall = off
+            BusOutputAsStruct = off
+            BusVirtuality = inherit
+            Unit = inherit
+            VarSizeSig = Inherit
+            SampleTime = -1
+            SignalType = auto
+            LatchByDelayingOutsideSignal = off
+            LatchInputForFeedbackSignals = off
+            InputConnect = 
+            DataMode = inherit
+            MessageQueueUseDefaultAttributes = on
+            MessageQueueCapacity = 1
+            MessageQueueType = LIFO
+            MessageQueueOverwriting = on
+    - [Inport] dual_module/Triggered Subsystem3/V_reset
+        * Settings & States:
+            Port = 7
+            OutputFunctionCall = off
+            BusOutputAsStruct = off
+            BusVirtuality = inherit
+            Unit = inherit
+            VarSizeSig = Inherit
+            SampleTime = -1
+            SignalType = auto
+            LatchByDelayingOutsideSignal = off
+            LatchInputForFeedbackSignals = off
+            InputConnect = 
+            DataMode = inherit
+            MessageQueueUseDefaultAttributes = on
+            MessageQueueCapacity = 1
+            MessageQueueType = LIFO
+            MessageQueueOverwriting = on
+    - [Inport] dual_module/Triggered Subsystem3/out_en
+        * Settings & States:
+            Port = 8
+            OutputFunctionCall = off
+            BusOutputAsStruct = off
+            BusVirtuality = inherit
+            Unit = inherit
+            VarSizeSig = Inherit
+            SampleTime = -1
+            SignalType = auto
+            LatchByDelayingOutsideSignal = off
+            LatchInputForFeedbackSignals = off
+            InputConnect = 
+            DataMode = inherit
+            MessageQueueUseDefaultAttributes = on
+            MessageQueueCapacity = 1
+            MessageQueueType = LIFO
+            MessageQueueOverwriting = on
+    - [Inport] dual_module/Triggered Subsystem3/cur_PI_Kp
+        * Settings & States:
+            Port = 9
+            OutputFunctionCall = off
+            BusOutputAsStruct = off
+            BusVirtuality = inherit
+            Unit = inherit
+            VarSizeSig = Inherit
+            SampleTime = -1
+            SignalType = auto
+            LatchByDelayingOutsideSignal = off
+            LatchInputForFeedbackSignals = off
+            InputConnect = 
+            DataMode = inherit
+            MessageQueueUseDefaultAttributes = on
+            MessageQueueCapacity = 1
+            MessageQueueType = LIFO
+            MessageQueueOverwriting = on
+    - [Inport] dual_module/Triggered Subsystem3/cur_PI_TI
+        * Settings & States:
+            Port = 10
+            OutputFunctionCall = off
+            BusOutputAsStruct = off
+            BusVirtuality = inherit
+            Unit = inherit
+            VarSizeSig = Inherit
+            SampleTime = -1
+            SignalType = auto
+            LatchByDelayingOutsideSignal = off
+            LatchInputForFeedbackSignals = off
+            InputConnect = 
+            DataMode = inherit
+            MessageQueueUseDefaultAttributes = on
+            MessageQueueCapacity = 1
+            MessageQueueType = LIFO
+            MessageQueueOverwriting = on
+    - [Inport] dual_module/Triggered Subsystem3/V_I_controll_select
+        * Settings & States:
+            Port = 11
+            OutputFunctionCall = off
+            BusOutputAsStruct = off
+            BusVirtuality = inherit
+            Unit = inherit
+            VarSizeSig = Inherit
+            SampleTime = -1
+            SignalType = auto
+            LatchByDelayingOutsideSignal = off
+            LatchInputForFeedbackSignals = off
+            InputConnect = 
+            DataMode = inherit
+            MessageQueueUseDefaultAttributes = on
+            MessageQueueCapacity = 1
+            MessageQueueType = LIFO
+            MessageQueueOverwriting = on
+    - [Inport] dual_module/Triggered Subsystem3/D_overrite
+        * Settings & States:
+            Port = 12
+            OutputFunctionCall = off
+            BusOutputAsStruct = off
+            BusVirtuality = inherit
+            Unit = inherit
+            VarSizeSig = Inherit
+            SampleTime = -1
+            SignalType = auto
+            LatchByDelayingOutsideSignal = off
+            LatchInputForFeedbackSignals = off
+            InputConnect = 
+            DataMode = inherit
+            MessageQueueUseDefaultAttributes = on
+            MessageQueueCapacity = 1
+            MessageQueueType = LIFO
+            MessageQueueOverwriting = on
+    - [TriggerPort] dual_module/Triggered Subsystem3/Trigger
+        * Settings & States:
+            TriggerType = falling
+            TriggerTime = on message available
+            ScheduleAsAperiodic = on
+            IsSimulinkFunction = off
+            AsynchronousFunction = off
+            FunctionName = 
+            FunctionVisibility = global
+            ScopeName = 
+            Variant = off
+            VariantControl = (inherit)
+            GeneratePreprocessorConditionals = off
+            StatesWhenEnabling = held
+            PropagateVarSize = During execution
+            ShowOutputPort = off
+            OutputDataType = auto
+            SampleTime = 1
+            ZeroCross = on
+            InitialTriggerSignalState [State/IC] = compatibility (no trigger on first evaluation)
+            TriggerSignalSampleTime = -1
+            FunctionPrototype = f()
+    - [Constant] dual_module/Triggered Subsystem3/Constant1
+        * Settings & States:
+            Value = 1
+            SampleTime = inf
+    - [Constant] dual_module/Triggered Subsystem3/Constant2
+        * Settings & States:
+            Value = 0
+            SampleTime = inf
+    - [Constant] dual_module/Triggered Subsystem3/Constant3
+        * Settings & States:
+            Value = 0.002
+            SampleTime = inf
+    - [Constant] dual_module/Triggered Subsystem3/Constant4
+        * Settings & States:
+            Value = 0.1
+            SampleTime = inf
+    - [Constant] dual_module/Triggered Subsystem3/Constant5
+        * Settings & States:
+            Value = 0.05
+            SampleTime = inf
+    - [Constant] dual_module/Triggered Subsystem3/Constant6
+        * Settings & States:
+            Value = 1
+            SampleTime = inf
+    - [Product] dual_module/Triggered Subsystem3/Divide1
+        * Settings & States:
+            Inputs = */
+            Multiplication = Element-wise(.*)
+            CollapseMode = All dimensions
+            CollapseDim = 1
+            InputSameDT = off
+            SampleTime = -1
+    - [SubSystem] dual_module/Triggered Subsystem3/PID Controller
+        * Settings & States:
+            Controller = PI
+            Form = Parallel
+            TimeDomain = Discrete-time
+            UseExternalTs = off
+            SampleTime = -1
+            IntegratorMethod = Forward Euler
+            FilterMethod = Forward Euler
+            ControllerParametersSource = external
+            P = 0.6
+            I = 50
+            UseKiTs = on
+            D = 0
+            UseExternalDerivativeSource = off
+            N = 100
+            UseFilter = on
+            TunerSelectOption = Transfer Function Based (PID Tuner App)
+            ZeroCross = on
+            InitialConditionSource = internal
+            InitialConditionForIntegrator [State/IC] = 0
+            InitialConditionForFilter [State/IC] = 0
+            DifferentiatorICPrevScaledInput = 0
+            ExternalReset = either
+            IgnoreLimit = off
+            TrackingMode = off
+            Kt = 1
+            LimitOutput = on
+            SatLimitsSource = internal
+            UpperSaturationLimit = 25
+            LowerSaturationLimit = -5
+            LinearizeAsGain = on
+            AntiWindupMode = none
+            Kb = 1
+            LimitIntegrator = off
+            UpperIntegratorSaturationLimit = inf
+            LowerIntegratorSaturationLimit = -inf
+            IntegratorStateMustResolveToSignalObject = off
+            FilterStateMustResolveToSignalObject = off
+            InitialConditionSetting [State/IC] = Auto
+    - [SubSystem] dual_module/Triggered Subsystem3/PID Controller1
+        * Settings & States:
+            Controller = PI
+            Form = Parallel
+            TimeDomain = Discrete-time
+            UseExternalTs = off
+            SampleTime = -1
+            IntegratorMethod = Forward Euler
+            FilterMethod = Forward Euler
+            ControllerParametersSource = external
+            P = 0.6
+            I = 0.1
+            UseKiTs = on
+            D = 0
+            UseExternalDerivativeSource = off
+            N = 100
+            UseFilter = on
+            TunerSelectOption = Transfer Function Based (PID Tuner App)
+            ZeroCross = on
+            InitialConditionSource = internal
+            InitialConditionForIntegrator [State/IC] = 0
+            InitialConditionForFilter [State/IC] = 0
+            DifferentiatorICPrevScaledInput = 0
+            ExternalReset = either
+            IgnoreLimit = off
+            TrackingMode = off
+            Kt = 1
+            LimitOutput = on
+            SatLimitsSource = internal
+            UpperSaturationLimit = 23
+            LowerSaturationLimit = 0
+            LinearizeAsGain = on
+            AntiWindupMode = clamping
+            Kb = 1
+            LimitIntegrator = off
+            UpperIntegratorSaturationLimit = inf
+            LowerIntegratorSaturationLimit = -inf
+            IntegratorStateMustResolveToSignalObject = off
+            FilterStateMustResolveToSignalObject = off
+            InitialConditionSetting [State/IC] = Auto
+    - [Sum] dual_module/Triggered Subsystem3/Sum
+        * Settings & States:
+            Inputs = |+-
+            CollapseMode = All dimensions
+            CollapseDim = 1
+            InputSameDT = off
+            SampleTime = -1
+    - [Sum] dual_module/Triggered Subsystem3/Sum1
+        * Settings & States:
+            Inputs = |+-
+            CollapseMode = All dimensions
+            CollapseDim = 1
+            InputSameDT = off
+            SampleTime = -1
+    - [Switch] dual_module/Triggered Subsystem3/Switch1
+        * Settings & States:
+            Criteria = u2 > Threshold
+            Threshold = 0
+            InputSameDT = off
+            ZeroCross = on
+            SampleTime = -1
+            AllowDiffInputSizes = off
+    - [Switch] dual_module/Triggered Subsystem3/Switch2
+        * Settings & States:
+            Criteria = u2 > Threshold
+            Threshold = 0
+            InputSameDT = off
+            ZeroCross = on
+            SampleTime = -1
+            AllowDiffInputSizes = off
+    - [Switch] dual_module/Triggered Subsystem3/Switch6
+        * Settings & States:
+            Criteria = u2 > Threshold
+            Threshold = 0
+            InputSameDT = off
+            ZeroCross = on
+            SampleTime = -1
+            AllowDiffInputSizes = off
+    - [Outport] dual_module/Triggered Subsystem3/D_out
+        * Settings & States:
+            Port = 1
+            OutputFunctionCall = off
+            BusOutputAsStruct = off
+            BusVirtuality = inherit
+            DataMode = inherit
+            Unit = inherit
+            VarSizeSig = Inherit
+            SampleTime = -1
+            SignalType = auto
+            EnsureOutportIsVirtual = off
+            OutputWhenDisabled = held
+            MustResolveToSignalObject = off
+            OutputWhenUnConnected = off
+            OutputWhenUnconnectedValue = 0
+            VectorParamsAs1DForOutWhenUnconnected = on
+    - [Outport] dual_module/Triggered Subsystem3/set_i_internal
+        * Settings & States:
+            Port = 2
+            OutputFunctionCall = off
+            BusOutputAsStruct = off
+            BusVirtuality = inherit
+            DataMode = inherit
+            Unit = inherit
+            VarSizeSig = Inherit
+            SampleTime = -1
+            SignalType = auto
+            EnsureOutportIsVirtual = off
+            OutputWhenDisabled = held
+            MustResolveToSignalObject = off
+            OutputWhenUnConnected = off
+            OutputWhenUnconnectedValue = 0
+            VectorParamsAs1DForOutWhenUnconnected = on
+    - [Outport] dual_module/Triggered Subsystem3/pi_set_i
+        * Settings & States:
+            Port = 3
+            OutputFunctionCall = off
+            BusOutputAsStruct = off
+            BusVirtuality = inherit
+            DataMode = inherit
+            Unit = inherit
+            VarSizeSig = Inherit
+            SampleTime = -1
+            SignalType = auto
+            EnsureOutportIsVirtual = off
+            OutputWhenDisabled = held
+            MustResolveToSignalObject = off
+            OutputWhenUnConnected = off
+            OutputWhenUnconnectedValue = 0
+            VectorParamsAs1DForOutWhenUnconnected = on
+    - [Outport] dual_module/Triggered Subsystem3/i_error
+        * Settings & States:
+            Port = 4
+            OutputFunctionCall = off
+            BusOutputAsStruct = off
+            BusVirtuality = inherit
+            DataMode = inherit
+            Unit = inherit
+            VarSizeSig = Inherit
+            SampleTime = -1
+            SignalType = auto
+            EnsureOutportIsVirtual = off
+            OutputWhenDisabled = held
+            MustResolveToSignalObject = off
+            OutputWhenUnConnected = off
+            OutputWhenUnconnectedValue = 0
+            VectorParamsAs1DForOutWhenUnconnected = on
+    - [Outport] dual_module/Triggered Subsystem3/v_error
         * Settings & States:
             Port = 5
             OutputFunctionCall = off
@@ -2475,14 +3295,6 @@ Generated on: 04-Nov-2026 15:02:35
   - [SimscapeBlock] dual_module/Voltage Sensor4 (Component: foundation.electrical.sensors.voltage)
   - [SimscapeBlock] dual_module/Voltage Sensor5 (Component: foundation.electrical.sensors.voltage)
   - [SimscapeBlock] dual_module/Voltage Sensor6 (Component: foundation.electrical.sensors.voltage)
-  - [Constant] dual_module/current limit
-      * Settings & States:
-          Value = 20
-          SampleTime = inf
-  - [Constant] dual_module/current limit1
-      * Settings & States:
-          Value = 20
-          SampleTime = inf
   - [SubSystem] dual_module/i_0_1
       * Settings & States:
           PhysicalDomain = network_engine_domain
@@ -2503,14 +3315,6 @@ Generated on: 04-Nov-2026 15:02:35
           VectorFormat = inherit
           Unit = inherit
           AffineConversion = off
-  - [Constant] dual_module/set voltage
-      * Settings & States:
-          Value = 18
-          SampleTime = inf
-  - [Constant] dual_module/set voltage1
-      * Settings & States:
-          Value = 25
-          SampleTime = inf
 
 --- 2. ROOT LEVEL PORTS ---
 Root Inports:
